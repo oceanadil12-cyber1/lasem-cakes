@@ -1,0 +1,1523 @@
+{
+ "updated": "2026-10-24",
+ "currency": "CAD",
+ "taxRate": 0.13,
+ "hours": {
+  "opens": "09:00",
+  "closes": "17:10"
+ },
+ "leadMinutes": 30,
+ "daysAhead": 14,
+ "categories": [
+  {
+   "id": "focaccia-sandwiches",
+   "name": "Focaccia Sandwiches",
+   "taxable": true,
+   "products": [
+    {
+     "id": "the-zesty-southern-italian",
+     "name": "The Zesty Southern Italian",
+     "desc": "Mortadella and Hot Salami, with Mozzarella, Sweet Peppers, Caramelized onions, Muffuletta, Arugula and Pesto on Home made Focaccia Bread",
+     "img": "images/menu/the-zesty-southern-italian.webp",
+     "variants": [
+      {
+       "id": "44329405787",
+       "label": null,
+       "price": 1300
+      }
+     ]
+    },
+    {
+     "id": "the-sweet-and-spicy-rosemary",
+     "name": "The Sweet and Spicy Rosemary",
+     "desc": "Rosemary Ham with Mozzarella, marinated Eggplant, Sweet Peppers, Arugula and Hot Honey on Home made Focaccia Bread",
+     "img": "images/menu/the-sweet-and-spicy-rosemary.webp",
+     "variants": [
+      {
+       "id": "44330336873",
+       "label": null,
+       "price": 1300
+      }
+     ]
+    },
+    {
+     "id": "the-italian-figgy-piggy",
+     "name": "The Italian Figgy Piggy",
+     "desc": "Prosciutto with Provolone, Sweet Peppers, Arugula, Fig Jam and Pesto on Home made Focaccia Bread",
+     "img": "images/menu/the-italian-figgy-piggy.webp",
+     "variants": [
+      {
+       "id": "44330336874",
+       "label": null,
+       "price": 1300
+      }
+     ]
+    },
+    {
+     "id": "the-hickory-hen",
+     "name": "The Hickory Hen",
+     "desc": "Smoked Roasted Chicken with Provolone, Sweet Peppers, Muffuletta, Caramelized onions and Pesto",
+     "img": "images/menu/the-hickory-hen.webp",
+     "variants": [
+      {
+       "id": "44336105022",
+       "label": null,
+       "price": 1300
+      }
+     ]
+    },
+    {
+     "id": "il-giardino",
+     "name": "Il Giardino",
+     "desc": "Marinated Eggplant with Provolone, Sweet Peppers, Arugula, Fig Jam and Pesto on Home made Focaccia Bread",
+     "img": "images/menu/il-giardino.webp",
+     "variants": [
+      {
+       "id": "44330338375",
+       "label": null,
+       "price": 1300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cakes",
+   "name": "Cakes",
+   "taxable": false,
+   "products": [
+    {
+     "id": "cheesecake",
+     "name": "Cheesecake",
+     "desc": "Vanilla cheesecake with graham cracker crust.",
+     "img": "images/menu/cheesecake.webp",
+     "variants": [
+      {
+       "id": "17728007126",
+       "label": "15 cm",
+       "price": 3650
+      },
+      {
+       "id": "17728007127",
+       "label": "20 cm",
+       "price": 4195
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "nutella-cheesecake",
+     "name": "Nutella Cheesecake",
+     "desc": "Vanilla cheesecake with graham cracker crust topped with Nutella.",
+     "img": "images/menu/nutella-cheesecake.webp",
+     "variants": [
+      {
+       "id": "17728007128",
+       "label": "15 cm",
+       "price": 3950
+      },
+      {
+       "id": "17728007129",
+       "label": "20 cm",
+       "price": 4650
+      }
+     ]
+    },
+    {
+     "id": "red-velvet",
+     "name": "Red Velvet",
+     "desc": "Red velvet cake with cream cheese icing filling, topped with chocolate whipped topping.",
+     "img": "images/menu/red-velvet.webp",
+     "variants": [
+      {
+       "id": "17728007130",
+       "label": "4″",
+       "price": 3295
+      },
+      {
+       "id": "17728007131",
+       "label": "15 cm",
+       "price": 4750
+      },
+      {
+       "id": "17728007132",
+       "label": "20 cm",
+       "price": 6150
+      }
+     ]
+    },
+    {
+     "id": "marble-cake",
+     "name": "Marble Cake",
+     "desc": "Marble pound cake with strawberry cream filling.",
+     "img": "images/menu/marble-cake.webp",
+     "variants": [
+      {
+       "id": "17728007133",
+       "label": "4″",
+       "price": 3295
+      },
+      {
+       "id": "17728007134",
+       "label": "15 cm",
+       "price": 4750
+      },
+      {
+       "id": "17728007135",
+       "label": "20 cm",
+       "price": 6150
+      }
+     ]
+    },
+    {
+     "id": "strawberry-shortcake",
+     "name": "Strawberry Shortcake",
+     "desc": "Vanilla sponge with rum with strawberries and whipped cream.",
+     "img": "images/menu/strawberry-shortcake.webp",
+     "variants": [
+      {
+       "id": "17728007136",
+       "label": "15 cm",
+       "price": 4950
+      },
+      {
+       "id": "17728007137",
+       "label": "20 cm",
+       "price": 6495
+      },
+      {
+       "id": "17728007138",
+       "label": "23 cm",
+       "price": 7795
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "black-forest",
+     "name": "Black Forest",
+     "desc": "Chocolate sponge with rum with chantilly cream and cherry filling.",
+     "img": "images/menu/black-forest.webp",
+     "variants": [
+      {
+       "id": "17728007139",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007140",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    },
+    {
+     "id": "italian-rum-cake",
+     "name": "Italian Rum Cake",
+     "desc": "Vanilla sponge with rum with vanilla and chocolate custard filling.",
+     "img": "images/menu/italian-rum-cake.webp",
+     "variants": [
+      {
+       "id": "17728007141",
+       "label": "4″",
+       "price": 3295
+      },
+      {
+       "id": "17728007142",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007143",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    },
+    {
+     "id": "black-velvet",
+     "name": "Black Velvet",
+     "desc": "Dark chocolate sponge with wildberry cream.",
+     "img": "images/menu/black-velvet.webp",
+     "variants": [
+      {
+       "id": "17728007144",
+       "label": "4″",
+       "price": 3295
+      },
+      {
+       "id": "17728007145",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007146",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    },
+    {
+     "id": "caramel-pecan",
+     "name": "Caramel Pecan",
+     "desc": "Chocolate sponge with rum with white and chocolate whipped cream, caramel and pecans.",
+     "img": "images/menu/caramel-pecan.webp",
+     "variants": [
+      {
+       "id": "17728007147",
+       "label": "15 cm",
+       "price": 4750
+      },
+      {
+       "id": "17728007148",
+       "label": "20 cm",
+       "price": 6150
+      }
+     ]
+    },
+    {
+     "id": "nocciola-delight",
+     "name": "Nocciola Delight",
+     "desc": "Almond sponge with rum with hazelnut cream.",
+     "img": "images/menu/nocciola-delight.webp",
+     "variants": [
+      {
+       "id": "17728007149",
+       "label": null,
+       "price": 4850
+      }
+     ]
+    },
+    {
+     "id": "tiramisu",
+     "name": "Tiramisu",
+     "desc": "Vanilla sponge with coffee liquor with rich mascarpone cheese filling covered in chocolate shavings.",
+     "img": "images/menu/tiramisu.webp",
+     "variants": [
+      {
+       "id": "17728007150",
+       "label": "15 cm",
+       "price": 4950
+      },
+      {
+       "id": "17728007151",
+       "label": "20 cm",
+       "price": 6150
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "sacher-style-torte",
+     "name": "Sacher Style Torte",
+     "desc": "Fudgy chocolate sponge with rum soaked chocolate whipped cream filling and a thin layer of apricot jam.",
+     "img": "images/menu/sacher-style-torte.webp",
+     "variants": [
+      {
+       "id": "17728007153",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007154",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    },
+    {
+     "id": "cappuccino-cake",
+     "name": "Cappuccino Cake",
+     "desc": "Vanilla and Chocolate sponge with coffee liquor with chantilly and cappuccino filling.",
+     "img": "images/menu/cappuccino-cake.webp",
+     "variants": [
+      {
+       "id": "17728007155",
+       "label": "4″",
+       "price": 3295
+      },
+      {
+       "id": "17728007156",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007157",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "nutella",
+     "name": "Nutella",
+     "desc": "Vanilla sponge with rum with nutella cream filling, topped with nutella.",
+     "img": "images/menu/nutella.webp",
+     "variants": [
+      {
+       "id": "17728007158",
+       "label": "15 cm",
+       "price": 4750
+      },
+      {
+       "id": "17728007159",
+       "label": "20 cm",
+       "price": 6150
+      }
+     ]
+    },
+    {
+     "id": "bacio",
+     "name": "Bacio",
+     "desc": "Chocolate sponge with rum with a light chocolate cream filling with crushed hazelnuts.",
+     "img": "images/menu/bacio.webp",
+     "variants": [
+      {
+       "id": "17728007161",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "17728007162",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    },
+    {
+     "id": "ice-cream-cake-vanilla-and-chocolate",
+     "name": "Ice Cream Cake (Vanilla & Chocolate)",
+     "desc": "Vanilla sponge with rum with vanilla and chocolate gelato.",
+     "img": "images/menu/ice-cream-cake-vanilla-and-chocolate.webp",
+     "variants": [
+      {
+       "id": "17728007164",
+       "label": "20 cm",
+       "price": 6595
+      },
+      {
+       "id": "17728007165",
+       "label": "23 cm",
+       "price": 7950
+      }
+     ]
+    },
+    {
+     "id": "sweet-table-ice-cream-van-and-choc",
+     "name": "Sweet Table Ice Cream (Van & Choc)",
+     "desc": "Vanilla sponge with rum with vanilla and chocolate gelato.",
+     "img": "images/menu/sweet-table-ice-cream-van-and-choc.webp",
+     "variants": [
+      {
+       "id": "17728007166",
+       "label": "20 cm",
+       "price": 6595
+      },
+      {
+       "id": "17728007167",
+       "label": "23 cm",
+       "price": 7950
+      }
+     ]
+    },
+    {
+     "id": "coco-tiramisu-ice-cream-cake",
+     "name": "Coco Tiramisu Ice Cream Cake",
+     "desc": "Vanilla sponge with coffee liquor with tiramisu gelato.",
+     "img": "images/menu/coco-tiramisu-ice-cream-cake.webp",
+     "variants": [
+      {
+       "id": "17728007168",
+       "label": "20 cm",
+       "price": 6595
+      },
+      {
+       "id": "17728007169",
+       "label": "25 cm",
+       "price": 8695
+      }
+     ]
+    },
+    {
+     "id": "caramel-meringue",
+     "name": "Caramel Meringue",
+     "desc": "Almond meringue with white and chocolate whipped cream, caramel and crushed almonds. Frozen - 1 to 1-1/2 hours to defrost",
+     "img": "images/menu/caramel-meringue.webp",
+     "variants": [
+      {
+       "id": "17728007170",
+       "label": "20 cm",
+       "price": 6700
+      },
+      {
+       "id": "17728007171",
+       "label": "25 cm",
+       "price": 8450
+      }
+     ]
+    },
+    {
+     "id": "pound-cake-lemon",
+     "name": "Pound Cake - Lemon",
+     "desc": "Pound cake loaf with lemon filling on top.",
+     "img": "images/menu/pound-cake-lemon.webp",
+     "variants": [
+      {
+       "id": "17728007172",
+       "label": null,
+       "price": 1650
+      }
+     ]
+    },
+    {
+     "id": "pound-cake-cherry",
+     "name": "Pound Cake - Cherry",
+     "desc": "Pound cake loaf with cherry filling on top.",
+     "img": "images/menu/pound-cake-cherry.webp",
+     "variants": [
+      {
+       "id": "17728007173",
+       "label": null,
+       "price": 1650
+      }
+     ]
+    },
+    {
+     "id": "pound-cake-apple",
+     "name": "Pound Cake - Apple",
+     "desc": "Pound cake loaf with apple filling on top.",
+     "img": "images/menu/pound-cake-apple.webp",
+     "variants": [
+      {
+       "id": "17728007174",
+       "label": null,
+       "price": 1650
+      }
+     ]
+    },
+    {
+     "id": "pound-cake-blueberry",
+     "name": "Pound Cake - Blueberry",
+     "desc": "Pound cake loaf with blueberry filling on top.",
+     "img": "images/menu/pound-cake-blueberry.webp",
+     "variants": [
+      {
+       "id": "17728007175",
+       "label": null,
+       "price": 1650
+      }
+     ]
+    },
+    {
+     "id": "mango-delight",
+     "name": "Mango Delight",
+     "desc": "Vanilla pound cake (NO alcohol) with a mango cream filling",
+     "img": "images/menu/mango-delight.webp",
+     "variants": [
+      {
+       "id": "23436822093",
+       "label": "15 cm",
+       "price": 4500
+      },
+      {
+       "id": "23436416845",
+       "label": "20 cm",
+       "price": 5750
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pastries",
+   "name": "Pastries",
+   "taxable": false,
+   "products": [
+    {
+     "id": "mixed-fruit-tart-2-inch",
+     "name": "Mixed Fruit Tart (2 Inch)",
+     "desc": "Small tart shell with chantilly cream with glazed mixed fruit.",
+     "img": "images/menu/mixed-fruit-tart-2-inch.webp",
+     "variants": [
+      {
+       "id": "17728007178",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "strawberry-tart-2-inch",
+     "name": "Strawberry Tart (2 Inch)",
+     "desc": "Small tart shell with chantilly cream with glazed strawberry.",
+     "img": "images/menu/strawberry-tart-2-inch.webp",
+     "variants": [
+      {
+       "id": "17728007179",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "cappuccino-pastries",
+     "name": "Cappuccino Pastries",
+     "desc": "Cappuccino cream on a shortbread cookie dipped in chocolate.",
+     "img": "images/menu/cappuccino-pastries.webp",
+     "variants": [
+      {
+       "id": "17728007181",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "rum-ball",
+     "name": "Rum Ball",
+     "desc": "Rum soaked sponge dipped in chocolate & rolled in chocolate sprinkles.",
+     "img": "images/menu/rum-ball.webp",
+     "variants": [
+      {
+       "id": "17728007182",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "clementine",
+     "name": "Clementine",
+     "desc": "Vanilla sponge with grand marnier liqueur with orange & chocolate cream dipped in chocolate.",
+     "img": "images/menu/clementine.webp",
+     "variants": [
+      {
+       "id": "17728007183",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "lemon-slices",
+     "name": "Lemon Slices",
+     "desc": "Pound cake filled and topped with lemon buttercream.",
+     "img": "images/menu/lemon-slices.webp",
+     "variants": [
+      {
+       "id": "17728007184",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "cannoli-sicilian-with-ricotta",
+     "name": "Cannoli Sicilian with Ricotta",
+     "desc": "Homemade Sicilian cannoli shell filled with sweet ricotta cheese with chocolate chips & candied orange peel.",
+     "img": "images/menu/cannoli-sicilian-with-ricotta.webp",
+     "variants": [
+      {
+       "id": "17728007185",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "cannoli-sicilian-with-chocolate",
+     "name": "Cannoli Sicilian with Chocolate",
+     "desc": "Homemade Sicilian cannoli shell filled with chocolate custard.",
+     "img": "images/menu/cannoli-sicilian-with-chocolate.webp",
+     "variants": [
+      {
+       "id": "17728007186",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "cannoli-sicilian-with-vanilla",
+     "name": "Cannoli Sicilian with Vanilla",
+     "desc": "Homemade Sicilian cannoli shell filled with vanilla custard.",
+     "img": "images/menu/cannoli-sicilian-with-vanilla.webp",
+     "variants": [
+      {
+       "id": "17728007187",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "cannoli-sfoglia-with-vanilla",
+     "name": "Cannoli Sfoglia with Vanilla",
+     "desc": "Flaky puff pastry cannoli shell filled with vanilla custard.",
+     "img": "images/menu/cannoli-sfoglia-with-vanilla.webp",
+     "variants": [
+      {
+       "id": "17728007188",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "veneziane-napoleon-vanilla",
+     "name": "Veneziane (Napoleon) Vanilla",
+     "desc": "1/2 Vanilla sponge with rum & 1/2 puff pastry filled with vanilla custard.",
+     "img": "images/menu/veneziane-napoleon-vanilla.webp",
+     "variants": [
+      {
+       "id": "17728007189",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "veneziane-napoleon-chocolate",
+     "name": "Veneziane (Napoleon) Chocolate",
+     "desc": "1/2 Chocolate sponge with rum & 1/2 puff pastry filled with chocolate custard.",
+     "img": "images/menu/veneziane-napoleon-chocolate.webp",
+     "variants": [
+      {
+       "id": "17728007190",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "veneziane-napoleon-almond",
+     "name": "Veneziane (Napoleon) Almond",
+     "desc": "1/2 Vanilla sponge with strega liqueur & 1/2 puff pastry filled with almond cream.",
+     "img": "images/menu/veneziane-napoleon-almond.webp",
+     "variants": [
+      {
+       "id": "17728007191",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "black-forest-slice",
+     "name": "Black Forest (slice)",
+     "desc": "Chocolate sponge with rum with chantilly and cherry filling.",
+     "img": "images/menu/black-forest-slice.webp",
+     "variants": [
+      {
+       "id": "17728007192",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "tiramisu-mousse",
+     "name": "Tiramisu Mousse",
+     "desc": "Vanilla sponge with coffee liqueur with tiramisu flavoured mousse filling.",
+     "img": "images/menu/tiramisu-mousse.webp",
+     "variants": [
+      {
+       "id": "17728007194",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "bigne-cream-puff-bacio",
+     "name": "Bigne (Cream Puff) Bacio",
+     "desc": "Cream puff filled with bacio cream (chocolate with crushed hazelnuts).",
+     "img": "images/menu/bigne-cream-puff-bacio.webp",
+     "variants": [
+      {
+       "id": "17728007197",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "bigne-cream-puff-vanilla",
+     "name": "Bigne (Cream Puff) Vanilla",
+     "desc": "Cream puff filled with vanilla custard.",
+     "img": "images/menu/bigne-cream-puff-vanilla.webp",
+     "variants": [
+      {
+       "id": "17728007198",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "bigne-cream-puff-hazelnut",
+     "name": "Bigne (Cream Puff) Hazelnut",
+     "desc": "Cream puff filled with hazelnut cream.",
+     "img": "images/menu/bigne-cream-puff-hazelnut.webp",
+     "variants": [
+      {
+       "id": "17728007199",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "bigne-cream-puff-nutella",
+     "name": "Bigne (Cream Puff) Nutella",
+     "desc": "Cream puff filled with nutella flavoured cream.",
+     "img": "images/menu/bigne-cream-puff-nutella.webp",
+     "variants": [
+      {
+       "id": "17728007200",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "bigne-clair-chocolate",
+     "name": "Bigne Éclair - Chocolate",
+     "desc": "Eclair cream puff filled with chocolate whipped cream",
+     "img": "images/menu/bigne-clair-chocolate.webp",
+     "variants": [
+      {
+       "id": "17728007201",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "baba-au-rhum-with-cream",
+     "name": "Baba au Rhum with Cream",
+     "desc": "Yeast raised cake soaked in rum with vanilla cream filling.",
+     "img": "images/menu/baba-au-rhum-with-cream.webp",
+     "variants": [
+      {
+       "id": "17728007202",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "tranciate",
+     "name": "Tranciate",
+     "desc": "Chocolate & vanilla sponge with rum with strawberry & chocolate cream.",
+     "img": "images/menu/tranciate.webp",
+     "variants": [
+      {
+       "id": "17728007203",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "ribbon-cake-slices",
+     "name": "Ribbon Cake Slices",
+     "desc": "Tri-colour pound cake with buttercream filling.",
+     "img": "images/menu/ribbon-cake-slices.webp",
+     "variants": [
+      {
+       "id": "17728007204",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "red-velvet-slice",
+     "name": "Red Velvet (slice)",
+     "desc": "Red Velvet sponge with cream cheese filling.",
+     "img": "images/menu/red-velvet-slice.webp",
+     "variants": [
+      {
+       "id": "17728007205",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "eggless-cake-slice",
+     "name": "Eggless Cake (slice)",
+     "desc": "Eggless/Vegan sponge with vegan bacio cream (chocolate with crushed hazelnuts).",
+     "img": "images/menu/eggless-cake-slice.webp",
+     "variants": [
+      {
+       "id": "17728007207",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "carrot-cake-slice",
+     "name": "Carrot Cake (slice)",
+     "desc": "Carrot cake with cream cheese icing filling.",
+     "img": "images/menu/carrot-cake-slice.webp",
+     "variants": [
+      {
+       "id": "17728007208",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "black-velvet-slice",
+     "name": "Black Velvet (slice)",
+     "desc": "Dark chocolate sponge with chocolate whipped cream.",
+     "img": "images/menu/black-velvet-slice.webp",
+     "variants": [
+      {
+       "id": "17728007209",
+       "label": null,
+       "price": 270
+      }
+     ]
+    },
+    {
+     "id": "almond-tart-2-inch",
+     "name": "Almond Tart (2 Inch)",
+     "desc": "Small tart shell with almond paste filling & a thin coating of strawberry jam.",
+     "img": "images/menu/almond-tart-2-inch.webp",
+     "variants": [
+      {
+       "id": "17728007210",
+       "label": null,
+       "price": 315
+      }
+     ]
+    },
+    {
+     "id": "mini-cheese-cake-strawberry",
+     "name": "Mini Cheese Cake - Strawberry",
+     "desc": "2-inch cheesecake with graham cracker crust with a glazed strawberry.",
+     "img": "images/menu/mini-cheese-cake-strawberry.webp",
+     "variants": [
+      {
+       "id": "17728007211",
+       "label": null,
+       "price": 425
+      }
+     ]
+    },
+    {
+     "id": "mini-cheese-cake-blueberry",
+     "name": "Mini Cheese Cake - Blueberry",
+     "desc": "2-inch cheesecake with graham cracker crust with blueberry topping.",
+     "img": "images/menu/mini-cheese-cake-blueberry.webp",
+     "variants": [
+      {
+       "id": "17728007212",
+       "label": null,
+       "price": 425
+      }
+     ]
+    },
+    {
+     "id": "mini-cheese-cake-caramel",
+     "name": "Mini Cheese Cake - Caramel",
+     "desc": "2-inch cheesecake with biscrunch crust with a caramel swirl.",
+     "img": "images/menu/mini-cheese-cake-caramel.webp",
+     "variants": [
+      {
+       "id": "17728007213",
+       "label": null,
+       "price": 425
+      }
+     ]
+    },
+    {
+     "id": "mini-cheese-cake-salted-caramel",
+     "name": "Mini Cheese Cake - Salted Caramel",
+     "desc": "2-inch cheesecake with graham cracker crust with salted caramel topping.",
+     "img": "images/menu/mini-cheese-cake-salted-caramel.webp",
+     "variants": [
+      {
+       "id": "17728007214",
+       "label": null,
+       "price": 425
+      }
+     ]
+    },
+    {
+     "id": "mini-cheese-cake-raspberry",
+     "name": "Mini Cheese Cake - Raspberry",
+     "desc": "2-inch raspberry cheesecake with a chocolate crust topped with white chocolate.",
+     "img": "images/menu/mini-cheese-cake-raspberry.webp",
+     "variants": [
+      {
+       "id": "17728007215",
+       "label": null,
+       "price": 425
+      }
+     ]
+    },
+    {
+     "id": "brownies",
+     "name": "Brownies",
+     "desc": "Rich chocolate brownie topped with fudge.",
+     "img": "images/menu/brownies.webp",
+     "variants": [
+      {
+       "id": "17728007216",
+       "label": null,
+       "price": 375
+      }
+     ]
+    },
+    {
+     "id": "square-tart-lemon",
+     "name": "Square Tart - Lemon",
+     "desc": "Square tart shell with lemon filling topped with sugar crumble.",
+     "img": "images/menu/square-tart-lemon.webp",
+     "variants": [
+      {
+       "id": "17728007217",
+       "label": null,
+       "price": 375
+      }
+     ]
+    },
+    {
+     "id": "square-tart-strawberry-rhubarb",
+     "name": "Square Tart - Strawberry/Rhubarb",
+     "desc": "Square tart shell with strawberry/rhubarb filling topped with sugar crumble.",
+     "img": "images/menu/square-tart-strawberry-rhubarb.webp",
+     "variants": [
+      {
+       "id": "17728007218",
+       "label": null,
+       "price": 375
+      }
+     ]
+    },
+    {
+     "id": "square-tart-raspberry-coconut",
+     "name": "Square Tart - Raspberry/Coconut",
+     "desc": "Square tart shell with raspberry filling topped with toasted coconut.",
+     "img": "images/menu/square-tart-raspberry-coconut.webp",
+     "variants": [
+      {
+       "id": "17728007219",
+       "label": null,
+       "price": 375
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "large-pastries",
+   "name": "Large Pastries",
+   "taxable": false,
+   "products": [
+    {
+     "id": "large-pastries-caramel-meringue",
+     "name": "Caramel Meringue",
+     "desc": "Almond Meringue discs with white and chocolate whipped cream, caramel and crushed almonds.",
+     "img": "images/menu/large-pastries-caramel-meringue.webp",
+     "variants": [
+      {
+       "id": "17728007222",
+       "label": null,
+       "price": 875
+      }
+     ]
+    },
+    {
+     "id": "cappuccino-meringue",
+     "name": "Cappuccino Meringue",
+     "desc": "Almond Meringue discs with cappuccino cream filling.",
+     "img": "images/menu/cappuccino-meringue.webp",
+     "variants": [
+      {
+       "id": "17728007223",
+       "label": null,
+       "price": 875
+      }
+     ]
+    },
+    {
+     "id": "lemon-meringue",
+     "name": "Lemon Meringue",
+     "desc": "Meringue discs with lemon cream filling.",
+     "img": "images/menu/lemon-meringue.webp",
+     "variants": [
+      {
+       "id": "17728007224",
+       "label": null,
+       "price": 875
+      }
+     ]
+    },
+    {
+     "id": "turnover-apple",
+     "name": "Turnover - Apple",
+     "desc": "Apple and cinnamon filling wrapped in a flaky pastry.",
+     "img": "images/menu/turnover-apple.webp",
+     "variants": [
+      {
+       "id": "17728007225",
+       "label": null,
+       "price": 315
+      }
+     ]
+    },
+    {
+     "id": "turnover-cherry",
+     "name": "Turnover - Cherry",
+     "desc": "Cherry filling wrapped in a flaky pastry.",
+     "img": "images/menu/turnover-cherry.webp",
+     "variants": [
+      {
+       "id": "17728007226",
+       "label": null,
+       "price": 315
+      }
+     ]
+    },
+    {
+     "id": "turnover-blueberry",
+     "name": "Turnover - Blueberry",
+     "desc": "Blueberry filling wrapped in a flaky pastry.",
+     "img": "images/menu/turnover-blueberry.webp",
+     "variants": [
+      {
+       "id": "17728007227",
+       "label": null,
+       "price": 315
+      }
+     ]
+    },
+    {
+     "id": "cupcakes",
+     "name": "Cupcakes",
+     "desc": "",
+     "img": "images/menu/cupcakes.webp",
+     "variants": [
+      {
+       "id": "17728007228",
+       "label": null,
+       "price": 465
+      }
+     ],
+     "choice": {
+      "label": "Flavour",
+      "options": [
+       "Vanilla",
+       "Chocolate"
+      ]
+     }
+    },
+    {
+     "id": "small-pecan-tarts",
+     "name": "Small Pecan Tarts",
+     "desc": "Flaky butter tart filled with pecans.",
+     "img": "images/menu/small-pecan-tarts.webp",
+     "variants": [
+      {
+       "id": "17728007229",
+       "label": null,
+       "price": 435
+      }
+     ]
+    },
+    {
+     "id": "mixed-trail-butter-tarts",
+     "name": "Mixed Trail Butter Tarts",
+     "desc": "Small butter tart filled with mixed trail.",
+     "img": "images/menu/mixed-trail-butter-tarts.webp",
+     "variants": [
+      {
+       "id": "17728007230",
+       "label": null,
+       "price": 435
+      }
+     ]
+    },
+    {
+     "id": "nutella-butter-tarts",
+     "name": "Nutella Butter Tarts",
+     "desc": "Small chocolate butter tart topped with Nutella.",
+     "img": "images/menu/nutella-butter-tarts.webp",
+     "variants": [
+      {
+       "id": "17728007231",
+       "label": null,
+       "price": 435
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zeppole",
+   "name": "Zeppole",
+   "taxable": false,
+   "products": [
+    {
+     "id": "zeppole-with-vanilla",
+     "name": "Zeppole with Vanilla",
+     "desc": "Choux Pastry filled with custard cream and amarena cherry.",
+     "img": "images/menu/zeppole-with-vanilla.webp",
+     "variants": [
+      {
+       "id": "17728007234",
+       "label": "Small",
+       "price": 465
+      },
+      {
+       "id": "17728007233",
+       "label": "Medium",
+       "price": 550
+      },
+      {
+       "id": "17728007232",
+       "label": "Large",
+       "price": 600
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "zeppole-with-ricotta",
+     "name": "Zeppole with Ricotta",
+     "desc": "Choux Pastry filled with sweet ricotta cheese (with chocolate chips & candied orange peel) and amarena cherry.",
+     "img": "images/menu/zeppole-with-ricotta.webp",
+     "variants": [
+      {
+       "id": "17728007237",
+       "label": "Small",
+       "price": 550
+      },
+      {
+       "id": "17728007236",
+       "label": "Medium",
+       "price": 660
+      },
+      {
+       "id": "17728007235",
+       "label": "Large",
+       "price": 715
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "macarons",
+   "name": "Macarons",
+   "taxable": false,
+   "products": [
+    {
+     "id": "macarons",
+     "name": "Macarons",
+     "desc": "Available in strawberry, pistachio, lemon, mango/passion fruit, red velvet, hazelnut, salted caramel and birthday cake.",
+     "img": "images/menu/macarons.webp",
+     "variants": [
+      {
+       "id": "17728007238",
+       "label": null,
+       "price": 335
+      }
+     ],
+     "choice": {
+      "label": "Flavour",
+      "options": [
+       "Strawberry",
+       "Pistachio",
+       "Lemon",
+       "Mango/Passion Fruit",
+       "Red Velvet",
+       "Hazelnut",
+       "Salted Caramel",
+       "Birthday Cake"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "gourmet-cookies",
+   "name": "Gourmet Cookies",
+   "taxable": false,
+   "products": [
+    {
+     "id": "chocolate-chip-cookie",
+     "name": "Chocolate Chip Cookie",
+     "desc": "Gourmet cookie with chocolate chunks.",
+     "img": "images/menu/chocolate-chip-cookie.webp",
+     "variants": [
+      {
+       "id": "17728007239",
+       "label": null,
+       "price": 275
+      }
+     ]
+    },
+    {
+     "id": "oatmeal-cookie",
+     "name": "Oatmeal Cookie",
+     "desc": "Gourmet oatmeal cookie with raisins.",
+     "img": "images/menu/oatmeal-cookie.webp",
+     "variants": [
+      {
+       "id": "17728007240",
+       "label": null,
+       "price": 275
+      }
+     ]
+    },
+    {
+     "id": "s-mores-cookie",
+     "name": "S'mores Cookie",
+     "desc": "Gourmet chocolate cookie with marshmallow, chocolate chips and Graham chunks.",
+     "img": "images/menu/s-mores-cookie.webp",
+     "variants": [
+      {
+       "id": "17728007242",
+       "label": null,
+       "price": 550
+      }
+     ],
+     "popular": true
+    }
+   ]
+  },
+  {
+   "id": "keto-cookies",
+   "name": "Keto Cookies",
+   "taxable": false,
+   "products": [
+    {
+     "id": "keto-peanut-butter-cookie",
+     "name": "Keto Peanut Butter Cookie",
+     "desc": "Gluten & sugar free peanut butter cookie designed for a keto diet.",
+     "img": "images/menu/keto-peanut-butter-cookie.webp",
+     "variants": [
+      {
+       "id": "17728007243",
+       "label": null,
+       "price": 275
+      }
+     ]
+    },
+    {
+     "id": "keto-chocolate-chip-slice",
+     "name": "Keto Chocolate Chip Slice",
+     "desc": "Gluten & sugar free chocolate chip cookie slice designed for a keto diet (contains nuts).",
+     "img": "images/menu/keto-chocolate-chip-slice.webp",
+     "variants": [
+      {
+       "id": "17728007244",
+       "label": null,
+       "price": 545
+      }
+     ]
+    },
+    {
+     "id": "keto-cream-cheese-slice",
+     "name": "Keto Cream Cheese Slice",
+     "desc": "Gluten & sugar free cookie slice designed for a keto diet (contains nuts).",
+     "img": "images/menu/keto-cream-cheese-slice.webp",
+     "variants": [
+      {
+       "id": "17728007246",
+       "label": null,
+       "price": 545
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "almond-and-shortbread-cookies-in-a-box",
+   "name": "Almond & Shortbread Cookies (In a Box)",
+   "taxable": false,
+   "products": [
+    {
+     "id": "almond-cookies-100-g-6-7-pcs",
+     "name": "Almond Cookies 100 G (6-7 Pcs)",
+     "desc": "Pasta di mandorla (almond paste) and amaretti cookies.",
+     "img": "images/menu/almond-cookies-100-g-6-7-pcs.webp",
+     "variants": [
+      {
+       "id": "17728007247",
+       "label": null,
+       "price": 795
+      }
+     ],
+     "popular": true
+    },
+    {
+     "id": "shortbread-cookies-100-g-6-7-pcs",
+     "name": "Shortbread Cookies 100 G (6-7 Pcs)",
+     "desc": "Variety of shortbread cookies.",
+     "img": "images/menu/shortbread-cookies-100-g-6-7-pcs.webp",
+     "variants": [
+      {
+       "id": "17728007248",
+       "label": null,
+       "price": 635
+      }
+     ]
+    },
+    {
+     "id": "mix-100-g-6-7-pcs",
+     "name": "Mix 100 G (6-7 Pcs)",
+     "desc": "Combination of almond and shortbread cookies.",
+     "img": "images/menu/mix-100-g-6-7-pcs.webp",
+     "variants": [
+      {
+       "id": "17728007249",
+       "label": null,
+       "price": 715
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "croissants",
+   "name": "Croissants",
+   "taxable": false,
+   "products": [
+    {
+     "id": "plain-croissant",
+     "name": "Plain Croissant",
+     "desc": "Freshly baked flaky plain butter croissant.",
+     "img": "images/menu/plain-croissant.webp",
+     "variants": [
+      {
+       "id": "17728007250",
+       "label": null,
+       "price": 330
+      }
+     ]
+    },
+    {
+     "id": "chocolate-croissant",
+     "name": "Chocolate Croissant",
+     "desc": "Freshly baked flaky chocolate filled croissant.",
+     "img": "images/menu/chocolate-croissant.webp",
+     "variants": [
+      {
+       "id": "17728007251",
+       "label": null,
+       "price": 330
+      }
+     ]
+    },
+    {
+     "id": "chocolate-hazelnut-croissant",
+     "name": "Chocolate Hazelnut Croissant",
+     "desc": "Freshly baked flaky chocolate hazelnut croissant topped with chocolate bits.",
+     "img": "images/menu/chocolate-hazelnut-croissant.webp",
+     "variants": [
+      {
+       "id": "17728007252",
+       "label": null,
+       "price": 495
+      }
+     ]
+    },
+    {
+     "id": "almond-croissant",
+     "name": "Almond Croissant",
+     "desc": "Freshly baked flaky almond croissant topped with sliced almonds.",
+     "img": "images/menu/almond-croissant.webp",
+     "variants": [
+      {
+       "id": "17728007253",
+       "label": null,
+       "price": 495
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beverages",
+   "name": "Beverages",
+   "taxable": true,
+   "products": [
+    {
+     "id": "bottled-water",
+     "name": "Bottled Water",
+     "desc": "Pure, still water in a sealed bottle.",
+     "img": null,
+     "variants": [
+      {
+       "id": "17728007254",
+       "label": null,
+       "price": 225
+      }
+     ]
+    },
+    {
+     "id": "coke-355-ml",
+     "name": "Coke (355 ml)",
+     "desc": "Experience the classic and refreshing taste of coke in a convenient 355 ml can, offering a timeless balance of sweetness and carbonation.",
+     "img": null,
+     "variants": [
+      {
+       "id": "44330338596",
+       "label": null,
+       "price": 225
+      }
+     ]
+    },
+    {
+     "id": "coke-zero-355-ml",
+     "name": "Coke Zero (355 ml)",
+     "desc": "Coke Zero: A 355 ml can of Coke Zero, offering classic cola taste with zero sugar, delivering a refreshing soda experience.",
+     "img": null,
+     "variants": [
+      {
+       "id": "44330338597",
+       "label": null,
+       "price": 225
+      }
+     ]
+    },
+    {
+     "id": "sprite-355-ml",
+     "name": "Sprite (355 ml)",
+     "desc": "A sparkling lemon-lime soda, typically known for its crisp and refreshing taste, offering a zesty citrus flavor that invigorates the senses.",
+     "img": null,
+     "variants": [
+      {
+       "id": "44330337276",
+       "label": null,
+       "price": 225
+      }
+     ]
+    },
+    {
+     "id": "ginger-ale-355-ml",
+     "name": "Ginger Ale (355 ml)",
+     "desc": "A carbonated soft drink with a ginger flavor, offering a classic and refreshing taste.",
+     "img": null,
+     "variants": [
+      {
+       "id": "44330337277",
+       "label": null,
+       "price": 225
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

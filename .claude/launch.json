@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lasem-wordpress",
+      "runtimeExecutable": "C:\\xampp\\php\\php.exe",
+      "runtimeArgs": ["-S", "localhost:8080", "-t", "site", "tools/router.php"],
+      "port": 8080
+    },
+    {
+      "name": "lasem-website",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["-S", "localhost:8081", "-t", "website", "website/router.php"],
+      "port": 8081
+    }
+  ]
+}

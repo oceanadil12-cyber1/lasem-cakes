@@ -1,0 +1,19 @@
+# WordPress core and local install — only our theme and tools are tracked.
+/site/*
+!/site/wp-content/
+/site/wp-content/*
+!/site/wp-content/themes/
+/site/wp-content/themes/*
+!/site/wp-content/themes/lasemcakes/
+
+# Downloads
+/tools/wordpress.zip
+/tools/wp-tmp/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Customer enquiries and orders (server only)
+/website/private/
