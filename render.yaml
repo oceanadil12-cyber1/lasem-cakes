@@ -1,0 +1,10 @@
+# Render Blueprint for La Sem Cakes v1.0 (branch render-v1.0 = tag v1.0 + these Render files).
+services:
+  - type: web
+    name: lasem-cakes-v1
+    runtime: docker
+    plan: free
+    branch: render-v1.0
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: false
