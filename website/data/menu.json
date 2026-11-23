@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24",
+ "updated": "2026-10-27",
  "currency": "CAD",
  "taxRate": 0.13,
  "hours": {
@@ -8,6 +8,16 @@
  },
  "leadMinutes": 30,
  "daysAhead": 14,
+ "delivery": {
+  "enabled": true,
+  "fee": 800,
+  "minOrder": 3000,
+  "freeOver": 7500,
+  "leadMinutes": 60,
+  "areas": "Mississauga and nearby",
+  "postalPrefixes": [],
+  "note": "We deliver within Mississauga and nearby. Someone needs to be home to receive the order."
+ },
  "categories": [
   {
    "id": "focaccia-sandwiches",
@@ -1519,5 +1529,8 @@
     }
    ]
   }
- ]
+ ],
+ "ordering": true,
+ "closedMessage": "",
+ "closedDates": []
 }

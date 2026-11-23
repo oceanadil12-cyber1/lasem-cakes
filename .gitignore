@@ -17,3 +17,9 @@ Thumbs.db
 
 # Customer enquiries and orders (server only)
 /website/private/
+
+# Upload packages built for the host
+/deploy/
+
+# Private links and sign-ins (this PC only; the repo is public)
+/ACCESS.md

@@ -1,5 +1,5 @@
 <?php
-// Landing pages for the three menu sections: /bakery/, /gallery/, /awards/.
+// Landing pages for two menu sections: /bakery/ and /gallery/ (/awards/ has its own page, awards.php).
 $pages = content()['pages'];
 $of = function ($type) use ($pages) {
     return array_filter($pages, function ($p) use ($type) { return $p['type'] === $type; });
@@ -10,7 +10,7 @@ $grid = function ($items, $prefix = '', $showCount = false) {
         echo '<a class="tile" href="' . e(url($prefix . $slug . '/')) . '">';
         if (!empty($p['images'])) echo img($p['images'][0]['src'], '', ['sizes' => '(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw']);
         echo '<span class="tile-label"><b>' . e($p['menu'] ?? $p['title']) . '</b>';
-        if ($showCount) echo '<i>' . count($p['images']) . ' photos</i>';
+        if ($showCount) echo '<i>' . (empty($p['images']) ? 'Photos on request' : count($p['images']) . ' photos') . '</i>';
         echo '</span></a>';
     }
     echo '</div>';
@@ -44,13 +44,5 @@ if ($section === 'bakery') {
 </section>
 <?php
     order_band('Like something you see?', 'Show us a photo from the gallery, or bring your own idea. We’ll help with size, flavour and design.');
-} else {
-    page_start(['title' => 'Awards', 'path' => 'awards/', 'description' => 'La Sem has been named Top Cake Boutique in Mississauga every year since 2015, plus Readers’ Choice and People’s Choice awards.']);
-    page_banner('Awards', 'Voted by our customers', 'Top Cake Boutique in Mississauga every year since 2015, with Readers’ Choice and People’s Choice awards along the way.');
-    ?>
-<section class="section">
-  <div class="wrap"><?php $grid($of('award'), 'awards/'); ?></div>
-</section>
-<?php
 }
 page_end();

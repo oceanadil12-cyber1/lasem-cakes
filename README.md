@@ -9,6 +9,11 @@ It runs on any cPanel host with PHP 7.4+.
 
 **Version:** 1.0 (tag `v1.0`, October 2026)
 
+> **Public preview links and sign-ins** are kept in `ACCESS.md` next to this file, on the developer's PC
+> only. That file is git-ignored on purpose, because this repository is public: never put links with
+> sign-ins, or any password, in this README. The current version and v1.0 each have their own
+> temporary Cloudflare link (v1.0 runs from a separate checkout, `../Lasem Cakes - v1.0`).
+
 ---
 
 ## Table of contents
@@ -20,13 +25,15 @@ It runs on any cPanel host with PHP 7.4+.
 5. [3D cake animations](#3d-cake-animations)
 6. [Online ordering (`/order/`)](#online-ordering-order)
 7. [Cake enquiry form](#cake-enquiry-form)
-8. [Admin panel, KDS and table ordering (planned)](#admin-panel-kds-and-table-ordering-planned)
-9. [Project structure](#project-structure)
-10. [Deploying to the live host](#deploying-to-the-live-host)
-11. [Security and privacy](#security-and-privacy)
-12. [The earlier WordPress rebuild (`site/`)](#the-earlier-wordpress-rebuild-site)
-13. [Before launch](#before-launch)
-14. [Version history](#version-history)
+8. [Admin panel (`/admin/`)](#admin-panel-admin)
+9. [Kitchen display (`/kds/`)](#kitchen-display-kds)
+10. [Table ordering (`/dine-in/`)](#table-ordering-dine-in)
+11. [Project structure](#project-structure)
+12. [Deploying to the live host](#deploying-to-the-live-host)
+13. [Security and privacy](#security-and-privacy)
+14. [The earlier WordPress rebuild (`site/`)](#the-earlier-wordpress-rebuild-site)
+15. [Before launch](#before-launch)
+16. [Version history](#version-history)
 
 ---
 
@@ -38,14 +45,14 @@ It runs on any cPanel host with PHP 7.4+.
 | --- | --- | --- | --- |
 | **Website** | <http://localhost:8081/> | <https://lasemcakes.ca/> | Built (v1.0) |
 | **Online ordering (pickup)** | <http://localhost:8081/order/> | <https://lasemcakes.ca/order/> | Built (v1.0) |
-| **Admin panel** | <http://localhost:8081/admin/> | <https://lasemcakes.ca/admin/> | Planned — next phase, not built yet |
-| **KDS (kitchen display)** | <http://localhost:8081/kds/> | <https://lasemcakes.ca/kds/> | Planned — not built yet |
-| **Table ordering (dine-in, QR code per table)** | <http://localhost:8081/dine-in/?table=1> | <https://lasemcakes.ca/dine-in/?table=1> | Planned — not built yet |
+| **Admin panel** | <http://localhost:8081/admin/> | <https://lasemcakes.ca/admin/> | Built (not yet in a release) |
+| **KDS (kitchen display)** | <http://localhost:8081/kds/> | <https://lasemcakes.ca/kds/> | Built (not yet in a release) |
+| **Table ordering (dine-in, QR code per table)** | <http://localhost:8081/dine-in/?t=TABLECODE> | <https://lasemcakes.ca/dine-in/?t=TABLECODE> | Built (not yet in a release); each table's link is in Admin → Tables & QR codes |
+| **"Now serving" board** | <http://localhost:8081/dine-in/board/> | <https://lasemcakes.ca/dine-in/board/> | Built (not yet in a release) |
 | Old WordPress rebuild (superseded) | <http://localhost:8080/> | — | Kept for reference |
 | Old WordPress admin (local only) | <http://localhost:8080/wp-admin/> | — | Kept for reference |
 
-The admin panel, KDS and table-ordering addresses are the ones reserved for them (the same layout as the
-Alibi Monkey Bar project). Until they are built, those addresses show the site's 404 page.
+Table links contain each table's secret code, so they are listed in the admin rather than here.
 
 `lasemcakes.ca` still serves the **old** WordPress site. The live column applies once this site is uploaded
 there (see [Deploying](#deploying-to-the-live-host)).
@@ -206,23 +213,156 @@ Settings at the top of `menu.json`:
 ## Cake enquiry form
 
 The contact page form posts to `website/api/contact.php`, which saves each enquiry to
-`website/private/messages/` and then emails info@lasemcakes.ca. Enquiries are saved even if the email fails.
+`website/private/messages/` and then emails the bakery (info@lasemcakes.ca, or the address set in the admin's
+Store settings). Enquiries are saved even if the email fails, and are listed in the admin under **Cake enquiries**.
 
 ---
 
-## Admin panel, KDS and table ordering (planned)
+## Admin panel (`/admin/`)
 
-These are **not built yet**. They follow the Alibi Monkey Bar system and will use these addresses:
+The team's back office, built like the Alibi Monkey Bar admin (same layout, dark theme in La Sem's cocoa and
+orange). No database: it reads and writes the same JSON files the website uses, so a change is live as soon
+as it is saved.
 
-| System | URL | What it will do |
-| --- | --- | --- |
-| Admin panel | `/admin/` | Password-protected. Orders, cake enquiries (`private/messages/`), menu and prices (`data/menu.json`), ordering hours and lead time, page text and photos (`data/*.json`), business details. |
-| KDS (kitchen display) | `/kds/` | Live screen for the kitchen/counter: new orders appear with a sound, staff mark them in progress → ready → picked up. |
-| Table ordering | `/dine-in/?table=N` | Guests scan the QR code on their table, order from the menu and send it straight to the KDS; can call a server. |
+| Section | What the team can do |
+| --- | --- |
+| **Dashboard** | Today's pickups with one-tap status buttons, orders to confirm, new enquiries, sales for the last 7 days, a 14-day sales chart, what's coming up, recent changes |
+| **Pickup orders** | Tabs for today, upcoming, to confirm, ready, picked up, cancelled, all; search; spreadsheet download. Each order: items, customer's note, phone/email links, status **New → Confirmed → Preparing → Ready → Picked up** (or Cancelled) with a timeline, **mark paid**, a private team note, other orders from the same customer, print |
+| **Prep list** | Everything to make for a day's pickups added up across orders (with writing-on-the-cake notes), then each order by pickup time. Printable |
+| **Cake enquiries** | Inbox from the contact form: New, Read, Replied, Booked, Archived; reply by email (pre-filled) or call; team note; delete; spreadsheet download |
+| **Menu & prices** | Every item on the order page: switch on/off, change prices, sold out (for today), "Most ordered". Per item: name, description, category, sizes and prices, a required choice (e.g. flavour), photo. Add and delete items. Categories: rename, reorder, HST on/off, hide |
+| **Page content** | Title, menu name, headline, page text (paragraphs and bullet points), Google description, photo captions, photo order, remove and upload photos, for all 40 cake, bakery, gallery, award and policy pages. Testimonials: edit, reorder, add, remove |
+| **Store settings** | Online ordering **on/off** with its message, first/last pickup time, notice needed, days ahead, **closed days**, HST rate; business details (name, phone, email, address, hours, Maps and Facebook links); where order/enquiry emails go; an **announcement bar** across the top of the site; the kitchen display passcode; **Google reviews** (API key, Place ID); change password |
+| **Activity log** | Sign-ins and every change, with time and IP |
 
-The website was built so these can be added without changing it: business details are in one place
-(`inc/site.php`), all content and menu data are JSON files in `data/`, and orders are JSON files in
-`private/orders/`.
+Live badges in the sidebar and the bell in the top bar refresh every 30 seconds (new orders, new enquiries,
+orders not confirmed after 10 minutes, pickups due within the hour that aren't ready, ready orders not
+collected).
+
+**First sign-in.** The first visit to `/admin/` shows a setup page that asks for a one-time code. The panel
+writes it to `website/private/setup-code.txt` on the server (read it over FTP or the host's file manager);
+then you choose the user name and password (10+ characters). The code file is deleted afterwards. To reset a
+forgotten password, delete `website/private/admin.json` on the server and set it up again.
+
+| File | What the admin changes in it |
+| --- | --- |
+| `private/orders/*.json` | Status, history, paid, team note (the items and prices are never changed) |
+| `private/messages/*.json` | Status, history, team note |
+| `data/menu.json` | Menu, prices, `hidden`, `soldOut`, `popular`, `choice`; `ordering`, `closedMessage`, `closedDates`, hours, lead time, days ahead, HST |
+| `data/pages.json`, `data/testimonials.json` | Page text and photos, testimonials |
+| `data/settings.json` | Business details, notification email, announcement (created on first save; overrides the defaults in `inc/site.php`) |
+| `images/menu/`, `images/uploads/admin/` | Uploaded photos (converted to WebP when the host's PHP has GD, otherwise kept as uploaded) |
+
+Every save keeps the previous copy of the data file in `private/backups/` (the newest 30 of each), and the
+files are written in the same layout as in git, so a change shows as a small diff.
+
+### Google reviews
+
+The home and testimonials pages show the bakery's **5-star Google reviews** in a wall that scrolls upward
+(two columns on computers, one on phones, pauses on hover), next to the overall rating and buttons to read
+all reviews or write one on the [Google Business Profile](https://maps.app.goo.gl/VnNGhAXHpFVgKws17).
+
+They come from Google's official **Places API (New)**, the way Google allows reviews to be shown on a website
+(reviewer name and photo, Google credited); reviews are never copied by hand. Setup, once:
+
+1. In [Google Cloud](https://console.cloud.google.com/), create a project, enable **Places API (New)** and
+   billing (the free monthly allowance easily covers two requests a day), then create an **API key**
+   restricted to that API.
+2. Admin → Store settings → **Google reviews**: paste the key and press **Save and refresh now**. The Place
+   ID is found automatically from the business name and address.
+
+The site asks Google again at most every 12 hours. Google returns up to 5 reviews per request, so each
+refresh adds any new 5-star review to the saved ones (newest 30 kept). Until a key is added, the section
+simply doesn't show. Files: `inc/reviews.php`, `private/google.json` (key, never committed),
+`private/google-reviews.json` (saved reviews).
+
+## Kitchen display (`/kds/`)
+
+A live screen for the bakery and the counter, like the Alibi KDS but made for a bakery's pickups, which are
+often booked hours or days ahead. Open it on a tablet or a TV browser at `/kds/`.
+
+- **Cards in pickup-time order**, each with the pickup time in large type, "in 25 min" / "12 min late", the
+  customer, every item with its size or flavour, writing-on-the-cake notes, the customer's note, the team
+  note, and what to collect at the counter (or "Paid").
+- **Colour tells what to do:** grey = later today, amber **Start now** (pickup is within the "start orders"
+  time, 30 minutes by default), orange = preparing (with a timer), red = late, green = ready.
+- **One tap moves an order:** Start → Ready → Picked up (picking up also marks it paid). "Ready" can be
+  tapped straight away for items that only need packing; Back/Undo fixes a mistake.
+- **New orders chime** (three-note bell) and glow blue, with a pop-up message. Tap the screen once after
+  opening it so the browser allows sound.
+- Tabs: **Today** (including late orders), **Tomorrow**, **Ready for pickup**, **Picked up today**. Counters
+  at the top: to start, preparing, ready, late.
+- Refreshes every 5 seconds, shows "Reconnecting…" if the connection drops, keeps the screen awake, and has a
+  full-screen button. Times are always Mississauga time.
+
+**Sign-in:** the kitchen passcode set in the admin (Store settings → Kitchen display) — it opens only the
+kitchen display, not the admin — or the admin user name and password. Changing the passcode or the admin
+password signs open screens out. Settings (start time, chime) can be changed on the screen or in the admin.
+
+The KDS and the admin use the same order files, so a tap on the KDS shows in the admin and the other way
+round. The order statuses are **New → Confirmed → Preparing → Ready → Picked up** (or Cancelled).
+
+| File | What it is |
+| --- | --- |
+| `kds/index.php` | Sign-in and the screen |
+| `kds/api.php` | JSON for the screen: orders, moves, settings (kitchen session + CSRF token) |
+| `kds/inc/kds.php` | Shared: session, passcode check (blocked from the web) |
+| `kds/assets/kds.js`, `kds.css` | The screen's script and styles |
+| `private/kds.json` | Passcode hash, start-orders minutes, chime on/off |
+
+## Table ordering (`/dine-in/`)
+
+Guests order from their table, on their own phone or on a tablet at the table, and get a **priority
+number** they can follow until the order is ready. Orders go straight to the kitchen display.
+
+**How guests use it**
+
+1. **Scan** the QR code on the table with the phone camera (no app), or tap the table's tablet.
+2. Enter a first name (optional), browse the menu (search, categories, photos), choose size/flavour,
+   add a special request, and review the order with HST.
+3. **Place order** → a big **priority number** (1, 2, 3… starting again each day) and a live status:
+   Received → Preparing → Ready → Enjoy. The page updates by itself and the phone buzzes and chimes
+   when it's ready. A phone remembers the day's orders, so the guest can order more and still see them.
+4. On a **table tablet** the confirmation also shows a QR code to follow the order on a phone, then the
+   tablet resets for the next guest after 60 seconds (or "Done"); an abandoned order resets after 3 minutes.
+5. **Call staff** button: shows as a red banner on the kitchen display until someone taps "On my way".
+
+**For the team**
+
+- **Kitchen display:** table orders appear as cards with the number (#12), the table and "ordered 3 min
+  ago", with a chime; Start → Ready → Served (or Collected). They turn red after the "late" time
+  (15 minutes by default). Tab: **Table orders**.
+- **"Now serving" board** at `/dine-in/board/` for a TV at the counter: numbers being prepared and numbers
+  ready (no names), with a chime when a number turns ready.
+- **Admin → Tables & QR codes:** add tables (Table 1, Table 2… or named, e.g. Patio), switch a table off,
+  rename, **replace a table's QR code**, remove; printable QR cards (two per page, with the logo); each
+  table's phone and tablet links; table-ordering settings: on/off, "we bring it to the table" or "collect
+  at the counter", HST on every table order (food eaten in is normally taxable in Ontario: confirm with
+  the accountant), the payment note, the "late" time.
+- **Admin → Orders:** table orders are listed with their table and number (tab "Table orders"), marked
+  Served instead of Picked up, and included in sales and the spreadsheet. **Menu & prices → Categories:**
+  untick "Table ordering" for categories that can't be ordered at a table.
+- Payment stays **at the counter**; nothing is charged online.
+
+**Security:** each table's QR link carries a random 8-character code (`/dine-in/?t=CODE`), so nobody can
+order for a table by guessing; a replaced code stops working at once. Table ordering only works during
+store hours, not on closed days, and only when switched on. Prices are recalculated on the server, sold-out
+and hidden items are refused, and there are limits on orders and staff calls per device. Tracking links
+carry a random key, so one guest can't see another's order. The board shows numbers only.
+
+| File | What it is |
+| --- | --- |
+| `dine-in/index.php` | The table page, `/dine-in/track/`, `/dine-in/board/`, `/dine-in/qr/` (tracking QR codes) |
+| `dine-in/assets/dine-in.js`, `dine-in.css` | The guest app and the board |
+| `api/dine-in.php` | Place an order, track orders, call staff, board numbers |
+| `inc/dinein.php` | Shared: tables, settings, opening hours, pricing, calls |
+| `inc/qr.php` | QR code generator (SVG), written for this project, no outside library or service |
+| `admin/inc/pages/tables.php` | Admin: Tables & QR codes |
+| `private/tables.json` | The tables and their codes |
+| `private/calls/` | Staff calls waiting for an answer |
+
+**Before launch:** print the QR cards from the **live** site's admin (codes printed from a local copy point
+to your computer). Scan one with a phone to check it opens the table's page.
 
 ---
 
@@ -238,13 +378,20 @@ The website was built so these can be added without changing it: business detail
 ├── website/                      THE NEW WEBSITE (this is what gets deployed) — see website/README.md
 │   ├── index.php                 Front controller: URL → template, old-URL redirects, sitemap
 │   ├── router.php                Local preview only (PHP built-in server)
-│   ├── .htaccess                 Apache rules: HTTPS, trailing slash, block inc/data/private
+│   ├── .htaccess                 Apache rules: HTTPS, trailing slash, block inc/data/private, admin/inc and kds/inc
 │   ├── robots.txt
+│   ├── admin/                    Admin panel: index.php, inc/ (auth, storage, layout, pages/), assets/
+│   ├── kds/                      Kitchen display: index.php, api.php, inc/, assets/
+│   ├── dine-in/                  Table ordering: index.php (table page, tracking, board, QR), assets/
 │   ├── api/
 │   │   ├── order.php             Places a pickup order
+│   │   ├── dine-in.php           Table orders: place, track, call staff, board
 │   │   └── contact.php           Cake enquiry form
 │   ├── inc/
 │   │   ├── site.php              Business details + helpers
+│   │   ├── ordering.php          Ordering on/off, closed days, hidden items, order numbers (shared)
+│   │   ├── dinein.php            Table ordering: tables, settings, pricing, staff calls
+│   │   ├── qr.php                QR code generator (SVG)
 │   │   ├── layout.php            Header (awning, mega menu), footer, shared sections
 │   │   ├── scene-hero.php        3D hero + per-page colour themes
 │   │   └── pages/*.php           Page templates
@@ -260,8 +407,9 @@ The website was built so these can be added without changing it: business detail
 │   │   ├── scenes/*.js           One animation per page
 │   │   └── vendor/               three.js r128
 │   ├── images/                   logo, uploads/ (WebP + manifest.json), menu/, story/
+│   ├── fonts/                    Inter (admin panel)
 │   ├── videos/                   Short product videos (mp4)
-│   └── private/                  Orders and enquiries — created on the server, NOT in git
+│   └── private/                  Orders, enquiries, admin sign-in, backups — created on the server, NOT in git
 ├── site/                         Earlier WordPress rebuild (only the theme is in git)
 │   └── wp-content/themes/lasemcakes/   — see its README.md
 └── tools/                        WordPress build tools (seed script, router, WP-CLI)
@@ -274,9 +422,15 @@ The website was built so these can be added without changing it: business detail
 1. Upload the **contents** of `website/` to `public_html` (or a sub-folder — both work), including `.htaccess`.
 2. Do **not** upload a local `private/` folder or `website/README.md`; the server creates its own. Make sure PHP can write to it.
 3. Set up a mailbox or SMTP on the host so order and enquiry emails reach info@lasemcakes.ca.
-4. Check <https://lasemcakes.ca/>, place a test order at <https://lasemcakes.ca/order/>, and submit
+4. Open <https://lasemcakes.ca/admin/> and create the admin sign-in with the code in `private/setup-code.txt`.
+5. Check <https://lasemcakes.ca/>, place a test order at <https://lasemcakes.ca/order/>, and submit
    <https://lasemcakes.ca/contact-us/>.
-5. Submit <https://lasemcakes.ca/sitemap.xml> in Google Search Console.
+6. Submit <https://lasemcakes.ca/sitemap.xml> in Google Search Console.
+
+**After launch the live server owns the content.** The bakery edits `data/*.json` and uploads photos through
+the admin, so when you upload a new version of the site, do **not** overwrite `data/`, `images/menu/` or
+`images/uploads/` (including `manifest.json`) with your local copies. Download them from the server first and
+commit them, or upload only the code files that changed. PHP must be able to write to `private/`, `data/` and `images/`.
 
 Requirements: PHP 7.4+, Apache with `mod_rewrite` (cPanel default). No database.
 
@@ -286,8 +440,18 @@ Requirements: PHP 7.4+, Apache with `mod_rewrite` (cPanel default). No database.
 
 - `website/data/`, `website/inc/` and `website/private/` are blocked from the web (`.htaccess`, and
   `router.php` locally).
-- Order prices are always recalculated on the server from `menu.json`.
-- Customer orders and enquiries (`website/private/`) are **never committed** (`.gitignore`).
+- Order prices are always recalculated on the server from `menu.json`; hidden or sold-out items, closed days
+  and "ordering off" are enforced there too, not just on the page.
+- Admin panel: user name + password (stored only as a hash), a one-time setup code for the first sign-in,
+  8 wrong passwords = 15-minute lock, sessions kept in `private/sessions` and ended after 12 idle hours,
+  changing the password signs out other devices, CSRF token on every form, strict security headers
+  (no outside scripts, no framing, not indexed), activity log. `admin/inc/` is blocked from the web.
+- Kitchen display: its own passcode (hash only) that opens nothing else, the same guess limit, its own
+  session cookie (path `/kds/`), a CSRF token on every request, and `kds/inc/` blocked from the web.
+  `robots.txt` asks search engines to stay out of `/admin/` and `/kds/`.
+- Table ordering: secret code per table in its QR link, store hours only, server-side prices, per-device
+  limits, random tracking keys; see [Table ordering](#table-ordering-dine-in).
+- Customer orders and enquiries, the admin sign-in and backups (`website/private/`) are **never committed** (`.gitignore`).
 - No passwords, API keys or payment keys are in this repository. WordPress core, `wp-config.php`,
   uploads and logs are excluded.
 
@@ -337,5 +501,4 @@ php tools/wp-cli.phar --path=site --user=admin eval-file tools/seed-site.php
 | Version | Date | What changed |
 | --- | --- | --- |
 | **1.0** | 2026-10-26 | First release: full website from the staging content, 3D animated heroes on the home and all 20 cake/bakery pages (8 modelled on reference photos), online pickup ordering at `/order/`, cake enquiry form, old-URL redirects, sitemap. |
-
-Next: admin panel (`/admin/`), then KDS (`/kds/`) and table ordering (`/dine-in/`).
+| *next* | *not released* | Admin panel at `/admin/` (orders, prep list, enquiries, menu & prices, page content, store settings, activity log); ordering on/off, closed days, sold-out and hidden items on the order page; announcement bar; notification email setting. Kitchen display at `/kds/` (pickup-time cards, start/ready/picked-up, new-order chime, kitchen passcode); new "Preparing" order status. Table ordering at `/dine-in/` (QR code per table, phones and table tablets, priority numbers with live tracking, call staff, "Now serving" board, Tables & QR codes in the admin, QR codes generated in-house). |

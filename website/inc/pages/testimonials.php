@@ -18,4 +18,5 @@ page_banner('Your opinion matters!', 'Testimonials', 'Thank-you notes from the f
     </div>
   </div>
 </section>
+<?php google_reviews_section('Five stars on Google'); ?>
 <?php order_band('Planning your own celebration?'); page_end();

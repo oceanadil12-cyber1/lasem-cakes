@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kitchen card design</title>
+<style>
+  :root { --bg:#120c09; --surface:#1e140f; --surface-2:#2a1c15; --line:#3a2a20; --text:#f6eee6; --dim:#c4b3a5; --muted:#9a8576; --orange:#e2783a; --orange-light:#f4a66d; --blue:#5aa7f0; --amber:#f4c055; --red:#f26d6d; --green:#5fcf86; --radius:16px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px 32px 32px; background: var(--bg); color: var(--text); font-family: "Segoe UI", Inter, system-ui, sans-serif; width: 1480px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  p.lead { margin: 0 0 22px; color: var(--dim); font-size: 14px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: start; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding: 16px 18px 12px; }
+  .when b { display: block; font-size: 34px; line-height: 1; letter-spacing: -.5px; }
+  .when span { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+  .type { padding: 6px 12px; border-radius: 999px; border: 1.5px solid; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+  .type.pickup { color: var(--orange-light); border-color: var(--orange); }
+  .type.delivery { color: var(--amber); border-color: var(--amber); }
+  .type.dinein { color: var(--blue); border-color: var(--blue); }
+  .type.walkin { color: var(--green); border-color: var(--green); }
+  .who { padding: 0 18px 6px; font-size: 19px; font-weight: 700; }
+  .sub { display: flex; justify-content: space-between; padding: 0 18px 12px; font-size: 13px; color: var(--muted); }
+  .sub b { color: var(--dim); font-weight: 600; }
+  .items { margin: 0; padding: 6px 0 0; list-style: none; border-top: 1px solid var(--line); }
+  .items li { display: grid; grid-template-columns: 54px 1fr; gap: 10px; align-items: start; padding: 11px 18px; border-bottom: 1px solid var(--line); }
+  .q { display: inline-grid; place-items: center; min-width: 44px; height: 34px; padding: 0 8px; border-radius: 10px; background: var(--surface-2); font-size: 18px; font-weight: 800; }
+  .items b { display: block; font-size: 18px; line-height: 1.25; }
+  .items em { display: block; margin-top: 2px; font-style: normal; font-size: 14px; color: var(--dim); }
+  .items .note { display: inline-block; margin-top: 6px; padding: 4px 9px; border-radius: 8px; background: rgba(244,192,85,.14); border-left: 3px solid var(--amber); color: var(--text); font-size: 13.5px; font-weight: 600; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 18px 16px; }
+  .stage { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .stage.new { color: var(--blue); }
+  .stage.prep { color: var(--amber); }
+  .stage.ready { color: var(--green); }
+  .btns { display: flex; gap: 8px; }
+  .btn { padding: 12px 18px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font-size: 15px; font-weight: 800; }
+  .btn.go { background: var(--orange); border-color: var(--orange); color: #1a120c; }
+  .btn.ready { background: var(--green); border-color: var(--green); color: #0f2a18; }
+  .btn.dim { color: var(--dim); }
+  .legend { margin-top: 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 12px; color: var(--dim); font-size: 13.5px; line-height: 1.6; }
+  .legend b { color: var(--text); }
+</style>
+</head>
+<body>
+<h1>Kitchen display, simplified card</h1>
+<p class="lead">Each card shows only what the kitchen needs: when the order came in, what kind of order it is, and the items to make. Nothing else.</p>
+
+<div class="row">
+  <!-- Pickup -->
+  <article class="card">
+    <div class="head">
+      <div class="when"><b>7:44 PM</b><span>Received</span></div>
+      <span class="type pickup">Pickup</span>
+    </div>
+    <div class="who">Maria Rossi</div>
+    <div class="sub"><span>Order <b>LS-261026-008</b></span><span>3 items</span></div>
+    <ul class="items">
+      <li><span class="q">1×</span><div><b>Cheesecake</b><em>8-inch · Strawberry</em><span class="note">Happy Birthday Maria</span></div></li>
+      <li><span class="q">6×</span><div><b>Cannoli</b><em>Ricotta</em></div></li>
+      <li><span class="q">2×</span><div><b>Focaccia sandwich</b><em>The Italian Figgy Piggy</em></div></li>
+    </ul>
+    <div class="foot"><span class="stage new">New</span><div class="btns"><button class="btn dim">Ready</button><button class="btn go">Start</button></div></div>
+  </article>
+
+  <!-- Delivery -->
+  <article class="card">
+    <div class="head">
+      <div class="when"><b>7:52 PM</b><span>Received</span></div>
+      <span class="type delivery">Delivery</span>
+    </div>
+    <div class="who">Test Customer</div>
+    <div class="sub"><span>Order <b>LS-261026-009</b></span><span>2 items</span></div>
+    <ul class="items">
+      <li><span class="q">12×</span><div><b>S’mores Cookie</b></div></li>
+      <li><span class="q">1×</span><div><b>Tiramisu</b><em>Large</em><span class="note">No cocoa on top</span></div></li>
+    </ul>
+    <div class="foot"><span class="stage prep">Preparing</span><div class="btns"><button class="btn ready">Ready</button></div></div>
+  </article>
+
+  <!-- Dine-in -->
+  <article class="card">
+    <div class="head">
+      <div class="when"><b>8:03 PM</b><span>Received</span></div>
+      <span class="type dinein">Dine-in · Table 5</span>
+    </div>
+    <div class="who">Antonio</div>
+    <div class="sub"><span>Order <b>#27</b></span><span>3 items</span></div>
+    <ul class="items">
+      <li><span class="q">2×</span><div><b>Cappuccino</b></div></li>
+      <li><span class="q">1×</span><div><b>Sfogliatella</b></div></li>
+      <li><span class="q">1×</span><div><b>Zeppole</b><em>Custard</em></div></li>
+    </ul>
+    <div class="foot"><span class="stage new">New</span><div class="btns"><button class="btn go">Start</button></div></div>
+  </article>
+
+  <!-- Walk-in -->
+  <article class="card">
+    <div class="head">
+      <div class="when"><b>8:10 PM</b><span>Received</span></div>
+      <span class="type walkin">Walk-in</span>
+    </div>
+    <div class="who">Sam Lee</div>
+    <div class="sub"><span>Order <b>LS-261026-010</b></span><span>1 item</span></div>
+    <ul class="items">
+      <li><span class="q">1×</span><div><b>Black Forest cake</b><em>10-inch</em><span class="note">Writing: Congratulations Sam</span></div></li>
+    </ul>
+    <div class="foot"><span class="stage ready">Ready</span><div class="btns"><button class="btn dim">Back</button><button class="btn go">Done</button></div></div>
+  </article>
+</div>
+
+<div class="legend">
+  <b>What stays:</b> time received, order type (with the table for dine-in), customer name, order number, item count, each item with its size or flavour and any writing or note, and the Start / Ready / Done buttons.<br>
+  <b>What goes:</b> phone number, delivery address, customer and team notes about payment, amounts to collect, “picked up at” times, and the countdown text.<br>
+  <b>Note:</b> walk-in orders (taken at the counter) don’t exist in the system yet; the card shows how they would look if a “new walk-in order” button is added to the admin or kitchen display.
+</div>
+</body>
+</html>

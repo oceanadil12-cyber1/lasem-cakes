@@ -4,14 +4,40 @@
     {
       "name": "lasem-wordpress",
       "runtimeExecutable": "C:\\xampp\\php\\php.exe",
-      "runtimeArgs": ["-S", "localhost:8080", "-t", "site", "tools/router.php"],
+      "runtimeArgs": [
+        "-S",
+        "localhost:8080",
+        "-t",
+        "site",
+        "tools/router.php"
+      ],
       "port": 8080
     },
     {
       "name": "lasem-website",
       "runtimeExecutable": "php",
-      "runtimeArgs": ["-S", "localhost:8081", "-t", "website", "website/router.php"],
+      "runtimeArgs": [
+        "-d",
+        "max_input_vars=5000",
+        "-S",
+        "localhost:8081",
+        "-t",
+        "website",
+        "website/router.php"
+      ],
       "port": 8081
+    },
+    {
+      "name": "lasem-website-v1",
+      "runtimeExecutable": "php",
+      "runtimeArgs": [
+        "-S",
+        "localhost:8082",
+        "-t",
+        "D:/Adil/Claude Directory - Git/Lasem Cakes - v1.0/website",
+        "D:/Adil/Claude Directory - Git/Lasem Cakes - v1.0/website/router.php"
+      ],
+      "port": 8082
     }
   ]
 }

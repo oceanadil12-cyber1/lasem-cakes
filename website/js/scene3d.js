@@ -711,12 +711,24 @@
       if (!w || !h) return;
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
-      // Wide screens: the subject sits on the right, next to the headline.
+      // Wide screens: the subject sits on the right, next to the headline, and fits in the band between
+      // the fixed header and the player controls, so tall cakes never run under the menu on short screens.
       var wide = window.matchMedia('(min-width: 900px)').matches;
-      if (wide) camera.setViewOffset(w, h, -w * 0.21, h * 0.05, w, h);
-      else camera.setViewOffset(w, h, 0, 0, w, h);
       var tanHalf = Math.tan(T.MathUtils.degToRad(camera.fov / 2));
-      var byHeight = cfg.h / (2 * tanHalf * (wide ? 0.86 : 0.8));
+      var frac = 0.8, shift = 0;
+      if (wide) {
+        var header = document.querySelector('.site-header');
+        var player = hero.querySelector('.player');
+        var top = (header ? header.offsetHeight : 0) + 20;
+        var bottom = player ? Math.min(h, player.offsetTop) - 12 : h - 24;
+        if (bottom - top < h * 0.45) { top = h * 0.12; bottom = h * 0.88; }
+        frac = (bottom - top) / h * 0.94;
+        shift = h / 2 - (top + bottom) / 2 + h * 0.04;
+        camera.setViewOffset(w, h, -w * 0.21, shift, w, h);
+      } else {
+        camera.setViewOffset(w, h, 0, 0, w, h);
+      }
+      var byHeight = cfg.h / (2 * tanHalf * frac);
       var byWidth = cfg.w / (2 * tanHalf * camera.aspect * (wide ? 0.5 : 0.92));
       camera.userData.dist = Math.max(byHeight, byWidth) / 5.2;
       camera.updateProjectionMatrix();

@@ -8,13 +8,14 @@ page_start([
     'scripts'     => ['js/vendor/three.min.js', 'js/scene3d.js', 'js/scenes/signature.js'],
 ]);
 
+// The occasion explorer: page, photo, name, one line about it, photo description.
 $occasions = [
-    ['wedding-cakes', '2026/10/wedding-cakes.jpg', 'Wedding cakes', 'Tiered, sugar flowers, fondant or cream', 'Five-tier white wedding cake with flowers'],
-    ['novelty-cakes', '2026/10/Birthday-Novelty-cake-2.jpg', 'Birthday & novelty', 'Any theme, any shape', 'Number cake decorated with chocolates and macarons'],
-    ['baptism-cakes', '2026/10/Baptism-1.avif', 'Baptism, Communion & Confirmation', '', 'Baptism cake with a gold cross'],
-    ['anniversary-cakes', '2026/10/Anniversary-1.jpg', 'Engagement & anniversary', '', 'Anniversary cake with white flowers'],
-    ['baby-shower-cakes', '2026/10/Baby-shower.jpg', 'Baby shower', '', 'Pink baby carriage cake'],
-    ['graduation-cakes', '2026/10/Graduation.jpg', 'Graduation', '', 'Graduation cake with a cap on top'],
+    ['wedding-cakes', '2026/10/wedding-cakes.jpg', 'Wedding cakes', 'Tiered showpieces with hand-made sugar flowers, in fondant or fresh cream.', 'Six-tier white wedding cake with black and blush sugar flowers'],
+    ['novelty-cakes', '2026/08/65th-BD-cake.jpg', 'Birthdays & novelty', 'Any theme, any age, any shape, from milestone birthdays to favourite heroes.', 'Black and gold two-tier 65th birthday cake'],
+    ['bridal-shower-cakes', '2026/10/Bridal-shower.jpg', 'Bridal showers', 'Painted porcelain patterns, sugar peonies and colours to match the day.', 'Three-tier blue and white porcelain-pattern cake with red sugar flowers'],
+    ['anniversary-cakes', '2026/10/Anniversary-1.jpg', 'Engagements & anniversaries', 'Soft, romantic designs dressed with fresh flowers.', 'Two-tier anniversary cake covered in white daisies'],
+    ['baptism-cakes', '2026/10/Baptism-2-1.jpg', 'Baptism, Communion & Confirmation', 'Graceful cakes for faith milestones, finished with crosses, pearls and flowers.', 'White baptism cake with blue flowers and a gold cross'],
+    ['graduation-cakes', '2026/10/Graduation.jpg', 'Graduation', 'Celebrate the cap-toss moment with clean lines, pearls and gold.', 'White graduation cake with pearls, a gold seam and a graduation cap'],
 ];
 
 $collection = [
@@ -26,6 +27,18 @@ $collection = [
     ['foccacia-pizza-lasagna-other-buns', '2026/09/lasme-img-06-1.jpg', 'Sourdough bread', 'Crispy crust, soft airy centre and that irresistible homemade taste. Baked fresh from our homemade starter.'],
     ['focaccia-sandwiches', '2026/10/Focaccia-sandwitch.jpg', 'Focaccia sandwiches', 'Our focaccia sandwiches bring together freshly baked focaccia bread and quality savoury fillings. A popular option for a satisfying lunch or a quick snack.'],
 ];
+
+// The moving ribbon under the stats.
+$specialties = ['Cannoli', 'Wedding cakes', 'Zeppole', 'Gelato', 'Pane di Altamura', 'Macarons', 'Birthday cakes', 'Sfogliatelle', 'Cupcakes', 'Tiramisu', 'Focaccia', 'Amaretti'];
+
+// The photo reel: the first photos of each gallery, alternating so the reel mixes cakes and pastries.
+$reel = [];
+foreach (content()['pages'] as $slug => $p) {
+    if ($p['type'] !== 'gallery' || $slug === 'bachelor-bachelorette') continue; // keep the home page family-friendly
+    foreach (array_slice($p['images'], 0, 3) as $i => $im) $reel[$i][] = [$slug, $im['src'], $p['menu'] ?? $p['title']];
+}
+$reel = array_slice(array_merge(...array_values($reel ?: [[]])), 0, 24);
+$reelRows = [array_slice($reel, 0, 12), array_slice($reel, 12, 12)];
 
 $favourites = [
     ['pastries-mississauga', '2026/09/lasme-img-08-1.jpg', 'Macarons', 'Delicate French-style macarons that bring colour, texture, and variety with a crisp shell and deliciously smooth fillings.'],
@@ -45,8 +58,8 @@ $favourites = [
       <h1 id="hero-title">A family tradition <em>of excellence</em></h1>
       <p class="lede">Our family baking story began in Bari, Italy in 1930, before coming to Canada in 1963 on St. Clair Avenue West in midtown Toronto. Since then, La Sem has carried its European baking heritage forward, creating cakes, pastries, breads, gelato and more for meaningful occasions, with care.</p>
       <div class="hero-actions">
-        <a class="btn btn-solid btn-lg" href="<?= e(url('contact-us/')) ?>#enquiry">Order a custom cake</a>
-        <a class="btn btn-ghost btn-lg" href="<?= e(url('order/')) ?>">Order for pick-up</a>
+        <button class="btn btn-solid btn-lg" type="button" data-order-request>Order a custom cake</button>
+        <a class="btn btn-ghost btn-lg" href="<?= e(DOORDASH_URL) ?>" target="_blank" rel="noopener">DoorDash Online</a>
       </div>
       <a class="hero-award" href="<?= e(url('awards/top-choice-award/')) ?>">
         <img src="<?= e(url('images/story/top-choice-2026.png')) ?>" alt="" width="160" height="225">
@@ -72,37 +85,93 @@ $favourites = [
 
   <section class="proof" aria-label="La Sem at a glance">
     <ul class="wrap proof-list">
-      <li><b>60+</b><span>years in Canada</span></li>
-      <li><b>12</b><span>consecutive Top Choice Awards</span></li>
+      <li><b data-count="60" data-suffix="+">60+</b><span>years in Canada</span></li>
+      <li><b data-count="12">12</b><span>consecutive Top Choice Awards</span></li>
       <li><b>Multiple</b><span>Readers’ Choice Awards</span></li>
       <li><b>Best</b><span>cannoli in the GTA</span></li>
     </ul>
   </section>
 
-  <!-- Occasions -->
-  <section class="section" id="cakes" aria-labelledby="cakes-title">
-    <div class="wrap">
-      <header class="section-head">
-        <p class="script">Proudly serving Mississauga and surrounding areas</p>
-        <h2 id="cakes-title">Cakes for life’s biggest moments</h2>
-        <p>We create cakes for birthdays, weddings, engagements, anniversaries, baptisms, communions, confirmations, graduations, baby showers, bridal showers and other family celebrations, plus bachelor and bachelorette and novelty cakes shaped around the tone of the gathering.</p>
-      </header>
-      <div class="occasions">
+  <!-- Video: the bakery's own film, loaded only when someone presses play -->
+  <section class="watch" id="watch" aria-labelledby="watch-title">
+    <div class="wrap watch-inner">
+      <div class="watch-copy" data-reveal>
+        <p class="script">Step inside La Sem</p>
+        <h2 id="watch-title">Authentic Italian flavours, baked in Mississauga</h2>
+        <p>Meet the team behind twelve years of Top Choice Awards. See the cannoli being filled, the cakes being finished by hand, and the recipes that came with our family from Bari.</p>
+        <ul class="watch-points">
+          <li>Family recipes since 1930</li>
+          <li>Everything made fresh in house</li>
+          <li>Top Cake Boutique, 12 years running</li>
+        </ul>
+        <div class="watch-actions">
+          <a class="btn btn-solid" href="<?= e(DOORDASH_URL) ?>" target="_blank" rel="noopener">DoorDash Online</a>
+          <a class="btn btn-ghost" href="#visit">Visit the bakery</a>
+        </div>
+      </div>
+      <div class="watch-media" data-reveal>
+        <button class="yt watch-video" type="button" data-yt="syuc3oXXmpc" aria-label="Play video: Lasem Italian Bakery, authentic Italian flavours in Mississauga">
+          <img src="<?= e(url('images/story/video-poster.jpg')) ?>" alt="" width="1280" height="720" loading="lazy">
+          <span class="watch-play" aria-hidden="true"><i></i></span>
+          <span class="watch-label">Watch our story</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+<?php for ($r = 0; $r < 2; $r++): foreach ($specialties as $sp): ?>
+      <span><?= e($sp) ?></span>
+<?php endforeach; endfor; ?>
+    </div>
+  </div>
+
+  <!-- Occasions: a big photo that changes with the occasion you point at (or by itself, every few seconds) -->
+  <section class="section occx" id="cakes" aria-labelledby="cakes-title">
+    <div class="wrap occx-grid" data-occx>
+      <div class="occx-stage" aria-hidden="true">
+        <span class="occx-frame"></span>
 <?php foreach ($occasions as $i => [$slug, $src, $label, $sub, $alt]): ?>
-        <a class="occ<?= $i === 0 ? ' occ-tall' : '' ?>" href="<?= e(url($slug . '/')) ?>">
-          <?= img($src, $alt, ['sizes' => $i === 0 ? '(max-width: 900px) 100vw, 40vw' : '(max-width: 900px) 50vw, 30vw']) ?>
-          <span class="occ-label"><b><?= e($label) ?></b><?php if ($sub): ?><i><?= e($sub) ?></i><?php endif; ?></span>
+        <a class="occx-shot<?= $i === 0 ? ' is-on' : '' ?>" href="<?= e(url($slug . '/')) ?>" tabindex="-1" data-occx-shot="<?= $i ?>">
+          <?= img($src, $alt, ['sizes' => '(max-width: 900px) 90vw, 46vw', 'eager' => $i === 0]) ?>
+          <span class="occx-caption"><b><?= sprintf('%02d', $i + 1) ?></b><?= e($label) ?></span>
         </a>
 <?php endforeach; ?>
+        <span class="occx-seal"><b>Since</b>1963</span>
       </div>
-      <p class="center-cta"><a class="btn btn-line" href="<?= e(url('bakery/')) ?>">See all cakes &amp; occasions</a></p>
+      <div class="occx-copy">
+        <header class="section-head left occx-head" data-reveal>
+          <p class="script">Proudly serving Mississauga and surrounding areas</p>
+          <h2 id="cakes-title">Cakes for life’s <em>biggest moments</em></h2>
+          <p>Every cake is designed around your celebration: the guests, the colours, the story. Choose an occasion to see what we make.</p>
+        </header>
+        <ol class="occx-list" data-reveal>
+<?php foreach ($occasions as $i => [$slug, $src, $label, $sub, $alt]): ?>
+          <li>
+            <a class="occx-row<?= $i === 0 ? ' is-on' : '' ?>" href="<?= e(url($slug . '/')) ?>" data-occx-row="<?= $i ?>">
+              <span class="occx-thumb"><?= img($src, '', ['sizes' => '(max-width: 900px) 70vw, 1px']) ?></span>
+              <span class="occx-num"><?= sprintf('%02d', $i + 1) ?></span>
+              <span class="occx-text"><b><?= e($label) ?></b><i><?= e($sub) ?></i></span>
+              <svg class="occx-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="occx-bar" aria-hidden="true"></span>
+            </a>
+          </li>
+<?php endforeach; ?>
+        </ol>
+        <p class="occx-more">Also <a href="<?= e(url('baby-shower-cakes/')) ?>">baby showers</a>, <a href="<?= e(url('bachelor-party-cakes/')) ?>">bachelor &amp; bachelorette</a> and <a href="<?= e(url('cake-type-fillings/')) ?>">any flavour you can imagine</a>.</p>
+        <div class="occx-actions">
+          <a class="btn btn-solid" href="<?= e(url('contact-us/')) ?>#enquiry">Design your cake</a>
+          <a class="btn btn-line" href="<?= e(url('bakery/')) ?>">See all occasions</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Signature collection -->
   <section class="section section-tint" id="bakery" aria-labelledby="bakery-title">
     <div class="wrap">
-      <header class="section-head">
+      <header class="section-head" data-reveal>
         <p class="script">Our signature collection</p>
         <h2 id="bakery-title">Custom baking for special events</h2>
         <p>Explore La Sem’s selection of sweet and savoury favourites, prepared with traditional European methods, fresh ingredients, and careful attention to quality.</p>
@@ -126,11 +195,11 @@ $favourites = [
   <!-- Customer favourites -->
   <section class="section" aria-labelledby="fav-title">
     <div class="wrap">
-      <header class="section-head">
+      <header class="section-head" data-reveal>
         <p class="script">Customer favourites</p>
         <h2 id="fav-title">What people come back for</h2>
       </header>
-      <div class="favs">
+      <div class="favs" data-reveal>
 <?php foreach ($favourites as [$slug, $src, $name, $text]): ?>
         <a class="fav" href="<?= e(url($slug . '/')) ?>">
           <?= img($src, $name, ['sizes' => '(max-width: 700px) 100vw, 25vw']) ?>
@@ -139,6 +208,27 @@ $favourites = [
 <?php endforeach; ?>
       </div>
     </div>
+  </section>
+
+  <!-- Photo reel: a moving wall of real La Sem cakes and pastries -->
+  <section class="reel-section" aria-labelledby="reel-title">
+    <header class="section-head wrap" data-reveal>
+      <p class="script">Fresh from our display case</p>
+      <h2 id="reel-title">Made here, every day</h2>
+    </header>
+<?php foreach ($reelRows as $n => $row): if (!$row) continue; ?>
+    <div class="reel<?= $n ? ' is-reverse' : '' ?>">
+      <div class="reel-track">
+<?php for ($r = 0; $r < 2; $r++): foreach ($row as [$slug, $src, $label]): ?>
+        <a class="reel-item" href="<?= e(url($slug . '/')) ?>"<?= $r ? ' tabindex="-1" aria-hidden="true"' : '' ?>>
+          <?= img($src, $r ? '' : $label . ' by La Sem', ['sizes' => '260px']) ?>
+          <span><?= e($label) ?></span>
+        </a>
+<?php endforeach; endfor; ?>
+      </div>
+    </div>
+<?php endforeach; ?>
+    <p class="center-cta wrap"><a class="btn btn-line" href="<?= e(url('gallery/')) ?>">Browse the galleries</a></p>
   </section>
 
   <!-- Build your cake: the real menu -->
@@ -151,7 +241,7 @@ $favourites = [
         <p class="note">All custom cakes are moistened with liqueur. Tell us and we’ll leave it out.</p>
         <p><a class="btn btn-line" href="<?= e(url('cake-type-fillings/')) ?>">All cake types &amp; fillings</a></p>
       </header>
-      <ol class="steps">
+      <ol class="steps" data-reveal>
         <li><span class="n">1</span><h3>Sponge</h3>
           <p class="chips"><span>European vanilla</span><span>European chocolate</span><span>Almond</span><span>Red velvet</span><span>Sacher</span><span>Carrot</span><span>Pound cake</span><span>Sfoglia (eggless)</span><span>Gluten-free</span><span>NY cheesecake</span><span>Ice cream</span></p></li>
         <li><span class="n">2</span><h3>Filling</h3>
@@ -169,11 +259,11 @@ $favourites = [
   <!-- Story -->
   <section class="section" id="story" aria-labelledby="story-title">
     <div class="wrap story">
-      <figure class="story-photo">
+      <figure class="story-photo" data-reveal>
         <img src="<?= e(url('images/story/storefront-1963.jpg')) ?>" alt="The original La Sem pasticceria on St. Clair Avenue West" loading="lazy" width="1070" height="540">
         <figcaption>St. Clair Avenue West, Toronto</figcaption>
       </figure>
-      <div class="story-text">
+      <div class="story-text" data-reveal>
         <p class="script">Our story</p>
         <h2 id="story-title">Made with passion, baked with love</h2>
         <p>At La Sem, we blend time-honoured European baking techniques with the finest ingredients to create unforgettable flavours and beautiful creations for all your special occasions. From handcrafted cakes and delicate pastries to classic Italian favourites, every treat is made with care and attention to detail.</p>
@@ -193,15 +283,15 @@ $favourites = [
   <!-- Awards + reviews -->
   <section class="section section-tint" id="awards" aria-labelledby="awards-title">
     <div class="wrap awards">
-      <div class="award-card">
+      <div class="award-card" data-reveal>
         <img src="<?= e(url('images/story/top-choice-2026.png')) ?>" alt="Top Choice Award, 12 years on top" loading="lazy" width="160" height="225">
         <div>
           <h2 id="awards-title">Mississauga’s choice, twelve years running</h2>
           <p>Named Top Cake Boutique by Top Choice Awards every year since 2015, with Readers’ Choice and People’s Choice awards along the way.</p>
-          <p><a class="link" href="<?= e(url('awards/')) ?>">See all awards</a></p>
+          <p><a class="link" href="<?= e(url('awards/')) ?>">See all awards</a> &nbsp; <a class="link" href="<?= e(TOP_CHOICE_LISTING) ?>" rel="noopener" target="_blank">Verified 2026 winner ↗</a></p>
         </div>
       </div>
-      <div class="reviews">
+      <div class="reviews" data-reveal>
 <?php foreach (array_slice(testimonials(), 0, 3) as $t): ?>
         <blockquote>
           <p>“<?= e($t['short'] ?? $t['text']) ?>”</p>
@@ -212,6 +302,8 @@ $favourites = [
       <p class="center-cta"><a class="btn btn-line" href="<?= e(url('testimonials/')) ?>">Read more testimonials</a></p>
     </div>
   </section>
+
+<?php google_reviews_section(); ?>
 
 <?php visit_section(); ?>
 

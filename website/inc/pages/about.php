@@ -32,6 +32,7 @@ page_banner('About La Sem Bakery', 'Since 1930', '', ['About us' => url('about-u
       <h2>From Bari to Toronto, with an idea that felt new</h2>
       <p>When La Sem arrived in Toronto in 1963, the intention was clear. We wanted to bring the character of a true European bakery to the city.</p>
       <p>That meant much more than filling display cases. The bakery became a place to sit, gather, talk, celebrate, and enjoy something made with care. La Sem introduced the first outdoor bakery patio in the GTA, bringing a little of the European café experience into Toronto life. The address changed over the years. The instinct behind it did not.</p>
+      <p>Those Toronto years are now part of the city’s food history: the University of Toronto Mississauga’s <a class="link" href="<?= e(FOODWAYS_LA_SEM) ?>" rel="noopener" target="_blank">Mapping Italian-Canadian Foodways</a> archive keeps a La Sem collection, with early storefront photos, a 1972 review and a National Post feature. See it with all our awards on <a class="link" href="<?= e(url('awards/')) ?>">Awards &amp; recognition</a>.</p>
     </div>
   </div>
 </section>
@@ -40,7 +41,7 @@ page_banner('About La Sem Bakery', 'Since 1930', '', ['About us' => url('about-u
   <ul class="wrap stats-list">
     <li><b>60+</b><span>years of experience</span></li>
     <li><b>300k+</b><span>customized cakes delivered</span></li>
-    <li><b>25+</b><span>awards won</span></li>
+    <li><a href="<?= e(url('awards/')) ?>"><b>25+</b><span>awards won</span></a></li>
   </ul>
 </section>
 
@@ -62,16 +63,30 @@ page_banner('About La Sem Bakery', 'Since 1930', '', ['About us' => url('about-u
   </div>
 </section>
 
+<section class="section section-tint" aria-labelledby="people-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="script">Behind the counter</p>
+      <h2 id="people-title">The people who bake for you</h2>
+      <p>Every cake is finished by hand by a team that has celebrated twelve Top Choice Awards together, and still gets excited about the next order.</p>
+    </header>
+    <div class="people">
+      <figure class="is-dark"><?= img('2026/10/cta.png', 'A La Sem baker at work in the kitchen', ['sizes' => '(max-width: 800px) 100vw, 55vw']) ?><figcaption>In the kitchen, finishing the day's cakes</figcaption></figure>
+      <figure><?= img('2026/06/2.jpg', 'The La Sem team with their Top Choice Award', ['sizes' => '(max-width: 800px) 100vw, 45vw']) ?><figcaption>The La Sem team at the Top Choice Awards</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="order-band" aria-label="Order">
   <div class="wrap order-inner">
     <div>
       <p class="script light">Come visit us</p>
       <h2>Taste the tradition for yourself</h2>
-      <p>Drop by the bakery in Mississauga, order for pick-up online, or tell us about the custom cake you have in mind.</p>
+      <p>Drop by the bakery in Mississauga, order through DoorDash, or tell us about the custom cake you have in mind.</p>
     </div>
     <div class="order-actions">
-      <a class="btn btn-cream btn-lg" href="<?= e(url('order/')) ?>">Order online</a>
-      <a class="btn btn-outline-light btn-lg" href="<?= e(url('contact-us/')) ?>#enquiry">Custom cake request</a>
+      <a class="btn btn-cream btn-lg" href="<?= e(DOORDASH_URL) ?>" target="_blank" rel="noopener">DoorDash Online</a>
+      <button class="btn btn-outline-light btn-lg" type="button" data-order-request>Online Custom Order Request</button>
     </div>
   </div>
 </section>

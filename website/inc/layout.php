@@ -64,6 +64,9 @@ function site_header()
 {
     ?>
 <header class="site-header" data-header>
+<?php if (SITE['announcement'] !== ''): // set in the admin, Store settings ?>
+  <p class="announce" role="note"><?= e(SITE['announcement']) ?></p>
+<?php endif; ?>
   <div class="awning" aria-hidden="true"></div>
   <div class="bar wrap">
     <a class="brand" href="<?= e(url()) ?>" aria-label="La Sem Cakes, home">
@@ -75,14 +78,21 @@ function site_header()
       </button>
       <ul id="nav-list" class="nav-list" data-nav-list>
 <?php foreach (nav_items() as $i => $item):
-        $hasSub = !empty($item['children']) || !empty($item['mega']); ?>
-        <li class="<?= $hasSub ? 'has-sub' : '' ?><?= !empty($item['mega']) ? ' has-mega' : '' ?>">
-          <a href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a>
+        $hasSub = !empty($item['children']) || !empty($item['mega']) || !empty($item['az']); ?>
+        <li class="<?= $hasSub ? 'has-sub' : '' ?><?= !empty($item['mega']) || !empty($item['az']) ? ' has-mega' : '' ?>">
+          <a href="<?= e($item['href']) ?>"<?= !empty($item['external']) ? ' target="_blank" rel="noopener"' : '' ?>><?= e($item['label']) ?></a>
 <?php if ($hasSub): ?>
           <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-<?= $i ?>" aria-label="Show <?= e($item['label']) ?> pages" data-sub-toggle>
             <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
           </button>
-<?php if (!empty($item['mega'])): ?>
+<?php if (!empty($item['az'])): ?>
+          <div class="sub mega mega-az" id="sub-<?= $i ?>">
+            <ul class="az-list"><?php foreach ($item['az'] as $l): ?><li><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a></li><?php endforeach; ?></ul>
+<?php if (!empty($item['more'])): ?>
+            <p class="az-more"><?php foreach ($item['more'] as $l): ?><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a><?php endforeach; ?></p>
+<?php endif; ?>
+          </div>
+<?php elseif (!empty($item['mega'])): ?>
           <div class="sub mega" id="sub-<?= $i ?>">
 <?php foreach ($item['mega'] as $heading => $links): ?>
             <div>
@@ -93,18 +103,18 @@ function site_header()
           </div>
 <?php else: ?>
           <ul class="sub" id="sub-<?= $i ?>">
-            <?php foreach ($item['children'] as $l): ?><li><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a></li><?php endforeach; ?>
+            <?php foreach ($item['children'] as $l): ?><li><a href="<?= e($l['href']) ?>"<?= !empty($l['external']) ? ' target="_blank" rel="noopener"' : '' ?>><?= e($l['label']) ?></a></li><?php endforeach; ?>
           </ul>
 <?php endif; ?>
 <?php endif; ?>
         </li>
 <?php endforeach; ?>
-        <li class="nav-cta-m"><a class="btn btn-solid" href="<?= e(url('order/')) ?>">Order Online</a></li>
+        <li class="nav-cta-m"><button class="btn btn-solid" type="button" data-order-request>Order Request</button></li>
       </ul>
     </nav>
     <div class="bar-actions">
       <a class="tel" href="tel:<?= e(SITE['phone_tel']) ?>"><?= e(SITE['phone']) ?></a>
-      <a class="btn btn-solid" href="<?= e(url('order/')) ?>">Order Online</a>
+      <button class="btn btn-solid" type="button" data-order-request>Order Request</button>
     </div>
   </div>
 </header>
@@ -171,6 +181,44 @@ function site_footer()
     </p>
   </div>
 </footer>
+<?php order_request_dialog(); ?>
+<?php
+}
+
+/**
+ * The "Order Request" pop-up (same fields as the staging site's): opened by any [data-order-request]
+ * button. It posts to api/contact.php, so requests land in the admin's Cake enquiries and the bakery's email.
+ */
+function order_request_dialog()
+{
+    ?>
+<dialog class="req" id="order-request" aria-labelledby="req-title">
+  <form class="req-form" method="post" action="<?= e(url('api/contact.php')) ?>" data-request-form novalidate>
+    <button class="req-close" type="button" data-request-close aria-label="Close">&times;</button>
+    <p class="script">Custom orders</p>
+    <h2 id="req-title">Order Request</h2>
+    <p class="req-for" data-request-for-label hidden></p>
+    <input type="hidden" name="form" value="request">
+    <input type="hidden" name="occasion" value="" data-request-for>
+    <input type="hidden" name="page" value="<?= e(strtok($_SERVER['REQUEST_URI'] ?? '', '?')) ?>">
+    <label>Name<input name="name" autocomplete="name" maxlength="200"></label>
+    <div class="req-row">
+      <label><span>Order date <b aria-hidden="true">*</b></span><input name="date" type="date" required min="<?= e(date('Y-m-d')) ?>"></label>
+      <label><span>Phone number <b aria-hidden="true">*</b></span><input name="phone" type="tel" required autocomplete="tel" maxlength="40"></label>
+    </div>
+    <label>Email address<input name="email" type="email" autocomplete="email" maxlength="200"></label>
+    <label>Order description<textarea name="message" rows="4" maxlength="4000" placeholder="Cake, size, flavour, design, writing on the cake…"></textarea></label>
+    <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+    <p class="req-status" role="status" aria-live="polite" data-request-status></p>
+    <button class="btn btn-solid btn-lg" type="submit" data-request-send>Send</button>
+  </form>
+  <div class="req-done" data-request-done hidden>
+    <button class="req-close" type="button" data-request-close aria-label="Close">&times;</button>
+    <h2>Thank you!</h2>
+    <p>Your order request is on its way. We’ll get back to you soon. For anything urgent, call <a href="tel:<?= e(SITE['phone_tel']) ?>"><?= e(SITE['phone']) ?></a>.</p>
+    <button class="btn btn-line" type="button" data-request-close>Close</button>
+  </div>
+</dialog>
 <?php
 }
 
@@ -200,7 +248,17 @@ function business_schema()
             'opens' => SITE['opens'],
             'closes' => SITE['closes'],
         ]],
-        'sameAs' => [SITE['facebook']],
+        'sameAs' => array_values(array_filter([SITE['facebook'], GOOGLE_PROFILE_URL, TOP_CHOICE_LISTING])),
+        'award' => [
+            'Top Choice Award, Top Cake Boutique in Mississauga, every year 2015–2026',
+            'Mississauga News Readers’ Choice Award',
+            'People’s Choice Award',
+        ],
+        'subjectOf' => [
+            '@type' => 'Collection',
+            'name' => 'La Sem Pasticcerie, Mapping Italian-Canadian Foodways (University of Toronto Mississauga)',
+            'url' => FOODWAYS_LA_SEM,
+        ],
     ];
 }
 
@@ -244,9 +302,12 @@ function visit_section()
       </dl>
       <a class="btn btn-solid" href="<?= e(SITE['maps_url']) ?>" rel="noopener">Get directions</a>
     </div>
+    <div class="visit-media">
+    <figure class="visit-photo"><?= img('2026/06/La-sem-Name-board.jpg', 'The La Sem Patisserie and Italian Bakery storefront on Eglinton Avenue East', ['sizes' => '(max-width: 900px) 100vw, 55vw']) ?><figcaption>Look for the orange sign at 1275 Eglinton Ave. East</figcaption></figure>
     <div class="map">
       <iframe title="Map to La Sem Cakes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=La%20Sem%20Cakes%2C%201275%20Eglinton%20Ave%20E%2C%20Mississauga%2C%20ON%20L4W%202Z2&amp;z=15&amp;output=embed"></iframe>
+    </div>
     </div>
   </div>
 </section>
@@ -266,7 +327,7 @@ function order_band($heading = 'Tell us about your cake', $text = 'Share the dat
     </div>
     <div class="order-actions">
       <a class="btn btn-cream btn-lg" href="tel:<?= e(SITE['phone_tel']) ?>">Call <?= e(SITE['phone']) ?></a>
-      <a class="btn btn-outline-light btn-lg" href="<?= e(url('contact-us/')) ?>#enquiry">Send an enquiry</a>
+      <button class="btn btn-outline-light btn-lg" type="button" data-order-request>Online Custom Order Request</button>
     </div>
   </div>
 </section>

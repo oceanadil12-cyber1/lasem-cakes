@@ -1,15 +1,22 @@
 <?php
 /**
- * Places a pickup order from the order page (js/order.js).
+ * Places a pickup or delivery order from the order page (js/order.js).
  *
- * The browser only sends what was chosen (item ids, quantities, flavour, notes, pickup time,
- * contact details). Prices, tax and totals are worked out here from data/menu.json, so they
- * can't be changed in the browser. Orders are saved to private/orders/ (the admin panel will
- * list them) and emailed to the bakery, with a confirmation to the customer.
- * Payment is taken at pickup.
+ * The browser only sends what was chosen (item ids, quantities, flavour, notes, pickup or
+ * delivery time, address, contact details). Prices, delivery fee, tax and totals are worked out
+ * here from data/menu.json, so they can't be changed in the browser. Orders are saved to
+ * private/orders/ (listed in the admin panel at /admin/) and emailed to the bakery, with a
+ * confirmation to the customer. Payment is taken at pickup or on delivery.
  */
 define('BASE_URL', rtrim(str_replace('\\', '/', dirname(dirname($_SERVER['SCRIPT_NAME']))), '/') . '/');
 require __DIR__ . '/../inc/site.php';
+
+if (!ONLINE_ORDERING) { // ordering is switched off in inc/site.php
+    http_response_code(410);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['ok' => false, 'error' => 'Online ordering is not available. Please order through DoorDash or call us.']);
+    exit;
+}
 
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
@@ -42,9 +49,12 @@ if (!is_array($in)) {
     fail('We couldn’t read your order. Please try again.', 400);
 }
 
-$menu = json_decode(file_get_contents(__DIR__ . '/../data/menu.json'), true);
+$menu = menu_data();
+if (!menu_ordering_open($menu)) {
+    fail(menu_closed_message($menu) . ' ' . SITE['phone']);
+}
 $byVariant = [];
-foreach ($menu['categories'] as $cat) {
+foreach (menu_for_customers($menu)['categories'] as $cat) {
     foreach ($cat['products'] as $p) {
         foreach ($p['variants'] as $v) {
             $byVariant[$v['id']] = ['p' => $p, 'v' => $v, 'cat' => $cat];
@@ -84,6 +94,9 @@ foreach ($lines as $l) {
     if (!$x) {
         fail('An item in your order is no longer available. Please remove it and try again.');
     }
+    if (!empty($x['p']['soldOut'])) {
+        fail($x['p']['name'] . ' is sold out today. Please remove it from your order.');
+    }
     $qty = (int) ($l['qty'] ?? 0);
     if ($qty < 1 || $qty > 50) {
         fail('Please check the quantities in your order (1 to 50 of each item).');
@@ -113,10 +126,49 @@ foreach ($lines as $l) {
         'taxable' => !empty($x['cat']['taxable']),
     ];
 }
-$tax = (int) round($taxable * $menu['taxRate']);
-$grand = $subtotal + $tax;
+/* ---------- Pickup or delivery ---------- */
 
-/* ---------- Pickup time ---------- */
+$delivery = menu_delivery($menu);
+$isDelivery = (($in['fulfilment'] ?? 'pickup') === 'delivery');
+$address = null;
+$fee = 0;
+if ($isDelivery) {
+    if (!$delivery['enabled']) {
+        fail('Delivery isn’t available right now. Please choose pickup, or call us at ' . SITE['phone'] . '.');
+    }
+    if ($subtotal < $delivery['minOrder']) {
+        fail('Delivery orders start at ' . money($delivery['minOrder']) . ' before tax. Add a little more, or choose pickup.');
+    }
+    $d = (array) ($in['delivery'] ?? []);
+    $address = [
+        'street'       => clean($d['street'] ?? '', 120),
+        'unit'         => clean($d['unit'] ?? '', 40),
+        'city'         => clean($d['city'] ?? '', 60),
+        'postal'       => strtoupper(preg_replace('/\s+/', '', clean($d['postal'] ?? '', 12))),
+        'instructions' => clean($d['instructions'] ?? '', 300),
+    ];
+    if ($address['street'] === '') {
+        fail('Please enter the delivery address.');
+    }
+    if ($address['city'] === '') {
+        fail('Please enter the city for delivery.');
+    }
+    if (!preg_match('/^[A-Z]\d[A-Z]\d[A-Z]\d$/', $address['postal'])) {
+        fail('Please enter a valid postal code (for example L4W 2Z2).');
+    }
+    if (!delivery_postal_allowed($delivery, $address['postal'])) {
+        fail('Sorry, we don’t deliver to that postal code yet' . ($delivery['areas'] !== '' ? ' (we deliver to ' . $delivery['areas'] . ')' : '') . '. Please choose pickup, or call us at ' . SITE['phone'] . '.');
+    }
+    $address['postal'] = substr($address['postal'], 0, 3) . ' ' . substr($address['postal'], 3);
+    $fee = delivery_fee($delivery, $subtotal);
+    $taxable += $fee; // the delivery charge is taxable
+}
+$tax = (int) round($taxable * $menu['taxRate']);
+$grand = $subtotal + $fee + $tax;
+$addressLabel = $address ? trim(($address['unit'] !== '' ? $address['unit'] . ' – ' : '') . $address['street'] . ', ' . $address['city'] . ' ' . $address['postal']) : '';
+$whenWord = $isDelivery ? 'delivery' : 'pickup';
+
+/* ---------- Pickup or delivery time ---------- */
 
 $date = (string) ($in['pickup']['date'] ?? '');
 $mins = (int) ($in['pickup']['time'] ?? -1);
@@ -127,13 +179,17 @@ $day = DateTime::createFromFormat('!Y-m-d', $date, $tz);
 $now = new DateTime('now', $tz);
 $today = new DateTime('today', $tz);
 if (!$day || $day->format('Y-m-d') !== $date || $mins % 15 !== 0 || $mins < $oh * 60 + $om || $mins > $ch * 60 + $cm) {
-    fail('Please choose a pickup time during online ordering hours.');
+    fail('Please choose a ' . $whenWord . ' time during online ordering hours.');
 }
 $pickup = (clone $day)->setTime(intdiv($mins, 60), $mins % 60);
-$earliest = (clone $now)->modify('+' . ((int) $menu['leadMinutes'] - 5) . ' minutes');
+$lead = (int) $menu['leadMinutes'] + ($isDelivery ? $delivery['leadMinutes'] : 0);
+$earliest = (clone $now)->modify('+' . ($lead - 5) . ' minutes');
 $latest = (clone $today)->modify('+' . ((int) $menu['daysAhead'] + 1) . ' days');
 if ($pickup < $earliest) {
-    fail('That pickup time has passed or is too soon. Please choose a later time.');
+    fail('That ' . $whenWord . ' time has passed or is too soon. Please choose a later time.');
+}
+if (in_array($date, menu_closed_dates($menu), true)) {
+    fail('We’re closed for ' . ($isDelivery ? 'deliveries' : 'pickups') . ' on ' . $day->format('l, F j') . '. Please choose another day.');
 }
 if ($pickup >= $latest) {
     fail('Orders can be placed up to ' . (int) $menu['daysAhead'] . ' days ahead.');
@@ -158,27 +214,19 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 /* ---------- Order number and save ---------- */
 
-// LS-241024-001: date + a counter that restarts each day. The lock stops two orders sharing a number.
-$counter = fopen($dir . '/counter.json', 'c+');
-if (!$counter || !flock($counter, LOCK_EX)) {
+$number = order_next_number($dir, 'counter');
+if ($number === '') {
     fail('Sorry, we couldn’t save your order. Please call us at ' . SITE['phone'] . '.', 500);
 }
-$c = json_decode(stream_get_contents($counter), true) ?: [];
-$stamp = $now->format('ymd');
-$seq = (($c['day'] ?? '') === $stamp ? (int) $c['seq'] : 0) + 1;
-ftruncate($counter, 0);
-rewind($counter);
-fwrite($counter, json_encode(['day' => $stamp, 'seq' => $seq]));
-fflush($counter);
-flock($counter, LOCK_UN);
-fclose($counter);
-$number = 'LS-' . $stamp . '-' . str_pad((string) $seq, 3, '0', STR_PAD_LEFT);
 
 $public = [
     'number'      => $number,
     'firstName'   => explode(' ', $name)[0],
     'email'       => $email,
     'pickupLabel' => $pickupLabel,
+    'fulfilment'  => $isDelivery ? 'delivery' : 'pickup',
+    'address'     => $addressLabel,
+    'fee'         => $fee,
     'lines'       => array_map(function ($i) { return ['name' => $i['name'], 'detail' => $i['detail'], 'qty' => $i['qty'], 'total' => $i['total']]; }, $items),
     'subtotal'    => $subtotal,
     'tax'         => $tax,
@@ -186,18 +234,21 @@ $public = [
     'emailed'     => false,
 ];
 $order = [
-    'number'   => $number,
-    'status'   => 'new',
-    'placed'   => $now->format('c'),
-    'pickup'   => $pickup->format('c'),
-    'customer' => ['name' => $name, 'phone' => $phone, 'email' => $email],
-    'notes'    => $notes,
-    'items'    => $items,
-    'subtotal' => $subtotal,
-    'tax'      => $tax,
-    'total'    => $grand,
-    'payment'  => 'pay at pickup',
-    'ip'       => $_SERVER['REMOTE_ADDR'] ?? '',
+    'number'     => $number,
+    'status'     => 'new',
+    'placed'     => $now->format('c'),
+    'pickup'     => $pickup->format('c'),
+    'fulfilment' => $isDelivery ? 'delivery' : 'pickup',
+    'delivery'   => $address,
+    'fee'        => $fee,
+    'customer'   => ['name' => $name, 'phone' => $phone, 'email' => $email],
+    'notes'      => $notes,
+    'items'      => $items,
+    'subtotal'   => $subtotal,
+    'tax'        => $tax,
+    'total'      => $grand,
+    'payment'    => $isDelivery ? 'pay on delivery' : 'pay at pickup',
+    'ip'         => $_SERVER['REMOTE_ADDR'] ?? '',
 ];
 
 // Saved before any email goes out, so every email matches a real order.
@@ -215,20 +266,29 @@ $rows = [];
 foreach ($items as $i) {
     $rows[] = $i['qty'] . ' x ' . $i['name'] . ($i['detail'] ? ' (' . $i['detail'] . ')' : '') . '  ' . money($i['total']) . ($i['note'] ? "\n    Note: " . $i['note'] : '');
 }
-$summary = implode("\n", $rows) . "\n\nSubtotal: " . money($subtotal) . "\nHST: " . money($tax) . "\nTotal: " . money($grand) . " (pay at pickup)";
+$summary = implode("\n", $rows) . "\n\nSubtotal: " . money($subtotal)
+    . ($isDelivery ? "\nDelivery: " . ($fee > 0 ? money($fee) : 'Free') : '')
+    . "\nHST: " . money($tax) . "\nTotal: " . money($grand) . ' (pay ' . ($isDelivery ? 'on delivery' : 'at pickup') . ')';
 $host = preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'lasemcakes.ca');
 $from = 'From: La Sem Cakes <no-reply@' . $host . ">\r\nContent-Type: text/plain; charset=UTF-8";
+$whereLines = $isDelivery
+    ? "Deliver to: $addressLabel\n" . ($address['instructions'] !== '' ? "Delivery instructions: {$address['instructions']}\n" : '')
+    : '';
 
 @mail(
-    SITE['email'],
-    'New pickup order ' . $number . ' – ' . $pickup->format('D M j, g:i a'),
-    "New online order $number\n\nPickup: $pickupLabel\nName: $name\nPhone: $phone\nEmail: $email\n" . ($notes ? "Notes: $notes\n" : '') . "\n$summary\n",
+    notify_email(),
+    'New ' . $whenWord . ' order ' . $number . ' – ' . $pickup->format('D M j, g:i a'),
+    "New online order $number\n\n" . ucfirst($whenWord) . ": $pickupLabel\n$whereLines" . "Name: $name\nPhone: $phone\nEmail: $email\n" . ($notes ? "Notes: $notes\n" : '') . "\n$summary\n",
     $from . "\r\nReply-To: " . $email
 );
 $public['emailed'] = @mail(
     $email,
     'Your La Sem order ' . $number,
-    "Hi {$public['firstName']},\n\nThank you for your order! Here are the details.\n\nOrder: $number\nPickup: $pickupLabel\nWhere: " . SITE['street'] . ', ' . SITE['city'] . "\n\n$summary\n\nPlease pay at the counter when you pick up. To change or cancel, call " . SITE['phone'] . ".\n\nLa Sem Cakes\n",
+    "Hi {$public['firstName']},\n\nThank you for your order! Here are the details.\n\nOrder: $number\n" . ucfirst($whenWord) . ": $pickupLabel\n"
+    . ($isDelivery ? $whereLines : 'Where: ' . SITE['street'] . ', ' . SITE['city'] . "\n")
+    . "\n$summary\n\n"
+    . ($isDelivery ? 'Please have payment ready when your order arrives (cash or card).' : 'Please pay at the counter when you pick up.')
+    . ' To change or cancel, call ' . SITE['phone'] . ".\n\nLa Sem Cakes\n",
     $from . "\r\nReply-To: " . SITE['email']
 );
 

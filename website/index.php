@@ -75,12 +75,17 @@ switch (true) {
         require __DIR__ . '/inc/pages/articles.php';
         break;
     case $path === 'order':
+        // Our own ordering is off (inc/site.php): send visitors to DoorDash, as the staging site does.
+        if (!ONLINE_ORDERING) { header('Location: ' . DOORDASH_URL, true, 302); exit; }
         require __DIR__ . '/inc/pages/order.php';
         break;
     case $path === 'cake-type-fillings':
         require __DIR__ . '/inc/pages/fillings.php';
         break;
-    case in_array($path, ['bakery', 'gallery', 'awards'], true):
+    case $path === 'awards':
+        require __DIR__ . '/inc/pages/awards.php';
+        break;
+    case in_array($path, ['bakery', 'gallery'], true):
         $section = $path;
         require __DIR__ . '/inc/pages/section.php';
         break;

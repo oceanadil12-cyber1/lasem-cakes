@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /api/
+Disallow: /admin/
+Disallow: /kds/
 
 Sitemap: https://lasemcakes.ca/sitemap.xml

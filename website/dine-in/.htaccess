@@ -1,0 +1,3 @@
+Options -Indexes
+DirectoryIndex index.php
+# /dine-in/track/, /board/ and /qr/ are routed to index.php by the site's main .htaccess.

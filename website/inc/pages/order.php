@@ -1,7 +1,12 @@
 <?php
-// Online ordering for pickup: the full bakery menu, cart and checkout on La Sem's own site.
-// Menu and prices come from data/menu.json (imported from the DoorDash store; the admin panel will edit it).
-$menu = json_decode(file_get_contents(__DIR__ . '/../../data/menu.json'), true);
+// Online ordering for pickup or delivery: the full bakery menu, cart and checkout on La Sem's own site.
+// Menu, prices, ordering hours and delivery settings come from data/menu.json, edited in the admin
+// (Menu & prices, Store settings).
+$menu = menu_for_customers();
+$delivery = $menu['delivery'];
+$dollars = function ($cents) { return '$' . rtrim(rtrim(number_format($cents / 100, 2), '0'), '.'); };
+$closed = !menu_ordering_open($menu);
+$menu['closedMessage'] = menu_closed_message($menu);
 foreach ($menu['categories'] as &$c) {
     foreach ($c['products'] as &$p) {
         if (!empty($p['img'])) $p['img'] = url($p['img']);
@@ -10,23 +15,31 @@ foreach ($menu['categories'] as &$c) {
 unset($c, $p);
 $fmt = function ($h) { return date('g:i a', strtotime($h)); };
 page_start([
-    'title'       => 'Order Online for Pickup',
+    'title'       => $delivery['enabled'] ? 'Order Online for Pickup or Delivery' : 'Order Online for Pickup',
     'path'        => 'order/',
-    'description' => 'Order La Sem cakes, cannoli and pastries, zeppole, cookies, croissants and focaccia sandwiches online for pickup at 1275 Eglinton Ave. East, Mississauga.',
-    'scripts'     => ['js/order.js'],
+    'description' => 'Order La Sem cakes, cannoli and pastries, zeppole, cookies, croissants and focaccia sandwiches online for pickup at 1275 Eglinton Ave. East, Mississauga' . ($delivery['enabled'] ? ', or delivery to your door' : '') . '.',
+    'scripts'     => ['js/chip-slider.js', 'js/order.js'],
 ]);
 ?>
 <section class="order-hero">
   <div class="wrap order-hero-inner">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="<?= e(url()) ?>">Home</a> <span aria-hidden="true">/</span> <a href="<?= e(url('order/')) ?>">Order online</a></nav>
+<?php if ($delivery['enabled']): ?>
+      <h1>Order for pickup or delivery</h1>
+      <p class="banner-intro">Cakes, pastries, zeppole, cookies and focaccia sandwiches, ready when you arrive or brought to your door. Pay at the counter or on delivery.</p>
+<?php else: ?>
       <h1>Order for pickup</h1>
       <p class="banner-intro">Cakes, pastries, zeppole, cookies and focaccia sandwiches, ready when you arrive. Pay at the counter when you pick up.</p>
+<?php endif; ?>
     </div>
     <ul class="order-facts">
       <li><b>Pickup at</b><?= e(SITE['street']) ?>, <?= e(SITE['city']) ?></li>
+<?php if ($delivery['enabled']): ?>
+      <li><b>Delivery</b><?= e($delivery['areas'] !== '' ? $delivery['areas'] : 'Local delivery') ?> · <?= $delivery['fee'] > 0 ? e($dollars($delivery['fee'])) . ' fee' : 'free' ?><?= $delivery['fee'] > 0 && $delivery['freeOver'] > 0 ? ', free over ' . e($dollars($delivery['freeOver'])) : '' ?><?= $delivery['minOrder'] > 0 ? ' · orders from ' . e($dollars($delivery['minOrder'])) : '' ?></li>
+<?php endif; ?>
       <li><b>Online ordering</b>Every day, <?= e($fmt($menu['hours']['opens'])) ?> – <?= e($fmt($menu['hours']['closes'])) ?></li>
-      <li><b>Ready in</b>About <?= (int) $menu['leadMinutes'] ?> minutes, or order up to <?= (int) $menu['daysAhead'] ?> days ahead</li>
+      <li><b>Ready in</b>About <?= (int) $menu['leadMinutes'] ?> minutes for pickup<?= $delivery['enabled'] ? ', ' . (int) ($menu['leadMinutes'] + $delivery['leadMinutes']) . ' for delivery' : '' ?>, or order up to <?= (int) $menu['daysAhead'] ?> days ahead</li>
     </ul>
   </div>
 </section>
@@ -47,6 +60,9 @@ page_start([
   </div>
 </div>
 
+<?php if ($closed): ?>
+<div class="wrap"><p class="notice order-closed" role="status"><b>Online ordering is closed.</b> <?= e($menu['closedMessage']) ?> <a href="tel:<?= e(SITE['phone_tel']) ?>"><?= e(SITE['phone']) ?></a></p></div>
+<?php endif; ?>
 <section class="order-page">
   <div class="wrap order-layout">
     <div class="menu-col" data-menu>
@@ -68,5 +84,5 @@ page_start([
 <div class="sheet sheet-cart" data-cart-sheet hidden role="dialog" aria-modal="true" aria-label="Your order"></div>
 
 <script type="application/json" id="menu-data"><?= json_encode($menu, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
-<script>window.LASEM_ORDER = { api: <?= json_encode(url('api/order.php')) ?>, terms: <?= json_encode(url('terms-conditions/')) ?>, contact: <?= json_encode(url('contact-us/') . '#enquiry') ?>, cancel: <?= json_encode(url('cancellation-policy/')) ?>, phone: <?= json_encode(SITE['phone']) ?>, tel: <?= json_encode(SITE['phone_tel']) ?> };</script>
+<script>window.LASEM_ORDER = { api: <?= json_encode(url('api/order.php')) ?>, terms: <?= json_encode(url('terms-conditions/')) ?>, contact: <?= json_encode(url('contact-us/') . '#enquiry') ?>, cancel: <?= json_encode(url('cancellation-policy/')) ?>, phone: <?= json_encode(SITE['phone']) ?>, tel: <?= json_encode(SITE['phone_tel']) ?>, street: <?= json_encode(SITE['street']) ?>, city: <?= json_encode(SITE['city']) ?> };</script>
 <?php page_end();

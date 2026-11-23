@@ -32,5 +32,5 @@ if not defined PHP (
 echo Starting La Sem Cakes at %URL%
 echo Keep this window open while you browse. Close it to stop the site.
 start "" "%URL%"
-%PHP% -S localhost:%PORT% -t website website/router.php
+%PHP% -d max_input_vars=5000 -S localhost:%PORT% -t website website/router.php
 pause

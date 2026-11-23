@@ -1,10 +1,11 @@
-/* Wedding cakes, modelled on La Sem's five-tier white wedding cake: a fluted white pedestal
-   and black board, five fondant tiers of different heights, hand-painted black marble veins,
+/* Wedding cakes, modelled on La Sem's five-tier white wedding cake: a black board,
+   five fondant tiers of different heights, hand-painted black marble veins,
    and a cascade of white sugar anemones, blush roses, dark leaves and tiny blossoms running
    from the fourth tier down to the bottom. */
 LaSem3D.start(function (k) {
   var T = k.T, rand = k.rand;
-  k.frame({ look: 1.4, h: 5.0, w: 2.4, elev: 0.6, spinSpeed: 0.08 });
+  k.frame({ look: 1.75, h: 4.3, w: 2.4, elev: 0.6, spinSpeed: 0.08 });
+  k.floor(0); // the board sits straight on the counter (no pedestal)
   k.rimColor('#e6c88e');
 
   var fondant = k.mat(0xfbf8f3, { roughness: 0.4 });
@@ -15,24 +16,11 @@ LaSem3D.start(function (k) {
   var black = k.mat(0x0b0b0c, { roughness: 0.8, envMapIntensity: 0.3 });
   var eyeMat = k.mat(0x0e0d0f, { roughness: 0.6 });
 
-  /* ---------- Pedestal and board ---------- */
-  k.cap(0.1, 'A fluted pedestal and black board');
-  var colGeo = new T.CylinderGeometry(0.72, 0.76, 0.9, 96, 1, true);
-  (function () {
-    var p = colGeo.attributes.position;
-    for (var i = 0; i < p.count; i++) { var x = p.getX(i), z = p.getZ(i), f = 1 + 0.035 * Math.cos(28 * Math.atan2(z, x)); p.setX(i, x * f); p.setZ(i, z * f); }
-    colGeo.translate(0, 0.45, 0);
-    colGeo.computeVertexNormals();
-  })();
-  var column = k.shadow(new T.Mesh(colGeo, k.M.porcelain));
-  column.position.y = -0.9;
-  k.rise(column, 0.2, 0.7);
-  var capTop = k.shadow(new T.Mesh(new T.CylinderGeometry(0.8, 0.8, 0.04, 64), k.M.porcelain));
-  capTop.position.y = -0.02;
-  k.pop(capTop, 0.8, 0.3);
+  /* ---------- Cake board ---------- */
+  k.cap(0.1, 'A black cake board');
   var board = k.shadow(new T.Mesh(new T.CylinderGeometry(1.07, 1.07, 0.05, 96), black));
   board.position.y = 0.025;
-  k.spread(board, 0.9, 0.45);
+  k.spread(board, 0.3, 0.6);
 
   /* ---------- Five tiers (proportions taken from the photo) ---------- */
   var dims = [[0.95, 0.82], [0.8, 0.8], [0.63, 0.57], [0.43, 0.76], [0.31, 0.6]];

@@ -1,7 +1,7 @@
-/* La Sem — online ordering for pickup.
+/* La Sem — online ordering for pickup or delivery.
  * Menu (from the page), item pop-up with sizes and flavours, cart kept in the browser,
- * pickup date and time, checkout. The server re-prices everything (api/order.php),
- * so the totals shown here are a preview.
+ * pickup or delivery with date, time and address, checkout. The server re-prices everything
+ * (api/order.php), so the totals shown here are a preview.
  */
 (function () {
   'use strict';
@@ -14,7 +14,10 @@
   var itemSheet = document.querySelector('[data-item-sheet]');
   var cartSheet = document.querySelector('[data-cart-sheet]');
   var fab = document.querySelector('[data-cart-fab]');
-  var CART_KEY = 'lasem-cart-v1';
+  var CART_KEY = 'lasem-cart-v1', MODE_KEY = 'lasem-fulfil';
+  var closed = menu.ordering === false; // switched off in the admin (Store settings)
+  var delivery = menu.delivery || {};
+  var canDeliver = !!delivery.enabled;
   var money = new Intl.NumberFormat('en-CA', { style: 'currency', currency: menu.currency || 'CAD' });
 
   // Lookups: variant id → {product, variant, category}; product id → {product, category}.
@@ -28,8 +31,9 @@
 
   var state = {
     cart: loadCart(),
+    mode: loadMode(),      // pickup | delivery
     view: 'cart',          // cart | checkout | done
-    form: { date: '', time: '', name: '', phone: '', email: '', notes: '', agree: false },
+    form: { date: '', time: '', name: '', phone: '', email: '', notes: '', agree: false, street: '', unit: '', city: cfg.city || '', postal: '', instructions: '' },
     error: '',
     sending: false,
     done: null,
@@ -49,12 +53,30 @@
   function loadCart() {
     try {
       var raw = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
-      return raw.filter(function (l) { return variants[l.variant] && l.qty > 0; });
+      return raw.filter(function (l) { return variants[l.variant] && !variants[l.variant].p.soldOut && l.qty > 0; });
     } catch (e) { return []; }
   }
   function saveCart() {
     try { localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); } catch (e) { /* private mode: cart lasts for this visit */ }
   }
+  function loadMode() {
+    try { return canDeliver && localStorage.getItem(MODE_KEY) === 'delivery' ? 'delivery' : 'pickup'; } catch (e) { return 'pickup'; }
+  }
+  function setMode(mode) {
+    state.mode = canDeliver && mode === 'delivery' ? 'delivery' : 'pickup';
+    state.form.time = '';
+    try { localStorage.setItem(MODE_KEY, state.mode); } catch (e) { /* ignore */ }
+  }
+  function isDelivery() { return state.mode === 'delivery' && canDeliver; }
+
+  // The delivery charge for a subtotal: free above the "free over" amount, when one is set.
+  function deliveryFee(sub) {
+    if (!isDelivery()) return 0;
+    if (delivery.freeOver > 0 && sub >= delivery.freeOver) return 0;
+    return delivery.fee || 0;
+  }
+  // How much more needs to be added before delivery is possible (0 = enough).
+  function deliveryShort(sub) { return isDelivery() && delivery.minOrder > sub ? delivery.minOrder - sub : 0; }
 
   function totals() {
     var sub = 0, taxable = 0, count = 0;
@@ -65,8 +87,9 @@
       count += l.qty;
       if (x.cat.taxable) taxable += line;
     });
-    var tax = Math.round(taxable * (menu.taxRate || 0));
-    return { sub: sub, tax: tax, total: sub + tax, count: count };
+    var fee = deliveryFee(sub);
+    var tax = Math.round((taxable + fee) * (menu.taxRate || 0));
+    return { sub: sub, fee: fee, tax: tax, total: sub + fee + tax, count: count };
   }
 
   function fromPrice(p) {
@@ -83,15 +106,16 @@
     var img = p.img
       ? '<img src="' + esc(p.img) + '" alt="" loading="lazy" width="400" height="300">'
       : '<span class="p-noimg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2h8l-1 4h-6zM7 7h10l-1.2 14.2a1 1 0 0 1-1 .8H9.2a1 1 0 0 1-1-.8z"/></svg></span>';
-    return '<article class="p-card" data-product="' + esc(p.id) + '" data-search="' + esc((p.name + ' ' + p.desc).toLowerCase()) + '">' +
+    var sold = !!p.soldOut;
+    return '<article class="p-card' + (sold ? ' is-sold' : '') + '" data-product="' + esc(p.id) + '" data-search="' + esc((p.name + ' ' + p.desc).toLowerCase()) + '">' +
       '<button class="p-open" type="button" data-open="' + esc(p.id) + '" aria-label="' + esc(p.name + ', ' + fromPrice(p)) + '">' +
         '<span class="p-media">' + img + '</span>' +
         '<span class="p-body"><span class="p-name">' + esc(p.name) + '</span>' +
         (p.desc ? '<span class="p-desc">' + esc(p.desc) + '</span>' : '') +
-        '<span class="p-foot"><span class="p-price">' + fromPrice(p) + '</span>' + sizes + '</span></span>' +
+        '<span class="p-foot"><span class="p-price">' + (sold ? 'Sold out today' : fromPrice(p)) + '</span>' + (sold ? '' : sizes) + '</span></span>' +
       '</button>' +
-      '<button class="p-add" type="button" data-' + (isQuick(p) ? 'quick' : 'open') + '="' + esc(p.id) + '" aria-label="Add ' + esc(p.name) + '">' +
-        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg></button>' +
+      (sold ? '' : '<button class="p-add" type="button" data-' + (isQuick(p) ? 'quick' : 'open') + '="' + esc(p.id) + '" aria-label="Add ' + esc(p.name) + '">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg></button>') +
     '</article>';
   }
 
@@ -101,7 +125,7 @@
     var html = '<section class="m-cat" id="cat-popular" data-cat><h2>Most ordered</h2><p class="m-cat-note">Our customers’ favourites</p><div class="p-grid">' + popular.map(card).join('') + '</div></section>';
     menu.categories.forEach(function (c) {
       html += '<section class="m-cat" id="cat-' + esc(c.id) + '" data-cat><h2>' + esc(c.name) + '</h2>' +
-        (c.id === 'cakes' ? '<p class="m-cat-note">Ready-made cakes for pickup. For a custom design, <a href="' + esc(cfg.contact) + '">send us an enquiry</a>.</p>' : '') +
+        (c.id === 'cakes' ? '<p class="m-cat-note">Ready-made cakes for pickup' + (canDeliver ? ' or delivery' : '') + '. For a custom design, <a href="' + esc(cfg.contact) + '">send us an enquiry</a>.</p>' : '') +
         '<div class="p-grid">' + c.products.map(card).join('') + '</div></section>';
     });
     html += '<p class="m-empty" data-empty hidden>No items match your search.</p>';
@@ -110,7 +134,7 @@
 
   menuEl.addEventListener('click', function (e) {
     var q = e.target.closest('[data-quick]');
-    if (q) { addToCart(products[q.dataset.quick].p.variants[0].id, 1, null, ''); return; }
+    if (q && !products[q.dataset.quick].p.soldOut) { addToCart(products[q.dataset.quick].p.variants[0].id, 1, null, ''); return; }
     var o = e.target.closest('[data-open]');
     if (o) openItem(o.dataset.open, o);
   });
@@ -136,6 +160,7 @@
 
   // Category bar: highlight the section in view; keep the active chip visible.
   var catNav = document.querySelector('[data-cat-nav]');
+  if (window.chipSlider) window.chipSlider(catNav);
   function setActive(id) {
     catNav.querySelectorAll('a').forEach(function (a) {
       var on = a.getAttribute('href') === '#' + id;
@@ -214,7 +239,9 @@
               '<output aria-live="polite">' + sel.qty + '</output>' +
               '<button type="button" data-qty="1" aria-label="One more">+</button>' +
             '</div>' +
-            '<button class="btn btn-solid btn-lg item-add" type="button" data-add>Add to order · ' + fmt(price()) + '</button>' +
+            (p.soldOut
+              ? '<button class="btn btn-solid btn-lg item-add" type="button" disabled>Sold out today</button>'
+              : '<button class="btn btn-solid btn-lg item-add" type="button" data-add>Add to order · ' + fmt(price()) + '</button>') +
           '</div>' +
         '</div>';
     }
@@ -237,7 +264,7 @@
         itemSheet.querySelector('[data-qty="' + q.dataset.qty + '"]').focus();
         return;
       }
-      if (e.target.closest('[data-add]')) {
+      if (e.target.closest('[data-add]') && !p.soldOut) {
         sel.note = itemSheet.querySelector('[data-note]').value.trim();
         if (p.choice && !sel.choice) {
           var err = itemSheet.querySelector('[data-item-err]');
@@ -252,7 +279,8 @@
     itemSheet.onchange = function (e) {
       if (e.target.name === 'variant') sel.variant = e.target.value;
       if (e.target.name === 'choice') sel.choice = e.target.value;
-      itemSheet.querySelector('[data-add]').textContent = 'Add to order · ' + fmt(price());
+      var add = itemSheet.querySelector('[data-add]');
+      if (add) add.textContent = 'Add to order · ' + fmt(price());
       var err = itemSheet.querySelector('[data-item-err]');
       if (err) err.hidden = true;
     };
@@ -281,12 +309,29 @@
     return { name: x.p.name, sub: bits.join(' · '), note: l.note };
   }
 
-  function summaryRows(t) {
+  function summaryRows(t, deliveryOrder) {
     return '<dl class="sum">' +
       '<div><dt>Subtotal</dt><dd>' + fmt(t.sub) + '</dd></div>' +
+      (deliveryOrder ? '<div><dt>Delivery</dt><dd>' + (t.fee > 0 ? fmt(t.fee) : 'Free') + '</dd></div>' : '') +
       '<div><dt>HST</dt><dd>' + fmt(t.tax) + '</dd></div>' +
       '<div class="sum-total"><dt>Total</dt><dd>' + fmt(t.total) + '</dd></div>' +
     '</dl>';
+  }
+
+  // Pickup / delivery switch at the top of the cart, with what each one means.
+  var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg>';
+  var TRUCK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h11v10H3zM14 8h4l3 3v4h-7zM6 19a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>';
+  function feeWords() {
+    if (!delivery.fee) return 'Free delivery';
+    return fmt(delivery.fee) + (delivery.freeOver > 0 ? ', free over ' + fmt(delivery.freeOver) : '');
+  }
+  function modeSwitch() {
+    if (!canDeliver) return '<p class="cart-pickup">' + PIN + 'Pickup · ' + esc(cfg.street) + '</p>';
+    var d = isDelivery();
+    return '<div class="fulfil" role="group" aria-label="Pickup or delivery">' +
+      '<button type="button" data-mode="pickup" class="' + (d ? '' : 'is-on') + '" aria-pressed="' + (d ? 'false' : 'true') + '">' + PIN + '<span>Pickup</span><small>' + esc(cfg.street) + '</small></button>' +
+      '<button type="button" data-mode="delivery" class="' + (d ? 'is-on' : '') + '" aria-pressed="' + (d ? 'true' : 'false') + '">' + TRUCK + '<span>Delivery</span><small>' + esc(feeWords()) + '</small></button>' +
+    '</div>';
   }
 
   function renderCart() {
@@ -302,8 +347,9 @@
     } else if (state.view === 'checkout') {
       html = renderCheckout(t);
     } else {
+      var short = deliveryShort(t.sub);
       html = '<div class="cart-head"><h2>Your order</h2><button class="sheet-x cart-x" type="button" data-close-cart aria-label="Close">&times;</button></div>' +
-        '<p class="cart-pickup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg>Pickup · 1275 Eglinton Ave. East</p>' +
+        modeSwitch() +
         '<ul class="lines">' + state.cart.map(function (l, i) {
           var n = lineName(l), x = variants[l.variant];
           return '<li class="line">' +
@@ -318,9 +364,13 @@
               '</div></div>' +
           '</li>';
         }).join('') + '</ul>' +
-        summaryRows(t) +
-        '<button class="btn btn-solid btn-lg btn-block" type="button" data-go="checkout">Checkout · ' + fmt(t.total) + '</button>' +
-        '<p class="muted small center">Pickup only. You pay at the counter.</p>';
+        summaryRows(t, isDelivery()) +
+        (closed
+          ? '<p class="notice">' + esc(menu.closedMessage || 'Online ordering is closed right now.') + '</p><a class="btn btn-line btn-lg btn-block" href="tel:' + esc(cfg.tel) + '">Call ' + esc(cfg.phone) + ' to order</a>'
+          : (short
+            ? '<p class="fulfil-note" role="status">Delivery orders start at <b>' + fmt(delivery.minOrder) + '</b>. Add <b>' + fmt(short) + '</b> more, or <button type="button" class="linkish" data-mode="pickup">switch to pickup</button>.</p><button class="btn btn-solid btn-lg btn-block" type="button" disabled>Checkout · ' + fmt(t.total) + '</button>'
+            : '<button class="btn btn-solid btn-lg btn-block" type="button" data-go="checkout">Checkout · ' + fmt(t.total) + '</button>')) +
+        '<p class="muted small center">' + (isDelivery() ? 'Pay on delivery, cash or card at the door.' : (canDeliver ? 'Pay at the counter when you pick up.' : 'Pickup only. You pay at the counter.')) + '</p>';
     }
     box.innerHTML = html;
     if (state.view === 'checkout') wireCheckout();
@@ -331,6 +381,14 @@
   }
 
   box.addEventListener('click', function (e) {
+    var m = e.target.closest('[data-mode]');
+    if (m) {
+      setMode(m.dataset.mode);
+      renderCart();
+      var again = box.querySelector('.fulfil [data-mode="' + state.mode + '"]');
+      if (again) again.focus({ preventScroll: true });
+      return;
+    }
     var b = e.target.closest('[data-line]');
     if (b) {
       var i = Number(b.dataset.line), l = state.cart[i];
@@ -373,7 +431,7 @@
     else if (!cartSheet.hidden) closeSheet(cartSheet);
   });
 
-  /* ---------- Pickup times (Mississauga time) ---------- */
+  /* ---------- Pickup and delivery times (Mississauga time) ---------- */
 
   function torontoNow() {
     var parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
@@ -384,17 +442,21 @@
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function label12(m) { var h = Math.floor(m / 60), mm = m % 60; return ((h + 11) % 12 + 1) + ':' + pad(mm) + ' ' + (h < 12 ? 'am' : 'pm'); }
 
+  function iso0(dt) { return dt.getUTCFullYear() + '-' + pad(dt.getUTCMonth() + 1) + '-' + pad(dt.getUTCDate()); }
+
   function pickupDays() {
     var now = torontoNow();
     var open = hm(menu.hours.opens), close = hm(menu.hours.closes);
+    var lead = menu.leadMinutes + (isDelivery() ? (delivery.leadMinutes || 0) : 0);
     var days = [];
     for (var i = 0; i <= menu.daysAhead; i++) {
       var dt = new Date(Date.UTC(now.y, now.m - 1, now.d + i));
       var start = open;
-      if (i === 0) start = Math.max(open, Math.ceil((now.mins + menu.leadMinutes) / 15) * 15);
+      if (i === 0) start = Math.max(open, Math.ceil((now.mins + lead) / 15) * 15);
+      var closedDay = (menu.closedDates || []).indexOf(iso0(dt)) !== -1;
       var slots = [];
       for (var m = start; m <= close; m += 15) slots.push(m);
-      if (!slots.length) continue;
+      if (!slots.length || closedDay) continue;
       var iso = dt.getUTCFullYear() + '-' + pad(dt.getUTCMonth() + 1) + '-' + pad(dt.getUTCDate());
       var md = dt.toLocaleDateString('en-CA', { month: 'short', day: 'numeric', timeZone: 'UTC' });
       var wd = dt.toLocaleDateString('en-CA', { weekday: 'short', timeZone: 'UTC' });
@@ -412,15 +474,28 @@
     var day = days.find(function (d) { return d.iso === f.date; });
     var times = day ? day.slots : [];
     if (times.indexOf(Number(f.time)) === -1) f.time = times.length ? String(times[0]) : '';
+    var d = isDelivery();
     return '<div class="cart-head"><button class="back" type="button" data-go="cart">&larr; Back to order</button><button class="sheet-x cart-x" type="button" data-close-cart aria-label="Close">&times;</button></div>' +
       '<h2>Checkout</h2>' +
       '<form class="co" data-checkout novalidate>' +
-        '<fieldset><legend>Pickup time</legend>' +
+        '<p class="co-mode">' + (d ? TRUCK + '<span><b>Delivery</b> · ' + esc(feeWords()) + '</span>' : PIN + '<span><b>Pickup</b> · ' + esc(cfg.street) + '</span>') +
+          (canDeliver ? '<button type="button" class="linkish" data-mode="' + (d ? 'pickup' : 'delivery') + '">' + (d ? 'Pick up instead' : 'Deliver instead') + '</button>' : '') + '</p>' +
+        (d ? '<fieldset><legend>Delivery address</legend>' +
+          '<label>Street address<input name="street" autocomplete="street-address" required value="' + esc(f.street) + '" placeholder="123 Main Street"></label>' +
+          '<div class="co-row co-row-unit">' +
+            '<label>Unit / buzzer <i>Optional</i><input name="unit" autocomplete="address-line2" value="' + esc(f.unit) + '"></label>' +
+            '<label>City<input name="city" autocomplete="address-level2" required value="' + esc(f.city) + '"></label>' +
+          '</div>' +
+          '<label>Postal code<input name="postal" autocomplete="postal-code" required value="' + esc(f.postal) + '" placeholder="L4W 2Z2" maxlength="7"></label>' +
+          '<label>Delivery instructions <i>Optional</i><textarea name="instructions" rows="2" maxlength="300" placeholder="Gate code, where to leave it, call on arrival…">' + esc(f.instructions) + '</textarea></label>' +
+          (delivery.note ? '<p class="muted small">' + esc(delivery.note) + '</p>' : '') +
+        '</fieldset>' : '') +
+        '<fieldset><legend>' + (d ? 'Delivery time' : 'Pickup time') + '</legend>' +
           '<div class="co-row">' +
             '<label>Day<select name="date" required>' + days.map(function (d) { return '<option value="' + d.iso + '"' + (d.iso === f.date ? ' selected' : '') + '>' + esc(d.label) + '</option>'; }).join('') + '</select></label>' +
             '<label>Time<select name="time" required>' + times.map(function (m) { return '<option value="' + m + '"' + (String(m) === f.time ? ' selected' : '') + '>' + label12(m) + '</option>'; }).join('') + '</select></label>' +
           '</div>' +
-          '<p class="muted small">Pickup at 1275 Eglinton Ave. East, Mississauga.</p>' +
+          '<p class="muted small">' + (d ? 'We aim to arrive within about 30 minutes of the time you choose.' : 'Pickup at ' + esc(cfg.street + ', ' + cfg.city) + '.') + '</p>' +
         '</fieldset>' +
         '<fieldset><legend>Your details</legend>' +
           '<label>Full name<input name="name" autocomplete="name" required value="' + esc(f.name) + '"></label>' +
@@ -428,8 +503,9 @@
           '<label>Email<input name="email" type="email" autocomplete="email" required value="' + esc(f.email) + '" placeholder="For your confirmation"></label>' +
           '<label>Order notes <i>Optional</i><textarea name="notes" rows="2" maxlength="500">' + esc(f.notes) + '</textarea></label>' +
         '</fieldset>' +
-        '<div class="pay-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zm2 2v2h14V8zm0 5v3h14v-3z"/></svg><div><b>Pay at pickup</b><span>Cash, debit or credit card at the counter.</span></div></div>' +
-        summaryRows(t) +
+        '<div class="pay-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zm2 2v2h14V8zm0 5v3h14v-3z"/></svg><div>' +
+          (d ? '<b>Pay on delivery</b><span>Cash or card when your order arrives.</span>' : '<b>Pay at pickup</b><span>Cash, debit or credit card at the counter.</span>') + '</div></div>' +
+        summaryRows(t, d) +
         '<label class="agree"><input type="checkbox" name="agree"' + (f.agree ? ' checked' : '') + '> <span>I agree to the <a href="' + esc(cfg.terms) + '" target="_blank" rel="noopener">terms</a> and <a href="' + esc(cfg.cancel) + '" target="_blank" rel="noopener">cancellation policy</a>.</span></label>' +
         (state.error ? '<p class="co-err" role="alert">' + esc(state.error) + '</p>' : '') +
         '<button class="btn btn-solid btn-lg btn-block" type="submit"' + (state.sending ? ' disabled' : '') + '>' + (state.sending ? 'Placing your order…' : 'Place order · ' + fmt(t.total)) + '</button>' +
@@ -459,7 +535,11 @@
     if (!f.name.trim()) bad = ['name', 'Please enter your name.'];
     else if (f.phone.replace(/\D/g, '').length < 10) bad = ['phone', 'Please enter a phone number with area code.'];
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim())) bad = ['email', 'Please enter a valid email address.'];
-    else if (!f.date || f.time === '') bad = ['date', 'Please choose a pickup time.'];
+    else if (isDelivery() && !f.street.trim()) bad = ['street', 'Please enter the delivery address.'];
+    else if (isDelivery() && !f.city.trim()) bad = ['city', 'Please enter the city.'];
+    else if (isDelivery() && !/^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$/.test(f.postal.trim())) bad = ['postal', 'Please enter a valid postal code, like L4W 2Z2.'];
+    else if (isDelivery() && delivery.postalPrefixes && delivery.postalPrefixes.length && !delivery.postalPrefixes.some(function (p) { return f.postal.replace(/\s+/g, '').toUpperCase().indexOf(p) === 0; })) bad = ['postal', 'Sorry, we don’t deliver to that postal code yet' + (delivery.areas ? ' (we deliver to ' + delivery.areas + ')' : '') + '. Choose pickup, or call ' + cfg.phone + '.'];
+    else if (!f.date || f.time === '') bad = ['date', 'Please choose a ' + (isDelivery() ? 'delivery' : 'pickup') + ' time.'];
     else if (!f.agree) bad = ['agree', 'Please agree to the terms and cancellation policy.'];
     if (bad) {
       state.error = bad[1];
@@ -477,6 +557,8 @@
       body: JSON.stringify({
         key: state.key,
         lines: state.cart,
+        fulfilment: isDelivery() ? 'delivery' : 'pickup',
+        delivery: isDelivery() ? { street: f.street.trim(), unit: f.unit.trim(), city: f.city.trim(), postal: f.postal.trim(), instructions: f.instructions.trim() } : null,
         pickup: { date: f.date, time: Number(f.time) },
         customer: { name: f.name.trim(), phone: f.phone.trim(), email: f.email.trim() },
         notes: f.notes.trim()
@@ -511,13 +593,15 @@
     return '<div class="done">' +
       '<div class="done-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>' +
       '<h2>Thank you, ' + esc(o.firstName) + '!</h2>' +
-      '<p>Your order <b>' + esc(o.number) + '</b> is in. We’ll have it ready for pickup.</p>' +
-      '<div class="done-when"><span>Pickup</span><b>' + esc(o.pickupLabel) + '</b><span>1275 Eglinton Ave. East, Mississauga</span></div>' +
+      '<p>Your order <b>' + esc(o.number) + '</b> is in. ' + (o.fulfilment === 'delivery' ? 'We’ll bring it to you.' : 'We’ll have it ready for pickup.') + '</p>' +
+      (o.fulfilment === 'delivery'
+        ? '<div class="done-when"><span>Delivery</span><b>' + esc(o.pickupLabel) + '</b><span>' + esc(o.address) + '</span></div>'
+        : '<div class="done-when"><span>Pickup</span><b>' + esc(o.pickupLabel) + '</b><span>' + esc(cfg.street + ', ' + cfg.city) + '</span></div>') +
       '<ul class="done-lines">' + o.lines.map(function (l) {
         return '<li><span>' + l.qty + ' × ' + esc(l.name) + (l.detail ? ' <i>' + esc(l.detail) + '</i>' : '') + '</span><b>' + fmt(l.total) + '</b></li>';
       }).join('') + '</ul>' +
-      summaryRows({ sub: o.subtotal, tax: o.tax, total: o.total }) +
-      '<p class="muted small">Pay at the counter when you pick up. ' + (o.emailed ? 'A confirmation is on its way to ' + esc(o.email) + '.' : '') +
+      summaryRows({ sub: o.subtotal, fee: o.fee || 0, tax: o.tax, total: o.total }, o.fulfilment === 'delivery') +
+      '<p class="muted small">' + (o.fulfilment === 'delivery' ? 'Please have payment ready when your order arrives. ' : 'Pay at the counter when you pick up. ') + (o.emailed ? 'A confirmation is on its way to ' + esc(o.email) + '.' : '') +
       ' Questions? Call <a href="tel:' + esc(cfg.tel) + '">' + esc(cfg.phone) + '</a>.</p>' +
       '<button class="btn btn-line btn-block" type="button" data-new-order>Start a new order</button>' +
     '</div>';

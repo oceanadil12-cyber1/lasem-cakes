@@ -7,6 +7,10 @@ DirectoryIndex index.php
   # Code and data folders are never served directly.
   RewriteRule ^(inc|data|private)(/|$) - [F,L]
 
+  # Staging or any other host than lasemcakes.ca: keep search engines out.
+  RewriteCond %{HTTP_HOST} !(^|\.)lasemcakes\.ca$ [NC]
+  RewriteRule ^robots\.txt$ robots-staging.txt [L]
+
   # One address per page: always https and a trailing slash.
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP_HOST} !^localhost [NC]
@@ -18,9 +22,23 @@ DirectoryIndex index.php
   RewriteCond %{REQUEST_URI} !\.[a-z0-9]{2,5}$ [NC]
   RewriteRule ^(.*)$ %{REQUEST_URI}/ [R=301,L]
 
+  # The admin panel and the kitchen display: their code folders are never served.
+  RewriteRule ^(admin|kds)/inc(/|$) - [F,L]
+  RewriteRule ^(admin|kds)/(index\.php|api\.php)?$ - [L]
+
+  # Table ordering: the table page, order tracking, the "Now serving" board, tracking QR codes.
+  RewriteRule ^dine-in/(index\.php)?$ - [L]
+  RewriteRule ^dine-in/(track|board|qr)/$ dine-in/index.php [L,QSA]
+
   # Everything that isn't a real file goes to the front controller.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Staging: tell search engines not to index pages served from any host but lasemcakes.ca.
+  SetEnvIfNoCase Host "(^|\.)lasemcakes\.ca$" LIVE_HOST
+  Header set X-Robots-Tag "noindex, nofollow" env=!LIVE_HOST
 </IfModule>
 
 <IfModule mod_expires.c>

@@ -1,0 +1,3 @@
+# Served instead of robots.txt on any host other than lasemcakes.ca (see .htaccess).
+User-agent: *
+Disallow: /

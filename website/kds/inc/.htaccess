@@ -1,0 +1,2 @@
+# KDS code is only ever run through kds/index.php and kds/api.php.
+Require all denied

@@ -17,11 +17,19 @@
    "images": [
     {
      "src": "2026/10/wedding-cakes.jpg",
-     "alt": null
+     "alt": "Six-tier white wedding cake with black and blush sugar flowers"
     },
     {
      "src": "2026/10/Other-Wedding.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/08/wedding-cakes-2.jpg",
+     "alt": "Wedding cake surrounded by flowers at a reception"
+    },
+    {
+     "src": "2026/10/wedding-cake-1.jpg",
+     "alt": "Classic four-tier white wedding cake with piped details"
     }
    ],
    "description": "A wedding cake has several jobs at once: it becomes part of the room, appears in photographs, reflects the couple’s style, and has to taste as considered…"
@@ -108,6 +116,10 @@
     {
      "src": "2026/10/Bridal-Shower-3.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/Bridal-shower-1.jpg",
+     "alt": "Two-tier bridal shower cake with a draped gown and pink sugar rose"
     }
    ],
    "description": "A bridal shower cake can feel more playful than the wedding cake that comes later. It may pick up the shower’s florals, colours, venue, fashion, or theme…"
@@ -160,6 +172,10 @@
     {
      "src": "2026/10/Baptism-2-1.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/baptism-2.jpg",
+     "alt": "White baptism cake with a gold cross and blue flowers"
     }
    ],
    "description": "A Baptism celebration has a gentle character of its own, and the cake can follow that mood rather than compete with it. Soft colours, meaningful symbols,…"
@@ -190,6 +206,10 @@
     {
      "src": "2026/10/Communion-3.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/communion-1.jpg",
+     "alt": "First Holy Communion cake shaped like an open book with a cross"
     }
    ],
    "description": "First Communion celebrations often bring several generations together, so the cake needs to feel fitting for the child while respecting the significance…"
@@ -262,7 +282,8 @@
      "alt": "Birthday & Novelty Cake"
     }
    ],
-   "description": "Bachelor & Bachelorette party cakes do not need to follow the rules of a celebration cake. They can be humorous, bold, themed around a hobby, an inside…"
+   "description": "Bachelor & Bachelorette party cakes do not need to follow the rules of a celebration cake. They can be humorous, bold, themed around a hobby, an inside…",
+   "menu": "Bachelor & Bachelorette Party Cakes"
   },
   "novelty-cakes": {
    "type": "occasion",
@@ -286,9 +307,18 @@
     {
      "src": "2026/10/BD-cakes.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/08/65th-BD-cake.jpg",
+     "alt": "Black and gold 65th birthday cake"
+    },
+    {
+     "src": "2026/08/BD-cakes-1.jpg",
+     "alt": "Black Jordan-themed birthday cake with the number 23"
     }
    ],
-   "description": "Novelty cakes are where cake design gets to show personality. A character, hobby, sport, profession, inside joke, milestone, or unexpected theme can…"
+   "description": "Novelty cakes are where cake design gets to show personality. A character, hobby, sport, profession, inside joke, milestone, or unexpected theme can…",
+   "menu": "Birthday & Novelty Cakes"
   },
   "pastries-mississauga": {
    "type": "bakery",
@@ -313,6 +343,10 @@
     {
      "src": "2026/10/Patries.avif",
      "alt": null
+    },
+    {
+     "src": "2026/10/Pastries-Sweets.jpg",
+     "alt": "Tray of layered pastry slices"
     }
    ],
    "description": "A pastry counter should give you reasons to look twice. At La Sem, our European-style selection is made fresh daily and includes fruit tarts,…"
@@ -344,6 +378,10 @@
     {
      "src": "2026/10/Zeppole-1-1.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/zeppole-rotated.jpg",
+     "alt": "Zeppole with custard and amarena cherries"
     }
    ],
    "description": "Zeppole arrive with a season, a tradition, and a reason people wait for them. Our version at La Sem follows Mr. Ventola’s original recipe: a lightly fried…"
@@ -371,6 +409,10 @@
     {
      "src": "2026/10/Almond-Shortbread_cookies.avif",
      "alt": "Almond & Shortbread cookies"
+    },
+    {
+     "src": "2026/10/Cookies-1.jpg",
+     "alt": "Stack of cookies drizzled with chocolate"
     }
    ],
    "description": "Cookies are easy bakery treats to share, but variety is what makes a box interesting. La Sem makes cookies fresh in-house, with Italian and European…"
@@ -397,6 +439,10 @@
     {
      "src": "2026/10/keto_Peanut-Butter-cookies-rotated.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/keto_cookies-assorted-rotated-1-rotated.jpg",
+     "alt": "Assorted keto cookies on a plate"
     }
    ],
    "description": "Finding a cookie that fits a lower-carbohydrate eating style should not mean giving up the pleasure of a bakery treat. Our Keto Cookies give customers an…"
@@ -424,6 +470,10 @@
     {
      "src": "2026/10/Cupcake.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/Pastries-Sweet-1-rotated.jpg",
+     "alt": "Chocolate cupcakes topped with fresh strawberries"
     }
    ],
    "description": "Cupcakes solve a different celebration need than a full-size cake. They are easy to portion, simple to share, and flexible enough for birthdays, office…"
@@ -474,6 +524,10 @@
     {
      "src": "2026/10/Cheese-cakes-1-1.jpg",
      "alt": null
+    },
+    {
+     "src": "2026/10/cheese-cakes.jpg",
+     "alt": "Tray of mini cheesecakes with fruit, chocolate and caramel toppings"
     }
    ],
    "description": "Cheesecake has a richness different from sponge or layered cream cakes. Its dense, smooth texture makes it well suited to celebrations where dessert…"
@@ -525,12 +579,32 @@
    ],
    "images": [
     {
-     "src": "2026/10/Focaccia-sandwitch.jpg",
-     "alt": null
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-01.jpg",
+     "alt": "Focaccia sandwich with mortadella and greens, served with a La Sem coffee"
     },
     {
-     "src": "2026/10/Foccacia-pict-1.jpg",
-     "alt": null
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-02.jpg",
+     "alt": "Focaccia sandwich on a plate at the La Sem café"
+    },
+    {
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-03.jpg",
+     "alt": "Hand holding a cut focaccia sandwich with prosciutto and greens"
+    },
+    {
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-04.jpg",
+     "alt": "Focaccia sandwiches with tomato and greens, served with pickles"
+    },
+    {
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-05.jpg",
+     "alt": "Fresh focaccia with sliced ham, ready for sandwiches"
+    },
+    {
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-06.jpg",
+     "alt": "Focaccia topped with pesto and roasted peppers"
+    },
+    {
+     "src": "2026/11/gallery/foccacia-pizza-lasagna-other-buns/focaccia-07.jpg",
+     "alt": "Focaccia sandwich with ham, cheese and greens"
     }
    ],
    "description": "Some sandwiches begin with the filling. Ours begin with the bread. La Sem has made focaccia from the same traditional recipe for more than 60 years, and…"
@@ -538,86 +612,3187 @@
   "birthday-novelty": {
    "type": "gallery",
    "title": "Birthday & Novelty",
+   "caption": "Birthday & Novelty Cake",
    "images": [
     {
      "src": "2026/09/Birthday-Novelty-Cake-1.jpg",
-     "alt": "Birthday Novelty Cake"
+     "alt": "Birthday Novelty Cake",
+     "title": "Birthday & Novelty Cake #1"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-2.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #2"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-3.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #3"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-4.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #4"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-5.jpg",
-     "alt": "Birthday Novelty Cake"
+     "alt": "Birthday Novelty Cake",
+     "title": "Birthday & Novelty Cake #5"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-6.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #6"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-7.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #7"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-8.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #8"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-9.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #9"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-10.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #10"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-11.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #11"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-12.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #12"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-13.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #13"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-14.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #14"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-15.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #15"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-16.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #16"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-17.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #17"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-18.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #18"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-19.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #19"
     },
     {
      "src": "2026/09/Birthday-Novelty-Cake-20.jpg",
-     "alt": "Birthday & Novelty Cake"
+     "alt": "Birthday & Novelty Cake",
+     "title": "Birthday & Novelty Cake #20"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-21.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #21"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-22.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #22"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-23.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #23"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-24.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #24"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-25.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #25"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-26.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #26"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-27.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #27"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-28.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #28"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-29.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #29"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-30.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #30"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-31.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #31"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-32.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #32"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-33.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #33"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-34.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #34"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-35.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #35"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-36.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #36"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-37.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #37"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-38.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #38"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-39.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #39"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-40.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #40"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-41.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #41"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-42.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #42"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-43.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #43"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-44.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #44"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-45.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #45"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-46.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #46"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-47.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #47"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-48.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #48"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-49.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #49"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-50.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #50"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-51.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #51"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-52.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #52"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-53.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #53"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-54.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #54"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-55.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #55"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-56.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #56"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-57.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #57"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-58.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #58"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-59.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #59"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-60.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #60"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-61.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #61"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-62.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #62"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-63.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #63"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-64.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #64"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-65.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #65"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-66.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #66"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-67.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #67"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-68.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #68"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-69.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #69"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-70.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #70"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-71.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #71"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-72.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #72"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-73.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #73"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-74.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #74"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-75.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #75"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-76.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #76"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-77.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #77"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-78.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #78"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-79.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #79"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-80.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #80"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-81.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #81"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-82.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #82"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-83.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #83"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-84.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #84"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-85.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #85"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-86.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #86"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-87.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #87"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-88.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #88"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-89.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #89"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-90.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #90"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-91.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #91"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-92.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #92"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-93.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #93"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-94.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #94"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-95.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #95"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-96.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #96"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-97.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #97"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-98.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #98"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-99.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #99"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-100.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #100"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-101.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #101"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-102.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #102"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-103.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #103"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-104.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #104"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-105.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #105"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-106.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #106"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-107.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #107"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-108.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #108"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-109.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #109"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-110.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #110"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-111.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #111"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-112.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #112"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-113.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #113"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-114.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #114"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-115.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #115"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-116.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #116"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-117.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #117"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-118.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #118"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-119.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #119"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-120.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #120"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-121.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #121"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-122.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #122"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-123.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #123"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-124.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #124"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-125.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #125"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-126.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #126"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-127.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #127"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-128.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #128"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-129.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #129"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-130.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #130"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-131.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #131"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-133.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #133"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-134.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #134"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-135.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #135"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-136.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #136"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-137.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #137"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-138.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #138"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-139.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #139"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-140.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #140"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-141.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #141"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-142.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #142"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-143.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #143"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-144.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #144"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-145.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #145"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-146.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #146"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-147.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #147"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-148.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #148"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-149.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #149"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-150.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #150"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-151.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #151"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-152.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #152"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-153.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #153"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-154.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #154"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-155.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #155"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-156.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #156"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-157.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #157"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-158.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #158"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-159.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #159"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-160.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #160"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-161.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #161"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-162.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #162"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-163.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #163"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-164.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #164"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-165.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #165"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-166.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #166"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-167.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #167"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-168.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #168"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-169.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #169"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-170.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #170"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-171.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #171"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-172.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #172"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-173.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #173"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-174.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #174"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-175.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #175"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-176.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #176"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-177.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #177"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-178.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #178"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-179.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #179"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-180.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #180"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-181.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #181"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-182.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #182"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-183.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #183"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-184.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #184"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-185.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #185"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-186.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #186"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-187.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #187"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-188.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #188"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-189.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #189"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-190.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #190"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-191.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #191"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-192.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #192"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-193.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #193"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-194.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #194"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-195.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #195"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-196.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #196"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-197.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #197"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-198.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #198"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-199.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #199"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-200.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #200"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-201.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #201"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-202.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #202"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-203.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #203"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-204.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #204"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-205.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #205"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-206.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #206"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-207.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #207"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-208.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #208"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-209.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #209"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-210.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #210"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-211.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #211"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-212.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #212"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-213.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #213"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-214.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #214"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-215.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #215"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-216.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #216"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-217.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #217"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-219.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #219"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-220.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #220"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-221.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #221"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-222.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #222"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-223.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #223"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-224.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #224"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-225.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #225"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-226.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #226"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-227.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #227"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-228.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #228"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-229.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #229"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-230.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #230"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-231.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #231"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-232.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #232"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-233.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #233"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-234.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #234"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-235.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #235"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-236.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #236"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-237.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #237"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-238.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #238"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-239.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #239"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-240.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #240"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-241.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #241"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-242.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #242"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-243.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #243"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-244.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #244"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-245.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #245"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-246.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #246"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-247.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #247"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-248.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #248"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-249.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #249"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-250.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #250"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-251.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #251"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-252.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #252"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-253.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #253"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-254.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #254"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-255.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #255"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-256.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #256"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-257.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #257"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-258.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #258"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-259.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #259"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-260.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #260"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-261.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #261"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-262.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #262"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-263.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #263"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-264.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #264"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-265.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #265"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-266.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #266"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-267.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #267"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-268.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #268"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-269.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #269"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-270.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #270"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-271.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #271"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-272.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #272"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-273.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #273"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-274.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #274"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-275.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #275"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-276-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #276"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-277-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #277"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-278-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #278"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-279-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #279"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-280-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #280"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-281-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #281"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-282.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #282"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-283-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #283"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-284-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #284"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-285-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #285"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-286-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #286"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-287-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #287"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-288-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #288"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-289-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #289"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-290-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #290"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-291-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #291"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-292-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #292"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-293-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #293"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-294-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #294"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-295-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #295"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-296-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #296"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-297-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #297"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-298-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #298"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-299-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #299"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-300-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #300"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-301-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #301"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-302-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #302"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-303-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #303"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-304-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #304"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-305-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #305"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-306-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #306"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-307-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #307"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-308-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #308"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-309-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #309"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-310-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #310"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-311-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #311"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-312-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #312"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-313-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #313"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-314-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #314"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-315-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #315"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-316-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #316"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-317.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #317"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-318-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #318"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-319-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #319"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-320.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #320"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-321.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #321"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-322.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #322"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-323.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #323"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-324.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #324"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-325-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #325"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-326-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #326"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-327.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #327"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-328.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #328"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-329.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #329"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-330.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #330"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-331.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #331"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-332.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #332"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-333.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #333"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-334.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #334"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-335.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #335"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-336.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #336"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-337.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #337"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-338.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #338"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-339.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #339"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-340.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #340"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-341.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #341"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-342.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #342"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-343.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #343"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-344.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #344"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-345.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #345"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-346.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #346"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-347.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #347"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-348.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #348"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-349.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #349"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-350.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #350"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-351.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #351"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-352.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #352"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-353.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #353"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-354.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #354"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-355.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #355"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-356.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #356"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-357.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #357"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-358.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #358"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-359.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #359"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-360-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #360"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-361.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #361"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-362.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #362"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-363-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #363"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-364-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #364"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-365-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #365"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-366.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #366"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-367.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #367"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-368.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #368"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-369.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #369"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-370.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #370"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-371.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #371"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-372.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #372"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-373.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #373"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-374.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #374"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-375.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #375"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-376.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #376"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-377.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #377"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-378.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #378"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-379.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #379"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-380.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #380"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-381.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #381"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-382.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #382"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-383.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #383"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-384.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #384"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-385.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #385"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-386.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #386"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-387.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #387"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-388.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #388"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-389.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #389"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-390.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #390"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-391.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #391"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-392.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #392"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-393.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #393"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-394.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #394"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-395.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #395"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-396.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #396"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-397.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #397"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-398.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #398"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-399.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #399"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-400.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #400"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-401.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #401"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-402.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #402"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-403.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #403"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-404.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #404"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-405.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #405"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-406.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #406"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-407.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #407"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-408.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #408"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-409.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #409"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-410.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #410"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-411.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #411"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-412.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #412"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-413.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #413"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-414.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #414"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-415.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #415"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-416.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #416"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-417.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #417"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-418.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #418"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-419.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #419"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-420.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #420"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-421.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #421"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-422.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #422"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-423.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #423"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-424.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #424"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-425.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #425"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-426.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #426"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-427.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #427"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-428.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #428"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-429.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #429"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-430.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #430"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-431.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #431"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-432.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #432"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-433.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #433"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-434.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #434"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-435.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #435"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-436.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #436"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-437.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #437"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-438.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #438"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-439.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #439"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-440.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #440"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-441.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #441"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-442.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #442"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-443.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #443"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-444.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #444"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-445.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #445"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-446.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #446"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-447-1.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #447"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-448.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #448"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-449.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #449"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-450.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #450"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-451.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #451"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-452.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #452"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-453.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #453"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-454.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #454"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-455.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #455"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-456.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #456"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-457.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #457"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-458.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #458"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-459.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #459"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-460.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #460"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-461.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #461"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-462.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #462"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-463.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #463"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-464.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #464"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-465.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #465"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-466.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #466"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-467.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #467"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-468.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #468"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-469.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #469"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-470.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #470"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-471.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #471"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-472.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #472"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-473.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #473"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-474.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #474"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-475.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #475"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-476.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #476"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-477.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #477"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-478.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #478"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-479.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #479"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-480.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #480"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-481.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #481"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-482.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #482"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-483.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #483"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-484.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #484"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-485.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #485"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-486.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #486"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-487.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #487"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-488.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #488"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-489.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #489"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-490.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #490"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-491.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #491"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-492.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #492"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-493.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #493"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-494.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #494"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-495.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #495"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-496.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #496"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-497.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #497"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-498.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #498"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-499.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #499"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-500.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #500"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-501.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #501"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-502.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #502"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-503.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #503"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-504.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #504"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-505.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #505"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-506.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #506"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-507.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #507"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-508.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #508"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-509.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #509"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-510.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #510"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-511.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #511"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-512.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #512"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-513-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #513"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-514.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #514"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-515.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #515"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-516.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #516"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-517.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #517"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-518.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #518"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-519.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #519"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-520.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #520"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-521.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #521"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-522.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #522"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-523.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #523"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-524.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #524"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-525.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #525"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-526.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #526"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-527.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #527"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-528.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #528"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-529.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #529"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-530.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #530"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-531.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #531"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-532.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #532"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-533-scaled.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #533"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-534.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #534"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-535.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #535"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-536.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #536"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-537.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #537"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-538.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #538"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-539.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #539"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-540.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #540"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-541.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #541"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-542.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #542"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-543.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #543"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-544.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #544"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-545.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #545"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-546.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #546"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-547.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #547"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-548.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #548"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-549.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #549"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-550.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #550"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-551.jpeg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #551"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-552.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #552"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-553.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #553"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-554.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #554"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-555.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #555"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-556.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #556"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-557.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #557"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-558.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #558"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-559.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #559"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-560.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #560"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-561.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #561"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-562.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #562"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-563.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #563"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-564.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #564"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-565-1.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #565"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-566.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #566"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-567.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #567"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-568.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #568"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-569.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #569"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-570.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #570"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-571.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #571"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-572.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #572"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-573.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #573"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-574.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #574"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-575.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #575"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-576.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #576"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-577.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #577"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-578.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #578"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-579.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #579"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-580.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #580"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-581.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #581"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-582.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #582"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-583.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #583"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-584.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #584"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-585.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #585"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-586.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #586"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-587.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #587"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-588.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #588"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-589.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #589"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-590.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #590"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-591.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #591"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-592.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #592"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-593.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #593"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-594.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #594"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-595.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #595"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-596.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #596"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-597.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #597"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-598.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #598"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-599.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #599"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-600.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #600"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-601.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #601"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-602.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #602"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-603.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #603"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-604.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #604"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-605.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #605"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-606.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #606"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-607.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #607"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-608.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #608"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-609.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #609"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-610.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #610"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-611.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #611"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-612.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #612"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-613.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #613"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-614.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #614"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-615.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #615"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-616.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #616"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-617.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #617"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-618.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #618"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-619.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #619"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-620.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #620"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-621.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #621"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-622-1.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #622"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-623.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #623"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-624.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #624"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-625.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #625"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-626.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #626"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-627.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #627"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-628.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #628"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-629.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #629"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-630.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #630"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-631.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #631"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-632.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #632"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-633.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #633"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-634.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #634"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-635.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #635"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-636.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #636"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-637.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #637"
+    },
+    {
+     "src": "2026/09/Birthday-Novelty-Cake-638.jpg",
+     "alt": null,
+     "title": "Birthday & Novelty Cake #638"
     }
    ],
    "description": "Photos of birthday & novelty made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -625,86 +3800,1522 @@
   "wedding-shower": {
    "type": "gallery",
    "title": "Wedding & Shower",
+   "caption": "Wedding & Shower Cake",
    "images": [
     {
      "src": "2026/09/Wedding-Shower-Cake-1.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #1"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-2.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #2"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-3.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #3"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-4.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #4"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-5.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #5"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-6.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #6"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-7.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #7"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-8.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #8"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-9.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #9"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-10.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #10"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-11.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #11"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-12.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #12"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-13.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #13"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-14.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #14"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-15.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #15"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-16.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #16"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-17.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #17"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-18.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #18"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-19.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #19"
     },
     {
      "src": "2026/09/Wedding-Shower-Cake-20.jpg",
-     "alt": "Wedding & Shower Cake"
+     "alt": "Wedding & Shower Cake",
+     "title": "Wedding & Shower Cake #20"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-21.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #21"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-22.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #22"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-23.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #23"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-24.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #24"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-25.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #25"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-26.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #26"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-27.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #27"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-28.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #28"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-29.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #29"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-30.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #30"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-31.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #31"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-32.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #32"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-33.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #33"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-34.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #34"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-35.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #35"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-36.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #36"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-37.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #37"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-38.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #38"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-39.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #39"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-40.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #40"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-41-1.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #41"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-42.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #42"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-43.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #43"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-44.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #44"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-45.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #45"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-46.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #46"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-47.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #47"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-48.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #48"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-49.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #49"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-50.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #50"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-51.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #51"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-52.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #52"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-53.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #53"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-54.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #54"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-55.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #55"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-56.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #56"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-57.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #57"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-58.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #58"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-59.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #59"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-60.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #60"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-61.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #61"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-62.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #62"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-63.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #63"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-64.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #64"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-65.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #65"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-66.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #66"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-67.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #67"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-68.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #68"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-69.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #69"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-70.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #70"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-71.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #71"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-72.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #72"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-73.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #73"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-74.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #74"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-75.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #75"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-76.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #76"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-77.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #77"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-78.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #78"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-79.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #79"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-80.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #80"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-81.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #81"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-82.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #82"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-83.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #83"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-84.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #84"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-85.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #85"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-86.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #86"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-87.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #87"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-88.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #88"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-89.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #89"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-90.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #90"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-91.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #91"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-92.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #92"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-93.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #93"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-94.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #94"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-95.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #95"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-96.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #96"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-97.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #97"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-98.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #98"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-99.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #99"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-100.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #100"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-101.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #101"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-102.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #102"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-103.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #103"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-104.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #104"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-105.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #105"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-106.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #106"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-107.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #107"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-108.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #108"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-109.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #109"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-110.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #110"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-111.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #111"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-112.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #112"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-113.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #113"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-114.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #114"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-115.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #115"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-116.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #116"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-117.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #117"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-118.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #118"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-119.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #119"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-120.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #120"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-121.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #121"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-122-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #122"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-123.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #123"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-124-1.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #124"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-125.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #125"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-126.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #126"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-127.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #127"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-128.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #128"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-129.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #129"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-130.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #130"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-131.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #131"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-132.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #132"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-133.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #133"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-134-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #134"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-135-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #135"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-136-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #136"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-137-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #137"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-138-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #138"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-139-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #139"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-140-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #140"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-141.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #141"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-142.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #142"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-143.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #143"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-144.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #144"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-145.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #145"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-146.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #146"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-147.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #147"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-148.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #148"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-149.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #149"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-150.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #150"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-151-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #151"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-152-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #152"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-153-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #153"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-154-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #154"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-155-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #155"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-156-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #156"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-157-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #157"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-158-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #158"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-159-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #159"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-160-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #160"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-161.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #161"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-162.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #162"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-163.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #163"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-164.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #164"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-165.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #165"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-166.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #166"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-167-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #167"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-168-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #168"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-169-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #169"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-170-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #170"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-171-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #171"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-172-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #172"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-173-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #173"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-174-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #174"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-175-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #175"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-176-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #176"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-177.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #177"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-178-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #178"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-179.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #179"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-180.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #180"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-181.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #181"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-182.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #182"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-183.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #183"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-184.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #184"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-185.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #185"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-186.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #186"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-187.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #187"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-188.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #188"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-189.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #189"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-190.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #190"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-191.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #191"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-192.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #192"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-193.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #193"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-194.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #194"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-195.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #195"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-196.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #196"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-197.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #197"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-198.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #198"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-199.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #199"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-200.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #200"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-201.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #201"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-202.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #202"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-203.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #203"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-204.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #204"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-205.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #205"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-206.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #206"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-207.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #207"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-208.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #208"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-209.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #209"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-210.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #210"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-211.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #211"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-212.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #212"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-213.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #213"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-214.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #214"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-215-1.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #215"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-216.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #216"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-217.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #217"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-218.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #218"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-219.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #219"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-220.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #220"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-221.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #221"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-222.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #222"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-223.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #223"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-224.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #224"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-225.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #225"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-226.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #226"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-227.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #227"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-228.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #228"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-229.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #229"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-230.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #230"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-231.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #231"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-232.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #232"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-233.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #233"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-234.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #234"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-235.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #235"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-236.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #236"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-237.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #237"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-238.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #238"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-239.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #239"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-240.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #240"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-241.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #241"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-242.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #242"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-243.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #243"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-244.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #244"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-245.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #245"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-246.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #246"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-247.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #247"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-248.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #248"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-249.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #249"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-250.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #250"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-251.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #251"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-252.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #252"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-253.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #253"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-254.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #254"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-255.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #255"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-256.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #256"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-257.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #257"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-258.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #258"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-259.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #259"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-260.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #260"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-261.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #261"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-262.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #262"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-263.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #263"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-264.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #264"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-265.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #265"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-266.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #265"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-267.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #267"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-268.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #268"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-269-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #269"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-270-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #270"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-271.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #271"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-272-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #272"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-273-scaled.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #273"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-274.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #274"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-275.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #275"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-276.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #276"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-277.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #277"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-278.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #278"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-279.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #279"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-280.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #280"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-281.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #281"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-282.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #282"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-283.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #283"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-284.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #284"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-285.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #285"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-286.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #286"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-287.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #287"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-288.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #288"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-289.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #289"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-290.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #290"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-291.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #291"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-292.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #292"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-293.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #293"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-294.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #294"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-295.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #295"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-296.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #296"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-297.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #297"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-298.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #298"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-299.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #299"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-300.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #300"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-301.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #301"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-302.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #302"
+    },
+    {
+     "src": "2026/09/Wedding-Shower-Cake-303.jpg",
+     "alt": null,
+     "title": "Wedding & Shower Cake #303"
     }
    ],
    "description": "Photos of wedding & shower made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -712,86 +5323,257 @@
   "engagement-anniversary": {
    "type": "gallery",
    "title": "Engagement & Anniversary",
+   "caption": "Engagement & Anniversary Cake",
    "images": [
     {
      "src": "2026/09/Engagement-Anniversary-Cake-1.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #1"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-2.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #2"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-3.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #3"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-4.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #4"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-5.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #5"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-6.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #6"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-7.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #7"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-8.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #8"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-9.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #9"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-10.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #10"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-11.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #11"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-12.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #12"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-13.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #13"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-14.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #14"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-15.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #15"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-16.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #16"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-17.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #17"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-18.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #18"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-19.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #19"
     },
     {
      "src": "2026/09/Engagement-Anniversary-Cake-20.jpg",
-     "alt": "Engagement & Anniversary Cake"
+     "alt": "Engagement & Anniversary Cake",
+     "title": "Engagement & Anniversary Cake #20"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-21.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #21"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-22.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #22"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-23.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #23"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-24.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #24"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-25.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #25"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-26.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #26"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-27-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #27"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-28-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #28"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-29-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #29"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-30-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #30"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-31-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #31"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-32-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #32"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-33.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #33"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-34.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #34"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-35.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #35"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-36-scaled.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #36"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-37.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #37"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-38.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #38"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-39.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #39"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-40.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #40"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-41.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #41"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-42.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #42"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-43.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #43"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-44.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #44"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-45.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #45"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-46.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #46"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-47.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #47"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-48.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #48"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-49.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #49"
+    },
+    {
+     "src": "2026/09/Engagement-Anniversary-Cake-50.jpg",
+     "alt": null,
+     "title": "Engagement & Anniversary Cake #50"
     }
    ],
    "description": "Photos of engagement & anniversary made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -799,74 +5581,92 @@
   "baby-shower": {
    "type": "gallery",
    "title": "Baby Shower",
+   "caption": "Baby Shower Cake",
    "images": [
     {
      "src": "2026/09/Baby-Shower-Cake-1.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #1"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-2.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #2"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-3.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #3"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-4.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #4"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-5.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #5"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-6.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #6"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-7.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #7"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-8.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #8"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-9.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #9"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-10.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #10"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-11.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #11"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-12.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #12"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-13.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #13"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-14-scaled.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #14"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-15-scaled.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #15"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-16-scaled.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #16"
     },
     {
      "src": "2026/09/Baby-Shower-Cake-17-scaled.jpg",
-     "alt": "Baby Shower Cake"
+     "alt": "Baby Shower Cake",
+     "title": "Baby Shower Cake #17"
     }
    ],
    "description": "Photos of baby shower made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -875,86 +5675,492 @@
    "type": "gallery",
    "title": "Religious Graduation",
    "menu": "Religious & Graduation",
+   "caption": "Religious & Graduation Cake",
    "images": [
     {
      "src": "2026/09/Religious-Graduation-Cake-1.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #1"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-2.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #2"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-3.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #3"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-4.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #4"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-5.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #5"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-6.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #6"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-7.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #7"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-8.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #8"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-9.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #9"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-10.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #10"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-11.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #11"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-12.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #12"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-13.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #13"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-14.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #14"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-15.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #15"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-16.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #16"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-17.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #17"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-18.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #18"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-19.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #19"
     },
     {
      "src": "2026/09/Religious-Graduation-Cake-20.jpg",
-     "alt": "Religious & Graduation Cake"
+     "alt": "Religious & Graduation Cake",
+     "title": "Religious & Graduation Cake #20"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-21.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #21"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-22.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #22"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-23.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #23"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-24.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #24"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-25.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #25"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-26.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #26"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-27.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #27"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-28.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #28"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-29.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #29"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-30.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #30"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-31.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #31"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-32.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #32"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-33.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #33"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-34.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #34"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-35.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #35"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-36.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #36"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-37.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #37"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-38.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #38"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-39.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #39"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-40.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #40"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-41.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #41"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-42.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #42"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-43.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #43"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-44.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #44"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-45.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #45"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-46.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #46"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-47.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #47"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-48.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #48"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-49.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #49"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-50.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #50"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-51.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #51"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-52.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #52"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-53.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #53"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-54.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #54"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-55.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #55"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-56.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #56"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-57.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #57"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-58-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #58"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-59-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #59"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-60-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #60"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-61-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #61"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-62-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #62"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-63-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #63"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-64-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #64"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-65-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #65"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-66-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #66"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-67-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #67"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-68-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #68"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-69-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #69"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-70-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #70"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-71-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #71"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-72-scaled.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #72"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-73.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #73"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-74.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #74"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-75.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #75"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-76.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #76"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-77.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #77"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-78.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #78"
+    },
+    {
+     "src": "2026/09/Religious-Graduation-Cake-79.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #79"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-80.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #80"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-81.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #81"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-82.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #82"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-83.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #83"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-84-rotated.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #84"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-85.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #85"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-86.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #86"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-87.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #87"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-88.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #88"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-89.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #89"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-90.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #90"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-91.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #91"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-92.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #92"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-93.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #93"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-94.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #94"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-95.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #95"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-96.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #96"
+    },
+    {
+     "src": "2026/10/Religious-Graduation-Cake-97.jpg",
+     "alt": null,
+     "title": "Religious & Graduation Cake #97"
     }
    ],
    "description": "Photos of religious graduation made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -962,86 +6168,137 @@
   "specialties": {
    "type": "gallery",
    "title": "Specialties",
+   "caption": "Specialties",
    "images": [
     {
      "src": "2026/09/Specialties-1.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #1"
     },
     {
      "src": "2026/09/Specialties-2.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #2"
     },
     {
      "src": "2026/09/Specialties-3.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #3"
     },
     {
      "src": "2026/09/Specialties-4.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #4"
     },
     {
      "src": "2026/09/Specialties-5.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #5"
     },
     {
      "src": "2026/09/Specialties-6.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #6"
     },
     {
      "src": "2026/09/Specialties-7.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #7"
     },
     {
      "src": "2026/09/Specialties-8.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #8"
     },
     {
      "src": "2026/09/Specialties-9.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #9"
     },
     {
      "src": "2026/09/Specialties-10.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #10"
     },
     {
      "src": "2026/09/Specialties-11.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #11"
     },
     {
      "src": "2026/09/Specialties-12.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #12"
     },
     {
      "src": "2026/09/Specialties-13.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #13"
     },
     {
      "src": "2026/09/Specialties-14.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #14"
     },
     {
      "src": "2026/09/Specialties-15-rotated.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #15"
     },
     {
      "src": "2026/09/Specialties-16.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #16"
     },
     {
      "src": "2026/09/Specialties-17.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #17"
     },
     {
      "src": "2026/09/Specialties-18-scaled.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #18"
     },
     {
      "src": "2026/09/Specialties-19.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #19"
     },
     {
      "src": "2026/09/Specialties-20.jpg",
-     "alt": "Specialties"
+     "alt": "Specialties",
+     "title": "Specialties #20"
+    },
+    {
+     "src": "2026/09/Specialties-21.jpg",
+     "alt": null,
+     "title": "Specialties #21"
+    },
+    {
+     "src": "2026/09/Specialties-22.jpg",
+     "alt": null,
+     "title": "Specialties #22"
+    },
+    {
+     "src": "2026/09/Specialties-23.jpg",
+     "alt": null,
+     "title": "Specialties #23"
+    },
+    {
+     "src": "2026/09/Specialties-24.jpg",
+     "alt": null,
+     "title": "Specialties #24"
+    },
+    {
+     "src": "2026/09/Specialties-25.jpg",
+     "alt": null,
+     "title": "Specialties #25"
+    },
+    {
+     "src": "2026/09/Specialties-26.jpg",
+     "alt": null,
+     "title": "Specialties #26"
     }
    ],
    "description": "Photos of specialties made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -1049,86 +6306,177 @@
   "retail-cakes": {
    "type": "gallery",
    "title": "Retail Cakes",
+   "caption": "Retail Cake",
    "images": [
     {
      "src": "2026/09/Retail-Cake-1.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #1"
     },
     {
      "src": "2026/09/Retail-Cake-2.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #2"
     },
     {
      "src": "2026/09/Retail-Cake-3.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #3"
     },
     {
      "src": "2026/09/Retail-Cake-4.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #4"
     },
     {
      "src": "2026/09/Retail-Cake-5.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #5"
     },
     {
      "src": "2026/09/Retail-Cake-6-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #6"
     },
     {
      "src": "2026/09/Retail-Cake-7-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #7"
     },
     {
      "src": "2026/09/Retail-Cake-8-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #8"
     },
     {
      "src": "2026/09/Retail-Cake-9-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #9"
     },
     {
      "src": "2026/09/Retail-Cake-10-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #10"
     },
     {
      "src": "2026/09/Retail-Cake-11-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #11"
     },
     {
      "src": "2026/09/Retail-Cake-12-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #12"
     },
     {
      "src": "2026/09/Retail-Cake-13-scaled.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #13"
     },
     {
      "src": "2026/09/Retail-Cake-14.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #14"
     },
     {
      "src": "2026/09/Retail-Cake-15.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #15"
     },
     {
      "src": "2026/09/Retail-Cake-16.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #16"
     },
     {
      "src": "2026/09/Retail-Cake-17.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #17"
     },
     {
      "src": "2026/09/Retail-Cake-18.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #18"
     },
     {
      "src": "2026/09/Retail-Cake-19.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #19"
     },
     {
      "src": "2026/09/Retail-Cake-20.jpg",
-     "alt": "Retail Cake"
+     "alt": "Retail Cake",
+     "title": "Retail Cake #20"
+    },
+    {
+     "src": "2026/09/Retail-Cake-21.jpg",
+     "alt": null,
+     "title": "Retail Cake #21"
+    },
+    {
+     "src": "2026/09/Retail-Cake-22.jpg",
+     "alt": null,
+     "title": "Retail Cake #22"
+    },
+    {
+     "src": "2026/09/Retail-Cake-23.jpg",
+     "alt": null,
+     "title": "Retail Cake #23"
+    },
+    {
+     "src": "2026/09/Retail-Cake-24.jpg",
+     "alt": null,
+     "title": "Retail Cake #24"
+    },
+    {
+     "src": "2026/09/Retail-Cake-25.jpg",
+     "alt": null,
+     "title": "Retail Cake #25"
+    },
+    {
+     "src": "2026/09/Retail-Cake-26.jpg",
+     "alt": null,
+     "title": "Retail Cake #26"
+    },
+    {
+     "src": "2026/09/Retail-Cake-27.jpg",
+     "alt": null,
+     "title": "Retail Cake #27"
+    },
+    {
+     "src": "2026/09/Retail-Cake-28.jpg",
+     "alt": null,
+     "title": "Retail Cake #28"
+    },
+    {
+     "src": "2026/09/Retail-Cake-29.jpg",
+     "alt": null,
+     "title": "Retail Cake #29"
+    },
+    {
+     "src": "2026/09/Retail-Cake-30.jpg",
+     "alt": null,
+     "title": "Retail Cake #30"
+    },
+    {
+     "src": "2026/09/Retail-Cake-31.jpg",
+     "alt": null,
+     "title": "Retail Cake #31"
+    },
+    {
+     "src": "2026/09/Retail-Cake-32.jpg",
+     "alt": null,
+     "title": "Retail Cake #32"
+    },
+    {
+     "src": "2026/09/Retail-Cake-33.jpg",
+     "alt": null,
+     "title": "Retail Cake #33"
+    },
+    {
+     "src": "2026/09/Retail-Cake-34.jpg",
+     "alt": null,
+     "title": "Retail Cake #34"
     }
    ],
    "description": "Photos of retail cakes made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -1136,86 +6484,267 @@
   "retail-pastry-other": {
    "type": "gallery",
    "title": "Retail Pastry & other",
+   "caption": "Pastries & Sweets",
    "images": [
     {
      "src": "2026/09/Pastries-Sweets-1.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #1"
     },
     {
      "src": "2026/09/Pastries-Sweets-2.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #2"
     },
     {
      "src": "2026/09/Pastries-Sweets-3.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #3"
     },
     {
      "src": "2026/09/Pastries-Sweets-4.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #4"
     },
     {
      "src": "2026/09/Pastries-Sweets-5.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #5"
     },
     {
      "src": "2026/09/Pastries-Sweets-6.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #6"
     },
     {
      "src": "2026/09/Pastries-Sweets-7.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #7"
     },
     {
      "src": "2026/09/Pastries-Sweets-8.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #8"
     },
     {
      "src": "2026/09/Pastries-Sweets-9.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #9"
     },
     {
      "src": "2026/09/Pastries-Sweets-10.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #10"
     },
     {
      "src": "2026/09/Pastries-Sweets-11.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #11"
     },
     {
      "src": "2026/09/Pastries-Sweets-12.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #12"
     },
     {
      "src": "2026/09/Pastries-Sweets-13.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #13"
     },
     {
      "src": "2026/09/Pastries-Sweets-14.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #14"
     },
     {
      "src": "2026/09/Pastries-Sweets-15.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #15"
     },
     {
      "src": "2026/09/Pastries-Sweets-16.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #16"
     },
     {
      "src": "2026/09/Pastries-Sweets-17.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #17"
     },
     {
      "src": "2026/09/Pastries-Sweets-18.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #18"
     },
     {
      "src": "2026/09/Pastries-Sweets-19.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #19"
     },
     {
      "src": "2026/09/Pastries-Sweets-20.jpg",
-     "alt": "Pastries & Sweets"
+     "alt": "Pastries & Sweets",
+     "title": "Pastries & Sweets #20"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-21.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #21"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-22.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #22"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-23.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #23"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-24.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #24"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-25-scaled.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #25"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-26-scaled.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #26"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-27.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #27"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-28.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #28"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-29-scaled.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #29"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-30.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #30"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-31-scaled.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #31"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-32.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #32"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-33.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #33"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-34.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #34"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-35.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #35"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-36.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #36"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-37.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #37"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-38.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #38"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-39.png",
+     "alt": null,
+     "title": "Pastries & Sweets #39"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-40.png",
+     "alt": null,
+     "title": "Pastries & Sweets #40"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-41.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #41"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-42.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #42"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-43.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #43"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-44.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #44"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-45.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #45"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-46.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #46"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-47.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #47"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-48.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #48"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-49.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #49"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-50.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #50"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-51.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #51"
+    },
+    {
+     "src": "2026/09/Pastries-Sweets-52.jpg",
+     "alt": null,
+     "title": "Pastries & Sweets #52"
     }
    ],
    "description": "Photos of retail pastry & other made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -1223,86 +6752,122 @@
   "cookies-other": {
    "type": "gallery",
    "title": "Cookies & Other",
+   "caption": "Cookies & Other",
    "images": [
     {
      "src": "2026/09/Cookies-Other-1.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #1"
     },
     {
      "src": "2026/09/Cookies-Other-2.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #2"
     },
     {
      "src": "2026/09/Cookies-Other-3.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #3"
     },
     {
      "src": "2026/09/Cookies-Other-4.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #4"
     },
     {
      "src": "2026/09/Cookies-Other-5.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #5"
     },
     {
      "src": "2026/09/Cookies-Other-6.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #6"
     },
     {
      "src": "2026/09/Cookies-Other-7.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #7"
     },
     {
      "src": "2026/09/Cookies-Other-8.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #8"
     },
     {
      "src": "2026/09/Cookies-Other-9.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #9"
     },
     {
      "src": "2026/09/Cookies-Other-10-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #10"
     },
     {
      "src": "2026/09/Cookies-Other-11-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #11"
     },
     {
      "src": "2026/09/Cookies-Other-12-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #12"
     },
     {
      "src": "2026/09/Cookies-Other-13-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #13"
     },
     {
      "src": "2026/09/Cookies-Other-14-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #14"
     },
     {
      "src": "2026/09/Cookies-Other-15-1-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #15"
     },
     {
      "src": "2026/09/Cookies-Other-16-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #16"
     },
     {
      "src": "2026/09/Cookies-Other-17-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #17"
     },
     {
      "src": "2026/09/Cookies-Other-18-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #18"
     },
     {
      "src": "2026/09/Cookies-Other-19-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #19"
     },
     {
      "src": "2026/09/Cookies-Other-20-scaled.jpg",
-     "alt": "Cookies & Other"
+     "alt": "Cookies & Other",
+     "title": "Cookies & Other #20"
+    },
+    {
+     "src": "2026/09/Cookies-Other-21-scaled.jpg",
+     "alt": null,
+     "title": "Cookies & Other #21"
+    },
+    {
+     "src": "2026/09/Cookies-Other-22-scaled.jpg",
+     "alt": null,
+     "title": "Cookies & Other #22"
+    },
+    {
+     "src": "2026/09/Cookies-Other-23-scaled.jpg",
+     "alt": null,
+     "title": "Cookies & Other #23"
     }
    ],
    "description": "Photos of cookies & other made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
@@ -1310,20 +6875,18 @@
   "bachelor-bachelorette": {
    "type": "gallery",
    "title": "Bachelor & Bachelorette",
-   "body": [
-    {
-     "t": "p",
-     "x": "Photos of adult, bachelor & bachelorette cakes can be supplied upon request. Please get in touch with us."
-    }
-   ],
+   "caption": "Bachelor & Bachelorette Cake",
+   "body": [],
    "images": [
     {
      "src": "2026/10/Adult-Cake-02.jpg",
-     "alt": null
+     "alt": "Red lace lingerie body cake for a bachelorette party",
+     "title": "Bachelor & Bachelorette Cake #1"
     },
     {
      "src": "2026/10/Adult-Cake-01-scaled.jpg",
-     "alt": null
+     "alt": "Pink corset cake with red lace and roses",
+     "title": "Bachelor & Bachelorette Cake #2"
     }
    ],
    "description": "Photos of adult, bachelor & bachelorette cakes can be supplied upon request. Please get in touch with us."
@@ -1332,109 +6895,289 @@
    "type": "gallery",
    "title": "Christmas & Easter",
    "menu": "Christmas & Easter",
+   "caption": "Christmas & Easter",
    "images": [
     {
      "src": "2026/09/Christmas-Cake-1.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #1"
     },
     {
      "src": "2026/09/Christmas-Cake-2.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #2"
     },
     {
      "src": "2026/09/Christmas-Cake-3.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #3"
     },
     {
      "src": "2026/09/Christmas-Cake-4.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #4"
     },
     {
      "src": "2026/09/Christmas-Cake-5.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #5"
     },
     {
      "src": "2026/09/Christmas-Cake-6.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #6"
     },
     {
      "src": "2026/09/Christmas-Cake-7-scaled.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #7"
     },
     {
      "src": "2026/09/Christmas-Cake-8.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #8"
     },
     {
      "src": "2026/09/Christmas-Cake-9.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #9"
     },
     {
      "src": "2026/09/Christmas-Cake-10.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #10"
     },
     {
      "src": "2026/09/Christmas-Cake-11.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #11"
     },
     {
      "src": "2026/09/Christmas-Cake-12.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #12"
     },
     {
      "src": "2026/09/Christmas-Cake-13.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #13"
     },
     {
      "src": "2026/09/Christmas-Cake-14.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #14"
     },
     {
      "src": "2026/09/Christmas-Cake-15.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #15"
     },
     {
      "src": "2026/09/Christmas-Cake-16.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #16"
     },
     {
      "src": "2026/09/Christmas-Cake-17.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #17"
     },
     {
      "src": "2026/09/Christmas-Cake-18.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #18"
     },
     {
      "src": "2026/09/Christmas-Cake-19.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #19"
     },
     {
      "src": "2026/09/Christmas-Cake-20.jpg",
-     "alt": "Christmas Cake"
+     "alt": "Christmas Cake",
+     "title": "Christmas & Easter #20"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-21.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #21"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-22.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #22"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-23.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #23"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-24.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #24"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-25.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #25"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-26.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #26"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-27.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #27"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-28.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #28"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-29.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #29"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-30.jpg",
+     "alt": null,
+     "title": "Christmas & Easter#30"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-31.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #31"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-32.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #32"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-33.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #33"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-34.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #34"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-35.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #35"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-36.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #36"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-37.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #37"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-38.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #38"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-39.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #39"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-40-scaled.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #40"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-41-scaled.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #41"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-42.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #42"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-43.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #43"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-44.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #44"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-45.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #45"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-46.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #46"
+    },
+    {
+     "src": "2026/09/Christmas-Cake-47.jpg",
+     "alt": null,
+     "title": "Christmas & Easter #47"
     }
    ],
    "description": "Photos of christmas & easter made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
   },
   "foccacia-pizza-lasagna-other-buns": {
    "type": "gallery",
-   "title": "Foccacia Pizza Lasagna & Other Buns",
+   "title": "Focaccia Pizza Lasagna & Other Buns",
    "menu": "Focaccia, Pizza & Buns",
+   "caption": "Focaccia",
    "images": [
     {
-     "src": "2026/09/Foccacia-1.jpg",
-     "alt": "Foccacia"
+     "src": "2026/09/Foccacia-1.jpeg",
+     "alt": null,
+     "title": "Focaccia #1"
     },
     {
-     "src": "2026/09/Foccacia-2.jpg",
-     "alt": "Foccacia"
+     "src": "2026/09/Foccacia-2.jpeg",
+     "alt": null,
+     "title": "Focaccia #2"
     },
     {
-     "src": "2026/09/Foccacia-3.jpg",
-     "alt": "Foccacia"
+     "src": "2026/09/Foccacia-3.jpeg",
+     "alt": null,
+     "title": "Focaccia #3"
+    },
+    {
+     "src": "2026/11/Foccacia-4.jpeg",
+     "alt": null,
+     "title": "Focaccia #4"
+    },
+    {
+     "src": "2026/11/Foccacia-5.jpeg",
+     "alt": null,
+     "title": "Focaccia #5"
+    },
+    {
+     "src": "2026/11/Foccacia-6.jpeg",
+     "alt": null,
+     "title": "Focaccia #6"
+    },
+    {
+     "src": "2026/11/Foccacia-7.jpeg",
+     "alt": null,
+     "title": "Focaccia #7"
     }
    ],
-   "description": "Photos of foccacia pizza lasagna & other buns made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
+   "description": "Photos of focaccia pizza lasagna & other buns made by La Sem, Mississauga’s family bakery since 1963. Order yours: (905) 624-8888."
   },
   "top-choice-award": {
    "type": "award",
@@ -1500,7 +7243,7 @@
     }
    ],
    "description": "Top Choice Awards collects and reviews the opinions of thousands of customers annually. The results of those studies are used by companies to improve…",
-   "link": "https://www.topchoiceaward.com/"
+   "link": "https://topchoiceawards.com/"
   },
   "readers-choice-award": {
    "type": "award",
