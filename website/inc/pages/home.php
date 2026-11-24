@@ -51,7 +51,7 @@ $favourites = [
   <!-- Hero: the cake is built live in 3D -->
   <section class="hero" data-cake-hero aria-labelledby="hero-title">
     <canvas class="hero-canvas" aria-label="Animation: a La Sem cake being layered with sponge, Chantilly cream and fresh fruit, iced, and topped with cherries, strawberries, pineapple, peaches, kiwi, blueberries and a chocolate plaque" role="img"></canvas>
-    <?= img('2026/09/chocolate-drip-cake-featured-image.png', 'A chocolate drip cake from La Sem', ['class' => 'hero-fallback', 'eager' => true]) ?>
+    <?= img('2026/09/chocolate-drip-cake-featured-image.png', 'A chocolate drip cake from La Sem', ['class' => 'hero-fallback']) ?>
 
     <div class="hero-copy wrap">
       <p class="eyebrow"><span class="dot"></span> A legacy of European baking in Mississauga</p>
@@ -111,7 +111,7 @@ $favourites = [
       </div>
       <div class="watch-media" data-reveal>
         <button class="yt watch-video" type="button" data-yt="syuc3oXXmpc" aria-label="Play video: Lasem Italian Bakery, authentic Italian flavours in Mississauga">
-          <img src="<?= e(url('images/story/video-poster.jpg')) ?>" alt="" width="1280" height="720" loading="lazy">
+          <img src="<?= e(url('images/story/video-poster.webp')) ?>" srcset="<?= e(url('images/story/video-poster-800.webp')) ?> 800w, <?= e(url('images/story/video-poster.webp')) ?> 1280w" sizes="(max-width: 900px) 100vw, 640px" alt="" width="1280" height="720" loading="lazy" decoding="async">
           <span class="watch-play" aria-hidden="true"><i></i></span>
           <span class="watch-label">Watch our story</span>
         </button>

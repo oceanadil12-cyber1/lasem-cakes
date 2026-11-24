@@ -62,7 +62,7 @@ function scene_hero($page, $actions)
 <section class="hero hero-page" data-cake-hero aria-labelledby="hero-title"
   style="--glow: <?= e($glow) ?>; --bg1: <?= e($bg1) ?>; --bg2: <?= e($bg2) ?>; --accent: <?= e($accent) ?>">
   <canvas class="hero-canvas" role="img" aria-label="Animation: <?= e(strtolower($label)) ?> being made at La Sem"></canvas>
-  <?php if ($first) echo img($first, $page['title'] . ' by La Sem', ['class' => 'hero-fallback', 'eager' => true]); ?>
+  <?php if ($first) echo img($first, $page['title'] . ' by La Sem', ['class' => 'hero-fallback']); ?>
   <div class="hero-copy wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="<?= e(url()) ?>">Home</a> <span aria-hidden="true">/</span> <a href="<?= e(url('bakery/')) ?>">Bakery</a> <span aria-hidden="true">/</span> <a href="<?= e(url($page['path'])) ?>"><?= e($label) ?></a></nav>
     <p class="hero-script"><?= e($script) ?></p>

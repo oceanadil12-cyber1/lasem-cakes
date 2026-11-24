@@ -369,7 +369,7 @@
         var step = function (t) {
           if (t0 === null) t0 = t;
           var p = Math.min(1, (t - t0) / 1400);
-          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US') + suffix;
           if (p < 1) requestAnimationFrame(step);
         };
         el.textContent = '0' + suffix;
@@ -378,4 +378,133 @@
     }, { threshold: 0.6 });
     document.querySelectorAll('[data-count]').forEach(function (el) { counters.observe(el); });
   }
+
+  // Slider photos past the first are loading="lazy" so they don't compete with the page.
+  // These fetch them early enough that a slide is never blank when it moves in.
+  // Articles & videos: preview frames load as each group of clips scrolls near.
+  var posterGroups = document.querySelectorAll('.post-media, .vrow');
+  function setPosters(g) { g.querySelectorAll('video[data-poster]').forEach(function (v) { v.poster = v.getAttribute('data-poster'); v.removeAttribute('data-poster'); }); }
+  if ('IntersectionObserver' in window) {
+    var posterWatch = new IntersectionObserver(function (en) {
+      en.forEach(function (x) { if (x.isIntersecting) { setPosters(x.target); posterWatch.unobserve(x.target); } });
+    }, { rootMargin: '600px 0px' });
+    posterGroups.forEach(function (g) { posterWatch.observe(g); });
+  } else posterGroups.forEach(setPosters);
+
+  // Articles & videos: only one clip plays at a time.
+  document.addEventListener('play', function (e) {
+    if (e.target.tagName !== 'VIDEO') return;
+    document.querySelectorAll('video').forEach(function (v) { if (v !== e.target && !v.paused) v.pause(); });
+  }, true);
+
+  // Slider frames must never scroll sideways (focusing an arrow can make browsers do that).
+  document.querySelectorAll('.team-viewport, .banner-media').forEach(function (frame) {
+    frame.addEventListener('scroll', function () { if (frame.scrollLeft) frame.scrollLeft = 0; });
+  });
+
+  function fetchLazy(scope) {
+    scope.querySelectorAll('img[loading="lazy"]').forEach(function (im) { im.loading = 'eager'; });
+  }
+
+  // About-us banner: photos slide left every 3 seconds, looping back to the first.
+  document.querySelectorAll('[data-banner-slider]').forEach(function (banner) {
+    var track = banner.querySelector('[data-banner-track]');
+    if (document.readyState === 'complete') fetchLazy(track);
+    else window.addEventListener('load', function () { fetchLazy(track); });
+    var count = track.children.length;
+    if (count < 2) return;
+    track.appendChild(track.children[0].cloneNode(true));
+    var i = 0;
+    function go() {
+      i++;
+      track.classList.remove('no-anim');
+      track.style.transform = 'translateX(' + (-100 * i) + '%)';
+    }
+    track.addEventListener('transitionend', function () {
+      if (i < count) return;
+      i = 0;
+      track.classList.add('no-anim');
+      track.style.transform = 'translateX(0)';
+    });
+    function tick() {
+      if (document.hidden) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && i >= count - 1) {
+        i = -1; // no transition to wait for: jump straight back to the first photo
+      }
+      go();
+    }
+    var timer;
+    function restart() {
+      // Always begin on Fold 1 and give it a full 3 seconds.
+      clearInterval(timer);
+      i = 0;
+      track.classList.add('no-anim');
+      track.style.transform = 'translateX(0)';
+      timer = setInterval(tick, 3000);
+    }
+    restart();
+    // Back/forward navigation can restore a frozen page mid-slide; start over from Fold 1.
+    window.addEventListener('pageshow', function (e) { if (e.persisted) restart(); });
+  });
+
+  // About-us team photos: 1 → 2 → 3 → 1 every 3 seconds (always forward), plus arrows, dots and swipe.
+  document.querySelectorAll('[data-team-slider]').forEach(function (box) {
+    var track = box.querySelector('[data-team-track]');
+    if ('IntersectionObserver' in window) {
+      var near = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting) return;
+        fetchLazy(track); near.disconnect();
+      }, { rootMargin: '400px 0px' });
+      near.observe(box);
+    } else fetchLazy(track);
+    var dots = box.querySelectorAll('[data-team-dots] button');
+    var count = track.children.length, i = 0, timer = null, onScreen = false;
+    if (count < 2) return;
+    // A copy of photo 1 after photo 3 lets the loop carry on forward instead of rewinding past photo 2.
+    var copy = track.children[0].cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+    function place(n, animate) {
+      track.style.transition = animate ? '' : 'none';
+      track.style.transform = 'translateX(' + (-100 * n) + '%)';
+      if (!animate) void track.offsetWidth; // apply the jump before any later animated move
+    }
+    function show(n) {
+      if (n < 0) { place(count, false); n = count - 1; } // from photo 1 back to photo 3: step in from the copy
+      i = n;
+      place(i, true);
+      var on = i % count;
+      dots.forEach(function (d, k) { if (k === on) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+    }
+    track.addEventListener('transitionend', function () { if (i >= count) { i = 0; place(0, false); } });
+    function next() {
+      if (i >= count) { i = 0; place(0, false); } // finish a loop that had no transition (reduced motion)
+      show(i + 1);
+    }
+    // The 3-second timer runs only while the slider is on screen; any arrow, dot or swipe restarts it.
+    function start() {
+      clearInterval(timer);
+      if (onScreen) timer = setInterval(function () { if (!document.hidden) next(); }, 3000);
+    }
+    box.querySelector('[data-team-prev]').addEventListener('click', function () { show((i % count) - 1); start(); });
+    box.querySelector('[data-team-next]').addEventListener('click', function () { next(); start(); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { if (i >= count) place(0, false); show(k); start(); }); });
+    window.addEventListener('pageshow', function (e) { if (e.persisted) { i = 0; place(0, false); show(0); start(); } });
+    // Swipe on touch screens.
+    var x0 = null;
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { if (dx < 0) next(); else show((i % count) - 1); start(); }
+    });
+    // Each time the slider comes into view it begins again at photo 1, so visitors see 1 → 2 → 3.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) {
+        onScreen = en[0].isIntersecting;
+        if (onScreen) { i = 0; place(0, false); show(0); }
+        start();
+      }, { threshold: 0.35 }).observe(box);
+    } else { onScreen = true; start(); }
+  });
 })();

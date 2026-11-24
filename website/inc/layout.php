@@ -51,10 +51,37 @@ function page_end()
     ?>
 </main>
 <?php site_footer(); ?>
-<?php foreach ($o['scripts'] ?? [] as $s): ?>
-<script src="<?= e(strpos($s, 'vendor/') !== false ? url($s) : asset($s)) ?>"></script>
+<?php
+    // The 3D scene files wait until the page has loaded; everything else loads as normal.
+    $late = [];
+    foreach ($o['scripts'] ?? [] as $s):
+        $src = strpos($s, 'vendor/') !== false ? url($s) : asset($s);
+        if (strpos($s, 'three') !== false || strpos($s, 'scene3d') !== false || strpos($s, 'scenes/') !== false) { $late[] = $src; continue; }
+?>
+<script src="<?= e($src) ?>"></script>
 <?php endforeach; ?>
 <script src="<?= e(asset('js/main.js')) ?>"></script>
+<?php if ($late): ?>
+<script>
+/* 3D hero: fetched once the page has loaded and the browser is idle, in order. On Save-Data or
+   2G connections it is skipped and the still photo is shown instead. */
+(function (list) {
+  var hero = document.querySelector('[data-cake-hero]');
+  var c = navigator.connection || {};
+  if (c.saveData || /(^|-)2g$/.test(c.effectiveType || '')) { if (hero) hero.classList.add('no-webgl'); return; }
+  function next() {
+    if (!list.length) return;
+    var el = document.createElement('script');
+    el.src = list.shift();
+    el.onload = next;
+    el.onerror = function () { if (hero) hero.classList.add('no-webgl'); };
+    document.body.appendChild(el);
+  }
+  function go() { if ('requestIdleCallback' in window) requestIdleCallback(next, { timeout: 1200 }); else setTimeout(next, 150); }
+  if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+})(<?= json_encode($late, JSON_UNESCAPED_SLASHES) ?>);
+</script>
+<?php endif; ?>
 </body>
 </html>
 <?php
@@ -77,19 +104,31 @@ function site_header()
         <span></span><span></span><span></span><b class="sr">Menu</b>
       </button>
       <ul id="nav-list" class="nav-list" data-nav-list>
-<?php foreach (nav_items() as $i => $item):
-        $hasSub = !empty($item['children']) || !empty($item['mega']) || !empty($item['az']); ?>
-        <li class="<?= $hasSub ? 'has-sub' : '' ?><?= !empty($item['mega']) || !empty($item['az']) ? ' has-mega' : '' ?>">
-          <a href="<?= e($item['href']) ?>"<?= !empty($item['external']) ? ' target="_blank" rel="noopener"' : '' ?>><?= e($item['label']) ?></a>
+<?php
+    // Current page: its menu link (and the menu it sits under) is shown in orange.
+    $here = rtrim((string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/') . '/';
+    $isHere = function ($l) use ($here) {
+        if (!empty($l['external'])) return false;
+        return rtrim((string) parse_url($l['href'], PHP_URL_PATH), '/') . '/' === $here;
+    };
+    $cur = function ($l) use ($isHere) { return $isHere($l) ? ' aria-current="page"' : ''; };
+foreach (nav_items() as $i => $item):
+        $hasSub = !empty($item['children']) || !empty($item['mega']) || !empty($item['az']);
+        $kids = array_merge($item['children'] ?? [], $item['az'] ?? [], $item['more'] ?? [], ...array_values($item['mega'] ?? []));
+        $root = rtrim((string) parse_url($item['href'], PHP_URL_PATH), '/') . '/';
+        $active = $isHere($item) || array_filter($kids, $isHere)
+            || (empty($item['external']) && $root !== url() && strpos($here, $root) === 0); ?>
+        <li class="<?= $hasSub ? 'has-sub' : '' ?><?= !empty($item['mega']) || !empty($item['az']) ? ' has-mega' : '' ?><?= $active ? ' is-current' : '' ?>">
+          <a href="<?= e($item['href']) ?>"<?= !empty($item['external']) ? ' target="_blank" rel="noopener"' : '' ?><?= $cur($item) ?>><?= e($item['label']) ?></a>
 <?php if ($hasSub): ?>
           <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-<?= $i ?>" aria-label="Show <?= e($item['label']) ?> pages" data-sub-toggle>
             <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
           </button>
 <?php if (!empty($item['az'])): ?>
           <div class="sub mega mega-az" id="sub-<?= $i ?>">
-            <ul class="az-list"><?php foreach ($item['az'] as $l): ?><li><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a></li><?php endforeach; ?></ul>
+            <ul class="az-list"><?php foreach ($item['az'] as $l): ?><li><a href="<?= e($l['href']) ?>"<?= $cur($l) ?>><?= e($l['label']) ?></a></li><?php endforeach; ?></ul>
 <?php if (!empty($item['more'])): ?>
-            <p class="az-more"><?php foreach ($item['more'] as $l): ?><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a><?php endforeach; ?></p>
+            <p class="az-more"><?php foreach ($item['more'] as $l): ?><a href="<?= e($l['href']) ?>"<?= $cur($l) ?>><?= e($l['label']) ?></a><?php endforeach; ?></p>
 <?php endif; ?>
           </div>
 <?php elseif (!empty($item['mega'])): ?>
@@ -97,13 +136,13 @@ function site_header()
 <?php foreach ($item['mega'] as $heading => $links): ?>
             <div>
               <p class="sub-head"><?= e($heading) ?></p>
-              <ul><?php foreach ($links as $l): ?><li><a href="<?= e($l['href']) ?>"><?= e($l['label']) ?></a></li><?php endforeach; ?></ul>
+              <ul><?php foreach ($links as $l): ?><li><a href="<?= e($l['href']) ?>"<?= $cur($l) ?>><?= e($l['label']) ?></a></li><?php endforeach; ?></ul>
             </div>
 <?php endforeach; ?>
           </div>
 <?php else: ?>
           <ul class="sub" id="sub-<?= $i ?>">
-            <?php foreach ($item['children'] as $l): ?><li><a href="<?= e($l['href']) ?>"<?= !empty($l['external']) ? ' target="_blank" rel="noopener"' : '' ?>><?= e($l['label']) ?></a></li><?php endforeach; ?>
+            <?php foreach ($item['children'] as $l): ?><li><a href="<?= e($l['href']) ?>"<?= !empty($l['external']) ? ' target="_blank" rel="noopener"' : '' ?><?= $cur($l) ?>><?= e($l['label']) ?></a></li><?php endforeach; ?>
           </ul>
 <?php endif; ?>
 <?php endif; ?>
@@ -171,7 +210,7 @@ function site_footer()
     </div>
   </div>
   <div class="wrap foot-bottom">
-    <p>&copy; <?= date('Y') ?> <?= e(SITE['legal']) ?></p>
+    <p>&copy; <?= date('Y') ?> <?= e(SITE['legal']) ?> <span class="foot-credit">Website design by <a href="https://seoservicesincanada.ca/" target="_blank" rel="noopener">Seo Services In Canada</a></span></p>
     <p class="policies">
       <?php foreach ($pages as $slug => $p) {
           if ($p['type'] === 'policy') {
@@ -263,10 +302,19 @@ function business_schema()
 }
 
 /** Page title band used by inner pages. */
-function page_banner($title, $script = '', $intro = '', $crumbs = [])
+function page_banner($title, $script = '', $intro = '', $crumbs = [], $slides = [])
 {
     ?>
-<section class="banner">
+<section class="banner<?= $slides ? ' banner-slides' : '' ?>"<?= $slides ? ' data-banner-slider' : '' ?>>
+<?php if ($slides): ?>
+  <div class="banner-media" aria-hidden="true">
+    <div class="banner-track" data-banner-track>
+<?php foreach ($slides as $i => $s): ?>
+      <?= str_replace('<img ', '<img style="object-position:' . e($s[1] ?? '50% 50%') . '" ', img($s[0], '', ['sizes' => '100vw', 'eager' => $i === 0, 'priority' => $i === 0])) ?>
+<?php endforeach; ?>
+    </div>
+  </div>
+<?php endif; ?>
   <div class="wrap">
 <?php if ($crumbs): ?>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="<?= e(url()) ?>">Home</a><?php foreach ($crumbs as $label => $href): ?> <span aria-hidden="true">/</span> <a href="<?= e($href) ?>"><?= e($label) ?></a><?php endforeach; ?></nav>
@@ -280,7 +328,8 @@ function page_banner($title, $script = '', $intro = '', $crumbs = [])
 }
 
 /** Address, hours and map. */
-function visit_section()
+/** $photo: false leaves out the storefront photo (e.g. About us, whose banner already shows it). */
+function visit_section($photo = true)
 {
     ?>
 <section class="section" id="visit" aria-labelledby="visit-title">
@@ -302,8 +351,10 @@ function visit_section()
       </dl>
       <a class="btn btn-solid" href="<?= e(SITE['maps_url']) ?>" rel="noopener">Get directions</a>
     </div>
-    <div class="visit-media">
+    <div class="visit-media<?= $photo ? '' : ' map-only' ?>">
+<?php if ($photo): ?>
     <figure class="visit-photo"><?= img('2026/06/La-sem-Name-board.jpg', 'The La Sem Patisserie and Italian Bakery storefront on Eglinton Avenue East', ['sizes' => '(max-width: 900px) 100vw, 55vw']) ?><figcaption>Look for the orange sign at 1275 Eglinton Ave. East</figcaption></figure>
+<?php endif; ?>
     <div class="map">
       <iframe title="Map to La Sem Cakes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=La%20Sem%20Cakes%2C%201275%20Eglinton%20Ave%20E%2C%20Mississauga%2C%20ON%20L4W%202Z2&amp;z=15&amp;output=embed"></iframe>

@@ -53,7 +53,7 @@ require_once __DIR__ . '/dinein.php';
 require_once __DIR__ . '/reviews.php';
 
 // Bump after CSS/JS changes so browsers fetch the new files.
-const ASSET_VERSION = '20261119f';
+const ASSET_VERSION = '20261124b';
 
 // Our own menu ordering (/order/, table ordering, kitchen display) is switched off: the client
 // orders through DoorDash and takes custom cakes through the "Order Request" pop-up, like the
@@ -141,6 +141,9 @@ function img($key, $alt = '', $opts = [])
     if (!empty($opts['class'])) {
         $attrs['class'] = $opts['class'];
     }
+    if (!empty($opts['priority'])) {
+        $attrs['fetchpriority'] = 'high';
+    }
     $html = '<img';
     foreach ($attrs as $k => $v) {
         $html .= ' ' . $k . '="' . e($v) . '"';
@@ -192,7 +195,7 @@ function body_html($body)
         if ($li && !$inList) { $html .= "<ul>\n"; $inList = true; }
         if (!$li && $inList) { $html .= "</ul>\n"; $inList = false; }
         // Some staging paragraphs pack a list into one line with "â€¢" bullets.
-        $parts = array_map('trim', explode('â€¢', (string) $b['x']));
+        $parts = array_map('trim', explode('•', str_replace('â€¢', '•', (string) $b['x'])));
         if (!$li && count($parts) > 1) {
             $html .= '<p>' . e($parts[0]) . "</p>\n<ul>";
             foreach (array_slice($parts, 1) as $item) $html .= '<li>' . e($item) . '</li>';

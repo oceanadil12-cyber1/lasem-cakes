@@ -1,4 +1,3 @@
-<?= body_html($page['body'] ?? []) ?>
 <?php
 // Terms, returns, cancellation, shipping and privacy pages.
 page_start(['title' => $page['title'], 'description' => $page['description'], 'path' => $page['path']]);
