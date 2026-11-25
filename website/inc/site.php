@@ -53,7 +53,7 @@ require_once __DIR__ . '/dinein.php';
 require_once __DIR__ . '/reviews.php';
 
 // Bump after CSS/JS changes so browsers fetch the new files.
-const ASSET_VERSION = '20261124b';
+const ASSET_VERSION = '20261124i';
 
 // Our own menu ordering (/order/, table ordering, kitchen display) is switched off: the client
 // orders through DoorDash and takes custom cakes through the "Order Request" pop-up, like the

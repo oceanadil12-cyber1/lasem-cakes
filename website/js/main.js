@@ -120,6 +120,37 @@
     lb.querySelector('.lb-close').focus();
   });
 
+  // "Upload pictures" on the enquiry forms: up to 5 images, 10 MB in total; lists the chosen files.
+  var PHOTO_MAX = 5, PHOTO_MB = 10;
+  function photoProblem(input) {
+    var files = input.files || [], total = 0;
+    if (files.length > PHOTO_MAX) return 'Please choose up to ' + PHOTO_MAX + ' photos.';
+    for (var i = 0; i < files.length; i++) {
+      if (!/^image\//.test(files[i].type) && !/\.(heic|heif)$/i.test(files[i].name)) return '“' + files[i].name + '” is not a photo.';
+      total += files[i].size;
+    }
+    if (total > PHOTO_MB * 1048576) return 'These photos come to ' + (total / 1048576).toFixed(1) + ' MB. Please keep them under ' + PHOTO_MB + ' MB in total.';
+    return '';
+  }
+  function showPhotos(input) {
+    var list = input.parentNode.querySelector('[data-photo-list]');
+    if (!list) return;
+    var files = input.files || [], problem = photoProblem(input), names = [];
+    for (var i = 0; i < files.length; i++) names.push(files[i].name);
+    list.textContent = problem || (files.length ? files.length + (files.length === 1 ? ' photo: ' : ' photos: ') + names.join(', ') : 'Up to ' + PHOTO_MAX + ' photos, ' + PHOTO_MB + ' MB in total');
+    list.classList.toggle('is-bad', !!problem);
+    list.classList.toggle('is-set', !problem && files.length > 0);
+  }
+  document.addEventListener('change', function (e) {
+    if (e.target.matches && e.target.matches('[data-photos]')) showPhotos(e.target);
+  });
+  document.addEventListener('submit', function (e) {
+    var input = e.target.querySelector && e.target.querySelector('[data-photos]');
+    if (!input || e.target.hasAttribute('data-request-form')) return;
+    var problem = photoProblem(input);
+    if (problem) { e.preventDefault(); showPhotos(input); input.focus(); }
+  });
+
   // "Order Request" pop-up (any [data-order-request] button; data-request-for names the cake).
   var req = document.getElementById('order-request');
   if (req && typeof req.showModal === 'function') {
@@ -128,7 +159,6 @@
     var reqStatus = req.querySelector('[data-request-status]');
     var reqSend = req.querySelector('[data-request-send]');
     var reqFor = req.querySelector('[data-request-for]');
-    var reqForLabel = req.querySelector('[data-request-for-label]');
     var reqOpener = null;
     document.addEventListener('click', function (e) {
       var b = e.target.closest('[data-order-request]');
@@ -136,9 +166,16 @@
       e.preventDefault();
       reqOpener = b;
       var what = b.getAttribute('data-request-for') || '';
-      reqFor.value = what;
-      reqForLabel.textContent = what ? 'For: ' + what : '';
-      reqForLabel.hidden = !what;
+      // Pick the matching occasion; a cake or bakery item not in the list gets its own option.
+      var extra = reqFor.querySelector('option[data-extra]');
+      if (extra) extra.remove();
+      var match = Array.prototype.find.call(reqFor.options, function (o) { return o.value && o.value.toLowerCase() === what.toLowerCase(); });
+      if (what && !match) {
+        match = new Option(what, what);
+        match.setAttribute('data-extra', '');
+        reqFor.add(match, 1);
+      }
+      reqFor.value = match ? match.value : '';
       reqForm.hidden = false;
       reqDone.hidden = true;
       reqStatus.textContent = '';
@@ -158,6 +195,12 @@
         (!date.value ? date : phone).focus();
         return;
       }
+      var photos = reqForm.querySelector('[data-photos]');
+      if (photos && photoProblem(photos)) {
+        reqStatus.textContent = photoProblem(photos);
+        showPhotos(photos);
+        return;
+      }
       reqSend.disabled = true;
       reqStatus.textContent = 'Sending…';
       fetch(reqForm.action, { method: 'POST', body: new FormData(reqForm), headers: { 'X-Requested-With': 'fetch' } })
@@ -165,6 +208,7 @@
         .then(function (res) {
           if (res.ok) {
             reqForm.reset();
+            if (photos) showPhotos(photos);
             reqForm.hidden = true;
             reqDone.hidden = false;
             reqDone.querySelector('button.btn').focus();

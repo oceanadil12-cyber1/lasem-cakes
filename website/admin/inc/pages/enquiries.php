@@ -58,7 +58,24 @@ function admin_enquiries_post(): void
 function admin_enquiry_detail(string $id): void
 {
     $e = enquiry_find($id);
-    $back = '<p class="back no-print"><a href="' . h(admin_url('enquiries')) . '">' . icon('left', 15) . ' Cake enquiries</a></p>';
+
+    // One of the customer's photos (?photo=1…): only for signed-in staff, from the private folder.
+    if ($e && isset($_GET['photo'])) {
+        $path = enquiry_photo_path($e, (int) $_GET['photo'] - 1);
+        if (!$path) { http_response_code(404); exit('Photo not found'); }
+        $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+        $mime = ['jpg' => 'image/jpeg', 'png' => 'image/png', 'webp' => 'image/webp', 'gif' => 'image/gif', 'heic' => 'image/heic', 'heif' => 'image/heif'][$ext] ?? 'application/octet-stream';
+        $name = preg_replace('/[^\w.\- ]/u', '_', (string) ($e['photos'][(int) $_GET['photo'] - 1]['name'] ?? basename($path)));
+        header('Content-Type: ' . $mime);
+        header('Content-Length: ' . filesize($path));
+        header('X-Content-Type-Options: nosniff');
+        header('Cache-Control: private, max-age=86400');
+        header('Content-Disposition: ' . (isset($_GET['download']) || in_array($ext, ['heic', 'heif'], true) ? 'attachment' : 'inline') . '; filename="' . $name . '"');
+        readfile($path);
+        exit;
+    }
+
+    $back ='<p class="back no-print"><a href="' . h(admin_url('enquiries')) . '">' . icon('left', 15) . ' Cake enquiries</a></p>';
     if (!$e) admin_render('Enquiry', $back . empty_state('Enquiry not found', 'It may have been deleted.', 'mail'), 'enquiries');
 
     // Opening a new enquiry marks it read.
@@ -94,6 +111,7 @@ function admin_enquiry_detail(string $id): void
                 ['Date needed', h($e['date'] !== '' && strtotime($e['date']) ? date('l, F j, Y', strtotime($e['date'])) : $e['date'])],
                 ['Guests', h($e['guests'])],
             ]) . '<div class="msgbody">' . nl2br(h($e['message'])) . '</div>')
+        .   ($e['photos'] ? card('Photos from the customer (' . count($e['photos']) . ')', enquiry_photos_html($e)) : '')
         .   card('Note for the team', form_open(admin_url('enquiries'))
                 . '<input type="hidden" name="id" value="' . h($id) . '"><input type="hidden" name="action" value="note">'
                 . '<label class="field wide"><span class="sr">Note</span><textarea name="note" rows="4" maxlength="2000" placeholder="Only the team sees this: quote given, design ideas, deposit…">' . h($e['note']) . '</textarea></label>'
@@ -112,6 +130,19 @@ function admin_enquiry_detail(string $id): void
                 . btn_submit('Delete enquiry', 'sm danger', '', '', 'trash', 'Delete this enquiry for good? This can\'t be undone.') . '</form>', '', 'no-print')
         . '</div></div>';
     admin_render('Enquiry', $body, 'enquiries');
+}
+
+function enquiry_photos_html(array $e): string
+{
+    $out = '<div class="enq-photos">';
+    foreach ($e['photos'] as $i => $p) {
+        $src = admin_url('enquiries', ['id' => $e['id'], 'photo' => $i + 1]);
+        $name = (string) ($p['name'] ?? $p['file']);
+        $out .= preg_match('/\.(heic|heif)$/i', $p['file'])
+            ? '<a class="enq-photo enq-photo-file" href="' . h($src) . '">' . icon('download', 18) . '<span>' . h($name) . '</span></a>'
+            : '<a class="enq-photo" href="' . h($src) . '" target="_blank" rel="noopener" title="' . h($name) . '"><img src="' . h($src) . '" alt="' . h($name) . '" loading="lazy"></a>';
+    }
+    return $out . '</div><p class="muted small">Click a photo to open it full size. HEIC photos (from iPhones) download instead.</p>';
 }
 
 function admin_enquiries_list(): void
@@ -147,7 +178,7 @@ function admin_enquiries_list(): void
         $soon = $e['date'] !== '' && strtotime($e['date']) && strtotime($e['date']) - time() < 7 * 86400 && strtotime($e['date']) >= strtotime('today');
         $rows .= '<tr' . ($e['status'] === 'new' ? ' class="unread"' : '') . '>'
             . '<td data-label="From"><a class="row-link" href="' . h(admin_url('enquiries', ['id' => $e['id']])) . '">' . guest_cell($e['name'], $e['email'] !== '' ? $e['email'] : $e['phone']) . '</a></td>'
-            . '<td data-label="Cake">' . ($e['occasion'] !== '' ? '<b>' . h(snip($e['occasion'], 40)) . '</b>' : '') . '<div class="cell-sub">' . h(snip($e['message'], 80)) . '</div></td>'
+            . '<td data-label="Cake">' . ($e['occasion'] !== '' ? '<b>' . h(snip($e['occasion'], 40)) . '</b>' : '') . '<div class="cell-sub">' . ($e['photos'] ? count($e['photos']) . (count($e['photos']) === 1 ? ' photo' : ' photos') . ' &middot; ' : '') . h(snip($e['message'], 80)) . '</div></td>'
             . '<td class="nowrap" data-label="Needed">' . ($e['date'] !== '' ? h(strtotime($e['date']) ? date('M j, Y', strtotime($e['date'])) : $e['date']) . ($soon ? '<div class="cell-sub">' . badge('Soon', 'warn') . '</div>' : '') : '<span class="muted">&ndash;</span>') . '</td>'
             . '<td class="nowrap" data-label="Received">' . h(fmt_when($e['ts'])) . '<div class="cell-sub">' . h(fmt_ago($e['ts'])) . '</div></td>'
             . '<td data-label="Status">' . status_badge(ENQUIRY_STATUSES, $e['status']) . '</td></tr>';

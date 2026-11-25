@@ -34,7 +34,7 @@ function page_start($o)
 <link rel="icon" href="<?= e(url('images/logo.png')) ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Kaushan+Script&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Happy+Monkey&family=Imperial+Script&family=Kaushan+Script&family=Montserrat:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="<?= e(asset('css/style.css')) ?>">
 <script type="application/ld+json"><?= json_encode(business_schema(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 </head>
@@ -224,6 +224,38 @@ function site_footer()
 <?php
 }
 
+/** The "Cake or occasion" drop-down (contact page and Order Request pop-up). */
+function occasion_select(string $selected = '', string $attr = '')
+{
+    $opts = [];
+    foreach (content()['pages'] as $p) {
+        if ($p['type'] === 'occasion') $opts[] = $p['title'];
+    }
+    array_push($opts, 'Birthday cake', 'Pastries or trays', 'Something else');
+    echo '<select name="occasion"' . ($attr !== '' ? ' ' . $attr : '') . '><option value="">Choose…</option>';
+    foreach ($opts as $o) {
+        echo '<option' . ($selected === $o ? ' selected' : '') . '>' . e($o) . '</option>';
+    }
+    echo '</select>';
+}
+
+/** Bottom of the enquiry forms: "Upload pictures" on the left, "Send inquiry" on the right. */
+function form_actions(string $sendAttr = '')
+{
+    static $n = 0;
+    $id = 'photos-' . ++$n;
+    ?>
+    <div class="form-actions">
+      <div class="photo-pick">
+        <input class="photo-input" id="<?= $id ?>" name="photos[]" type="file" accept="image/*,.heic,.heif" multiple data-photos>
+        <label class="btn btn-line photo-btn" for="<?= $id ?>"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-8 8"/></svg>Upload pictures</label>
+        <p class="photo-list" data-photo-list>Up to 5 photos, 10 MB in total</p>
+      </div>
+      <button class="btn btn-solid btn-lg" type="submit"<?= $sendAttr !== '' ? ' ' . $sendAttr : '' ?>>Send inquiry</button>
+    </div>
+    <?php
+}
+
 /**
  * The "Order Request" pop-up (same fields as the staging site's): opened by any [data-order-request]
  * button. It posts to api/contact.php, so requests land in the admin's Cake enquiries and the bakery's email.
@@ -232,13 +264,11 @@ function order_request_dialog()
 {
     ?>
 <dialog class="req" id="order-request" aria-labelledby="req-title">
-  <form class="req-form" method="post" action="<?= e(url('api/contact.php')) ?>" data-request-form novalidate>
+  <form class="req-form" method="post" action="<?= e(url('api/contact.php')) ?>" enctype="multipart/form-data" data-request-form novalidate>
     <button class="req-close" type="button" data-request-close aria-label="Close">&times;</button>
     <p class="script">Custom orders</p>
     <h2 id="req-title">Order Request</h2>
-    <p class="req-for" data-request-for-label hidden></p>
     <input type="hidden" name="form" value="request">
-    <input type="hidden" name="occasion" value="" data-request-for>
     <input type="hidden" name="page" value="<?= e(strtok($_SERVER['REQUEST_URI'] ?? '', '?')) ?>">
     <label>Name<input name="name" autocomplete="name" maxlength="200"></label>
     <div class="req-row">
@@ -246,10 +276,14 @@ function order_request_dialog()
       <label><span>Phone number <b aria-hidden="true">*</b></span><input name="phone" type="tel" required autocomplete="tel" maxlength="40"></label>
     </div>
     <label>Email address<input name="email" type="email" autocomplete="email" maxlength="200"></label>
+    <div class="req-row">
+      <label>Cake or occasion<?php occasion_select('', 'data-request-for'); ?></label>
+      <label>Number of guests<input name="guests" type="number" min="1" max="5000" inputmode="numeric"></label>
+    </div>
     <label>Order description<textarea name="message" rows="4" maxlength="4000" placeholder="Cake, size, flavour, design, writing on the cake…"></textarea></label>
     <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
     <p class="req-status" role="status" aria-live="polite" data-request-status></p>
-    <button class="btn btn-solid btn-lg" type="submit" data-request-send>Send</button>
+    <?php form_actions('data-request-send'); ?>
   </form>
   <div class="req-done" data-request-done hidden>
     <button class="req-close" type="button" data-request-close aria-label="Close">&times;</button>

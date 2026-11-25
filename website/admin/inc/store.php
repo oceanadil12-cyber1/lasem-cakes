@@ -276,6 +276,8 @@ function enquiry_from_file(array $r, string $id): array
         'guests'   => (string) ($r['guests'] ?? ''),
         'message'  => (string) ($r['message'] ?? ''),
         'note'     => (string) ($r['team_note'] ?? ''),
+        // Customer photos: [['file' => '<id>-1.jpg', 'name' => 'original.jpg'], …] in private/messages/photos/.
+        'photos'   => array_values(array_filter((array) ($r['photos'] ?? []), fn($p) => is_array($p) && preg_match('/^\d{8}-\d{6}-[0-9a-f]{6}-\d{1,2}\.(jpg|png|webp|gif|heic|heif)$/', (string) ($p['file'] ?? '')))),
         'history'  => array_values(array_filter((array) ($r['history'] ?? []), 'is_array')),
     ];
 }
@@ -325,7 +327,18 @@ function enquiry_set(string $id, array $fields): bool
 function enquiry_delete(string $id): bool
 {
     $f = enquiry_file($id);
-    return $f ? @unlink($f) : false;
+    if (!$f) return false;
+    foreach (glob(private_dir('messages') . '/photos/' . $id . '-*') ?: [] as $p) @unlink($p);
+    return @unlink($f);
+}
+
+/** Path of an enquiry's photo number $n (0-based), or null. */
+function enquiry_photo_path(array $e, int $n): ?string
+{
+    $file = $e['photos'][$n]['file'] ?? '';
+    if ($file === '' || !str_starts_with($file, $e['id'] . '-')) return null;
+    $path = private_dir('messages') . '/photos/' . $file;
+    return is_file($path) ? $path : null;
 }
 
 // ---------- photos ----------

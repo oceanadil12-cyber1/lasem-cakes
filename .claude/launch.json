@@ -19,6 +19,10 @@
       "runtimeArgs": [
         "-d",
         "max_input_vars=5000",
+        "-d",
+        "upload_max_filesize=10M",
+        "-d",
+        "post_max_size=12M",
         "-S",
         "localhost:8081",
         "-t",

@@ -502,7 +502,7 @@
         g.font = (o.font === 'serif' ? '600 ' + size + 'px "Fraunces", Georgia, serif' : size + 'px "Kaushan Script", "Brush Script MT", cursive');
         g.fillText(o.text, cw / 2, ch * (o.sub ? 0.42 : 0.52));
         if (o.sub) {
-          g.font = '700 ' + Math.round(ch * 0.13) + 'px "Manrope", Arial, sans-serif';
+          g.font = '700 ' + Math.round(ch * 0.13) + 'px "Montserrat", Arial, sans-serif';
           g.fillStyle = o.subInk || '#b8642a';
           g.fillText(o.sub, cw / 2, ch * 0.8);
         }

@@ -33,34 +33,24 @@ page_banner('Contact us', 'We’d love to hear from you', 'Thank you for choosin
 <?php if ($sent): ?>
       <div class="notice ok" role="status"><b>Thank you, your enquiry is on its way.</b> We’ll get back to you soon. For anything urgent, call <?= e(SITE['phone']) ?>.</div>
 <?php elseif ($error): ?>
-      <div class="notice err" role="alert"><?= e($error === 'missing' ? 'Please fill in your name, a phone number or email, and your message.' : 'Sorry, something went wrong sending your message. Please call us at ' . SITE['phone'] . '.') ?></div>
+      <div class="notice err" role="alert"><?= e($error === 'missing' ? 'Please fill in your name, a phone number or email, and your message.' : ($error === 'photos' ? 'Please send up to 5 photos (JPG, PNG, WebP or HEIC), 10 MB in total.' :'Sorry, something went wrong sending your message. Please call us at ' . SITE['phone'] . '.')) ?></div>
 <?php endif; ?>
       <p>Tell us about your celebration and we’ll help with size, flavour and design.</p>
-      <form method="post" action="<?= e(url('api/contact.php')) ?>">
+      <form method="post" action="<?= e(url('api/contact.php')) ?>" enctype="multipart/form-data">
         <div class="field-row">
-          <label>Your name <span aria-hidden="true">*</span><input name="name" required autocomplete="name"></label>
+          <label><span>Your name <span aria-hidden="true">*</span></span><input name="name" required autocomplete="name"></label>
           <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
         </div>
         <label>Email<input name="email" type="email" autocomplete="email"></label>
         <div class="field-row">
-          <label>Cake or occasion
-            <select name="occasion">
-              <option value="">Choose…</option>
-<?php foreach (content()['pages'] as $p): if ($p['type'] !== 'occasion') continue; ?>
-              <option<?= $cake === $p['title'] ? ' selected' : '' ?>><?= e($p['title']) ?></option>
-<?php endforeach; ?>
-              <option>Birthday cake</option>
-              <option>Pastries or trays</option>
-              <option>Something else</option>
-            </select>
-          </label>
+          <label>Cake or occasion<?php occasion_select($cake); ?></label>
           <label>Date needed<input name="date" type="date"></label>
         </div>
-        <label>Number of guests<input name="guests" type="number" min="1" inputmode="numeric"></label>
-        <label>Your idea <span aria-hidden="true">*</span><textarea name="message" rows="5" required placeholder="Flavours, colours, theme, writing on the cake…"></textarea></label>
+        <label>Number of guests<input name="guests" type="number" min="1" max="5000" inputmode="numeric"></label>
+        <label><span>Your idea <span aria-hidden="true">*</span></span><textarea name="message" rows="5" required placeholder="Flavours, colours, theme, writing on the cake…"></textarea></label>
         <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
         <p class="small-note">We reply by phone or email. Please include at least one.</p>
-        <button class="btn btn-solid btn-lg" type="submit">Send enquiry</button>
+        <?php form_actions(); ?>
       </form>
     </div>
   </div>
